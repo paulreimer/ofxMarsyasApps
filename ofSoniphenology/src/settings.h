@@ -1,0 +1,31 @@
+#pragma once
+
+#define	USE_CVD
+#define USE_OPENCV
+#define	USE_GUI
+#define	USE_FIDUCIAL_TRACKER
+#define	USE_SONIFICATION_ENGINE
+#define	USE_GEO_DATA
+#undef	USE_CAMERA
+
+#define	PREFER_OPENCV
+
+#define VIDEO_WIDTH		320
+#define VIDEO_HEIGHT	240
+#define VIDEO_SIZE		VIDEO_WIDTH,VIDEO_HEIGHT
+//#define	VIDEO_FPS		1000/(10)
+#define	VIDEO_FPS		120
+
+#ifdef USE_CAMERA
+#define CAMERA_WIDTH	640
+#define CAMERA_HEIGHT	480
+#define CAMERA_SIZE		CAMERA_WIDTH,CAMERA_HEIGHT
+#define	CAMERA_FPS		24
+#endif
+
+#ifdef USE_FIDUCIAL_TRACKER
+#define FADER_FIDUCIAL_ID 0
+#endif
+
+#define MIRROR_VERTICAL		true
+#define MIRROR_HORIZONTAL	true
