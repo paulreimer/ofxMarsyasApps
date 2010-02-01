@@ -22,12 +22,14 @@ GeoData::~GeoData()
 void
 GeoData::setup()
 {
+#ifdef USE_GEO_DATA
 	OGRRegisterAll();
 	
     datasource = OGRSFDriverRegistrar::Open(dataSourceName.c_str(), FALSE);
     if(datasource!=NULL)
 		layer = datasource->GetLayerByName(layerName.c_str());
-	
+#endif
+
 	startThread(false, false); // non-blocking, non-verbose
 }
 
@@ -38,8 +40,10 @@ GeoData::destroy()
 	if (isThreadRunning())
 		stopThread();
 
+#ifdef USE_GEO_DATA
 	if (datasource != NULL)
 		OGRDataSource::DestroyDataSource(datasource);
+#endif
 }
 
 
@@ -47,6 +51,7 @@ GeoData::destroy()
 void
 GeoData::threadedFunction()
 {
+#ifdef USE_GEO_DATA
 	if (datasource==NULL || layer==NULL)
 		return;
 
@@ -117,6 +122,7 @@ GeoData::threadedFunction()
 		}
 		else ofSleepMillis(20);
 	}
+#endif
 }
 
 //--------------------------------------------------------------
