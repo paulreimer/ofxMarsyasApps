@@ -43,21 +43,26 @@ public:
 	void mouseReleased(int x, int y, int button);
 	void windowResized(int w, int h);
 
+#ifdef USE_FIDUCIAL_TRACKER
 	void processFiducials(list<ofxFiducial>& fiducialsList);
+#endif
 
-	ofImage	bg;
+	ofImage			bg;
 
-	ofVideoGrabber 		cvGrabber;
-	ofxCvdColorImage	imRGB;
-	ofPoint videoSize;
-	ofPoint drawVideoSize;
-	ofPoint scale;
+	ofVideoGrabber 	cvGrabber;
+	ofPoint			videoSize;
 
-	ofVideoGrabber 		cameraGrabber;
-	ofImage				cameraImage;
+	ofVideoGrabber 	cameraGrabber;
+	ofImage			cameraImage;
+	
+	ofTrueTypeFont	font;
+	ofTrueTypeFont	font_sm;
 
-	ofTrueTypeFont font;
-	ofTrueTypeFont font_sm;
+#ifdef USE_CVD
+	ofxCvdColorImage imRGB;
+#else
+#error "Please download/build libCVD from http://mi.eng.cam.ac.uk/~er258/cvd."
+#endif
 
 #ifdef USE_GUI
 	ofxSimpleGuiToo gui;

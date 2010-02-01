@@ -6,6 +6,9 @@
 
 #include "ofxVec2f.h"
 
+#define EVEN(n) (bool)((int)n % 2) 
+#define ODD(n) (!(bool)((int)n % 2))
+
 struct fiducialById:
 public std::unary_function <ofxFiducial, bool>{
 	int id;
@@ -25,12 +28,12 @@ testApp::setup()
 	ofSetBackgroundAuto(true);
 	ofBackground(0,0,0);
 
-	bg.loadImage("chrome/bg.png");
+	bg.loadImage("chrome/bg-dark.png");
 	bg.getTextureReference().setTextureWrap(GL_REPEAT, GL_REPEAT);
 
 	ofSetFrameRate(VIDEO_FPS);
 
-	glutSetWindowTitle("PhaseVocoder");
+	glutSetWindowTitle("A tangible interface for sonification of geo-spatial and phenological data at multiple time-scales.");
 	
 //	font.loadFont(ofToDataPath("frabk.ttf"), 14);
 	font.loadFont(ofToDataPath("HelveticaBold.ttf"), 12);
@@ -75,7 +78,7 @@ testApp::setup()
 #endif
 	gui.addContent("Fiducials",	fiducials);
 #endif
-	gui.setup();
+//	gui.setup();
 #endif
 	
 #ifdef USE_GEO_DATA
@@ -94,9 +97,13 @@ testApp::update()
 
 	if (cvGrabber.isFrameNew())
 	{
+#ifdef USE_CVD
 		CVD::BasicImage<CVD::Rgb<CVD::byte> > grabRGB((CVD::Rgb<CVD::byte>*)cvGrabber.getPixels(),
 													  CVD::ImageRef(videoSize.x, videoSize.y));
 		imRGB.copy_from(grabRGB);
+#else
+#error "Please download/build libCVD from http://mi.eng.cam.ac.uk/~er258/cvd."
+#endif
 
 #ifdef USE_FIDUCIAL_TRACKER
 		fiducials.update();
@@ -178,11 +185,13 @@ testApp::mouseDragged(int x, int y, int button)
 void
 testApp::mousePressed(int x, int y, int button)
 {
+#ifdef USE_GEO_DATA
 	ofPoint tlCorner(-90, 0);
 	ofPoint brCorner(90, 180);
 	ofPoint timeInterval(1905, 2010);
 
 	geoData.query(tlCorner, brCorner, timeInterval);
+#endif
 }
 
 //--------------------------------------------------------------
@@ -195,6 +204,7 @@ void
 testApp::windowResized(int w, int h)
 {}
 
+#ifdef USE_FIDUCIAL_TRACKER
 //--------------------------------------------------------------
 void
 testApp::processFiducials(list<ofxFiducial>& fiducials)
@@ -207,13 +217,13 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 
 	int channel;
 	ofxVec2f from, to;
-	ofxVec2f from_ref, to_ref;
+	ofxVec2f from_ref, to_ref, map_ref;
 	ofxVec2f epicentre;
 	double angle;
 
 	for (from_fiducial = fiducials.begin(); from_fiducial != fiducials.end(); from_fiducial++)
 	{
-		if (from_fiducial->getId() == FADER_FIDUCIAL_ID || from_fiducial->getId() % 2)
+		if (from_fiducial->getId() == FADER_FIDUCIAL_ID || EVEN(from_fiducial->getId()))
 			continue;
 		
 		to_fiducial = find_if(fiducials.begin(), fiducials.end(), fiducialById(from_fiducial->getId()+1));
@@ -238,3 +248,4 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 		cout << "angle = " << angle << endl;
 	}
 }
+#endif
