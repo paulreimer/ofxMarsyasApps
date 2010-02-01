@@ -1,5 +1,8 @@
 #pragma once
+
+#ifdef USE_GEO_DATA
 #include "ogrsf_frmts.h"
+#endif
 
 #include "ofTypes.h"
 #include "ofxThread.h"
@@ -30,8 +33,10 @@ protected:
 	int		yearMin,		yearMax;
 
 private:
+#ifdef USE_GEO_DATA
 	OGRDataSource	*datasource;
     OGRLayer		*layer;
+#endif
 	
 	bool bNewQuery;
 };
