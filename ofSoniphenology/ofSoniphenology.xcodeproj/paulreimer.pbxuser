@@ -855,7 +855,7 @@
 		fRef = 87FF81611112242B00341604 /* GeoData.h */;
 		name = "GeoData.h: 39";
 		rLen = 0;
-		rLoc = 586;
+		rLoc = 609;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 207;
@@ -1160,6 +1160,36 @@
 		rType = 0;
 		vrLen = 417;
 		vrLoc = 990;
+	};
+	871BF72911177CE2001D93E9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
+		name = "testApp.h: 58";
+		rLen = 0;
+		rLoc = 1078;
+		rType = 0;
+		vrLen = 421;
+		vrLoc = 990;
+	};
+	871BF72A11177CE2001D93E9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF81611112242B00341604 /* GeoData.h */;
+		name = "GeoData.h: 39";
+		rLen = 0;
+		rLoc = 609;
+		rType = 0;
+		vrLen = 404;
+		vrLoc = 205;
+	};
+	871BF72B11177CE2001D93E9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF81611112242B00341604 /* GeoData.h */;
+		name = "GeoData.h: 4";
+		rLen = 0;
+		rLoc = 36;
+		rType = 0;
+		vrLen = 347;
+		vrLoc = 0;
 	};
 	87242595110A4CCA00818640 /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -1976,9 +2006,9 @@
 	};
 	87FF81611112242B00341604 /* GeoData.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1003, 688}}";
-			sepNavSelRange = "{586, 0}";
-			sepNavVisRange = "{207, 402}";
+			sepNavIntBoundsRect = "{{0, 0}, {1003, 752}}";
+			sepNavSelRange = "{36, 0}";
+			sepNavVisRange = "{0, 347}";
 		};
 	};
 	87FF81711112257800341604 /* PBXTextBookmark */ = {
@@ -2198,7 +2228,7 @@
 		fRef = 87FF81611112242B00341604 /* GeoData.h */;
 		name = "GeoData.h: 33";
 		rLen = 0;
-		rLoc = 557;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 288;
 		vrLoc = 266;
@@ -2594,6 +2624,9 @@
 			871BF72611177142001D93E9 /* PBXTextBookmark */ = 871BF72611177142001D93E9 /* PBXTextBookmark */;
 			871BF72711177142001D93E9 /* PBXTextBookmark */ = 871BF72711177142001D93E9 /* PBXTextBookmark */;
 			871BF72811177147001D93E9 /* PBXTextBookmark */ = 871BF72811177147001D93E9 /* PBXTextBookmark */;
+			871BF72911177CE2001D93E9 /* PBXTextBookmark */ = 871BF72911177CE2001D93E9 /* PBXTextBookmark */;
+			871BF72A11177CE2001D93E9 /* PBXTextBookmark */ = 871BF72A11177CE2001D93E9 /* PBXTextBookmark */;
+			871BF72B11177CE2001D93E9 /* PBXTextBookmark */ = 871BF72B11177CE2001D93E9 /* PBXTextBookmark */;
 			87242595110A4CCA00818640 = 87242595110A4CCA00818640 /* PBXBookmark */;
 			872429D6110BE74000818640 = 872429D6110BE74000818640 /* PBXTextBookmark */;
 			87242A24110D470400818640 = 87242A24110D470400818640 /* PBXTextBookmark */;
@@ -2677,7 +2710,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1003, 1264}}";
 			sepNavSelRange = "{1078, 0}";
-			sepNavVisRange = "{990, 417}";
+			sepNavVisRange = "{990, 421}";
 		};
 	};
 }

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "settings.h"
+
 #ifdef USE_GEO_DATA
 #include "ogrsf_frmts.h"
 #endif

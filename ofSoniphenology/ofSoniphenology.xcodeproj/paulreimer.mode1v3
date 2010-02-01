@@ -280,7 +280,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
+									<integer>6</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
@@ -323,7 +323,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>testApp.h</string>
+								<string>GeoData.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,11 +331,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>testApp.h</string>
+										<string>GeoData.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>871BF72811177147001D93E9</string>
+										<string>871BF72B11177CE2001D93E9</string>
 										<key>history</key>
 										<array>
 											<string>87E014881106D1E1002664D1</string>
@@ -394,7 +394,6 @@
 											<string>871BF6AF111763A1001D93E9</string>
 											<string>871BF6B4111763CC001D93E9</string>
 											<string>871BF6FD11176FCA001D93E9</string>
-											<string>871BF6FF11176FCA001D93E9</string>
 											<string>871BF70011176FCA001D93E9</string>
 											<string>871BF71A1117713F001D93E9</string>
 											<string>871BF71C1117713F001D93E9</string>
@@ -402,7 +401,8 @@
 											<string>871BF71E1117713F001D93E9</string>
 											<string>871BF71F1117713F001D93E9</string>
 											<string>871BF7201117713F001D93E9</string>
-											<string>871BF7211117713F001D93E9</string>
+											<string>871BF72911177CE2001D93E9</string>
+											<string>871BF72A11177CE2001D93E9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -600,7 +600,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>871BF7231117713F001D93E9</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>871BF64A1116C0DD001D93E9</string>
 		<string>871BF64B1116C0DD001D93E9</string>
