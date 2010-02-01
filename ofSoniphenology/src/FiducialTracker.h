@@ -6,17 +6,12 @@
 
 #include "ofxFiducialTracker.h"
 
-#ifdef USE_CVD
-#include "ofxCvdImage.h"
-#endif
-
 #ifdef USE_OPENCV
 #include "ofxCvMain.h"
 #endif
 
 class FiducialTracker
 : public ofBaseUpdates
-, public ofBaseHasPixels
 , public ofBaseDraws
 {
 public:
@@ -32,20 +27,11 @@ public:
 
 	float getWidth() { return videoSize.x; }
 	float getHeight() { return videoSize.y; }
-	
-	unsigned char * getPixels() { return pixels; };
-
-#ifdef USE_CVD
-	ofxCvdGrayscaleImage	imBW;
-	ofxCvdGrayscaleImage	imThreshold;
-	CVD::ImageRef			videoSize;
-#else
-	ofPoint					videoSize;
-#endif
 
 #ifdef USE_OPENCV
-	IplImage* iplBW;
-	IplImage* iplThreshold;
+	ofxCvGrayscaleImage	*imBW;
+	ofxCvGrayscaleImage	imThreshold;
+	ofPoint				videoSize;
 #endif
 
 	int threshold;
@@ -60,7 +46,6 @@ public:
 	bool bTrackFiducials;
 	bool bDrawFiducials;
 
-	unsigned char* pixels;
 	//private:
 //	ofxFiducialBacked::physics::Engine fiducial_physics;	
 	ofxFiducialTracker tracker;

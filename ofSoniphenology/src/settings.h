@@ -1,6 +1,6 @@
 #pragma once
 
-#define	USE_CVD
+#undef	USE_CVD
 #define USE_OPENCV
 #define	USE_GUI
 #define	USE_FIDUCIAL_TRACKER

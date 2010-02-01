@@ -22,10 +22,6 @@
 #include "ofxSimpleGuiToo.h"
 #endif
 
-#ifdef USE_CVD
-#include "ofxCvdImage.h"
-#endif
-
 class testApp
 : public ofBaseApp
 {
@@ -58,10 +54,9 @@ public:
 	ofTrueTypeFont	font;
 	ofTrueTypeFont	font_sm;
 
-#ifdef USE_CVD
-	ofxCvdColorImage imRGB;
-#else
-#error "Please download/build libCVD from http://mi.eng.cam.ac.uk/~er258/cvd."
+#ifdef USE_OPENCV
+	ofxCvColorImage		imRGB;
+	ofxCvGrayscaleImage	imBW;
 #endif
 
 #ifdef USE_GUI

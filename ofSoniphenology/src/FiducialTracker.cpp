@@ -1,12 +1,5 @@
 #include "FiducialTracker.h"
 
-#ifdef USE_CVD
-#include <cvd/image_convert.h>
-#include <cvd/vision.h>
-#include <cvd/gl_helpers.h>
-using namespace CVD;
-#endif
-
 //--------------------------------------------------------------
 FiducialTracker::FiducialTracker()
 {
@@ -32,13 +25,8 @@ FiducialTracker::~FiducialTracker()
 
 void FiducialTracker::setup()
 {
-#ifdef USE_CVD
-	imBW.		resize(videoSize);
-	imThreshold.resize(videoSize);
-#endif
 #ifdef USE_OPENCV
-	iplBW		= cvCreateImageHeader(cvSize(videoSize.x,videoSize.y), IPL_DEPTH_8U, 1);
-	iplThreshold= cvCreateImageHeader(cvSize(videoSize.x,videoSize.y), IPL_DEPTH_8U, 1);
+	imThreshold.allocate(VIDEO_SIZE);
 #endif
 
 	//detect finger is off by default
@@ -60,15 +48,7 @@ void FiducialTracker::update()
 	if (!getWidth() || !getHeight())
 		return;
 
-#ifdef USE_CVD
-	BasicImage<Rgb<byte> > grabRGB((Rgb<byte>*)getPixels(), videoSize);
-	convert_image(grabRGB, imBW);
-#endif
-
 #ifdef USE_OPENCV
-	cvSetData(iplBW,			imBW.data(),		VIDEO_WIDTH);
-	cvSetData(iplThreshold,		imThreshold.data(),	VIDEO_WIDTH);
-	
 	int flipMode;
 
 	if		( MIRROR_VERTICAL && !MIRROR_HORIZONTAL) flipMode = 0;
@@ -76,26 +56,23 @@ void FiducialTracker::update()
 	else if	( MIRROR_VERTICAL &&  MIRROR_HORIZONTAL) flipMode = -1;
 
 	if (MIRROR_VERTICAL || MIRROR_HORIZONTAL)
-		cvFlip(iplBW, NULL, flipMode);
-#endif
+		cvFlip(imBW->getCvImage(), NULL, flipMode);
 
-#ifdef PREFER_OPENCV
 	blocksize = (blocksize < 2)? 3 : !(blocksize % 2)? ++blocksize : blocksize;
 	
 	int threshold_type	= invert?	CV_THRESH_BINARY			: CV_THRESH_BINARY_INV;
     int adaptive_method	= gauss?	CV_ADAPTIVE_THRESH_MEAN_C	: CV_ADAPTIVE_THRESH_GAUSSIAN_C;
 
-    cvAdaptiveThreshold(iplBW, iplThreshold,
+    cvAdaptiveThreshold(imBW->getCvImage(), imThreshold.getCvImage(),
 						255, adaptive_method,
 						threshold_type,
 						blocksize, offset);
-#else
-	imThreshold.copy_from(imBW);
-	CVD::threshold(imThreshold, (byte)(0xff&threshold), (byte)0xff);
+	
+	imThreshold.flagImageChanged();
 #endif
 	
 	if (bTrackFiducials)
-		tracker.findFiducials(imThreshold.data(), videoSize.x, videoSize.y);
+		tracker.findFiducials((unsigned char*)imThreshold.getCvImage()->imageData, videoSize.x, videoSize.y);
 	
 	if (!tracker.fiducialsList.empty())
 		ofNotifyEvent(newFrame, tracker.fiducialsList);
@@ -112,9 +89,7 @@ void FiducialTracker::draw(float x, float y, float w, float h)
 {
 	glPushMatrix();
 	glTranslatef(x, y, 0.);
-#ifdef USE_CVD
 	glScalef(w/getWidth(), h/getHeight(), 1.);
-#endif
 
 	if (bTrackFiducials && bDrawFiducials)
 	{

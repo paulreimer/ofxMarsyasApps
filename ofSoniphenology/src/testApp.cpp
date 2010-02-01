@@ -1,9 +1,5 @@
 #include "testApp.h"
 
-#ifdef USE_CVD
-#include <cvd/gl_helpers.h>
-#endif
-
 #include "ofxVec2f.h"
 
 #define EVEN(n) (bool)((int)n % 2) 
@@ -43,6 +39,9 @@ testApp::setup()
 	cvGrabber.setDesiredFrameRate(VIDEO_FPS);
 	cvGrabber.initGrabber(VIDEO_SIZE);
 	videoSize.set(VIDEO_SIZE);
+	
+	imRGB.allocate(VIDEO_SIZE);
+	imBW.allocate(VIDEO_SIZE);
 
 #ifdef USE_CAMERA
 	cameraGrabber.setDesiredFrameRate(24);
@@ -51,9 +50,10 @@ testApp::setup()
 #endif
 
 #ifdef USE_FIDUCIAL_TRACKER	
-	fiducials.pixels = cvGrabber.getPixels();
 	fiducials.videoSize.x = videoSize.x;
 	fiducials.videoSize.y = videoSize.y;
+
+	fiducials.imBW = &imBW;
 
 	fiducials.setup();
 
@@ -66,7 +66,7 @@ testApp::setup()
 #ifdef USE_FIDUCIAL_TRACKER
 	gui.addPage("Fiducials");
 	gui.addContent("RGB",		imRGB);
-	gui.addContent("BW",		fiducials.imBW);
+	gui.addContent("BW",		imBW);
 	gui.addContent("Threshold",	fiducials.imThreshold, VIDEO_WIDTH);
 #ifdef PREFER_OPENCV
 	gui.addSlider("Block Size",	fiducials.blocksize, 0, 49);
@@ -97,12 +97,9 @@ testApp::update()
 
 	if (cvGrabber.isFrameNew())
 	{
-#ifdef USE_CVD
-		CVD::BasicImage<CVD::Rgb<CVD::byte> > grabRGB((CVD::Rgb<CVD::byte>*)cvGrabber.getPixels(),
-													  CVD::ImageRef(videoSize.x, videoSize.y));
-		imRGB.copy_from(grabRGB);
-#else
-#error "Please download/build libCVD from http://mi.eng.cam.ac.uk/~er258/cvd."
+#ifdef USE_OPENCV
+		imRGB.setFromPixels(cvGrabber.getPixels(), videoSize.x, videoSize.y);
+		imBW = imRGB;
 #endif
 
 #ifdef USE_FIDUCIAL_TRACKER
