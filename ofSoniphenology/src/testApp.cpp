@@ -1,7 +1,5 @@
 #include "testApp.h"
 
-#include "ofxVec2f.h"
-
 #define EVEN(n) (bool)((int)n % 2) 
 #define ODD(n) (!(bool)((int)n % 2))
 
@@ -57,7 +55,7 @@ testApp::setup()
 
 	fiducials.setup();
 
-	soundEngine.fiducials = &fiducials.tracker.fiducialsList;
+	soundEngine.responses = &geoData.getResponses();
 
 	ofAddListener(fiducials.newFrame, this, &testApp::processFiducials);
 #endif
@@ -84,6 +82,10 @@ testApp::setup()
 #ifdef USE_GEO_DATA
 	geoData.setup();
 #endif
+	
+	map_ref		.set(0,0);
+	map_angle	= 0;
+	map_rsize	= 1;
 }
 
 //--------------------------------------------------------------
@@ -187,7 +189,7 @@ testApp::mousePressed(int x, int y, int button)
 	ofPoint brCorner(90, 180);
 	ofPoint timeInterval(1905, 2010);
 
-	geoData.query(tlCorner, brCorner, timeInterval);
+	geoData.query(1, tlCorner, brCorner, timeInterval);
 #endif
 }
 
@@ -206,40 +208,62 @@ testApp::windowResized(int w, int h)
 void
 testApp::processFiducials(list<ofxFiducial>& fiducials)
 {	
-	list<ofxFiducial>::iterator from_fiducial, to_fiducial, fader_fiducial;
+	list<ofxFiducial>::iterator from_fiducial, to_fiducial, fader_fiducial, map_fiducial;
 	
 	POIs.clear();
 
 	fader_fiducial = find_if(fiducials.begin(), fiducials.end(), fiducialById(FADER_FIDUCIAL_ID));
+	map_fiducial = find_if(fiducials.begin(), fiducials.end(), fiducialById(MAP_FIDUCIAL_ID));
 
 	int channel;
 	ofxVec2f from, to;
-	ofxVec2f from_ref, to_ref, map_ref;
+	ofxVec2f from_ref, to_ref;
 	ofxVec2f epicentre;
 	double angle;
+
+	if (map_fiducial != fiducials.end())
+	{
+		map_ref.set(map_fiducial->getX(), map_fiducial->getY());
+		map_angle = map_fiducial->getAngle();
+		map_rsize = map_fiducial->getRootSize();
+	}
+	
+	// new co-ordinate system, in units of root size of map fiducial
+	// relative to center of map fiducial
+	ofPoint origin(-map_ref.x,-map_ref.y);
+	ofxVec2f vx(cosf(map_angle)/map_rsize, -sinf(map_angle)/map_rsize);
+	ofxVec2f vy(sinf(map_angle)/map_rsize, cosf(map_angle)/map_rsize);
 
 	for (from_fiducial = fiducials.begin(); from_fiducial != fiducials.end(); from_fiducial++)
 	{
 		if (from_fiducial->getId() == FADER_FIDUCIAL_ID || EVEN(from_fiducial->getId()))
 			continue;
-		
+
 		to_fiducial = find_if(fiducials.begin(), fiducials.end(), fiducialById(from_fiducial->getId()+1));
 
 		if (to_fiducial == fiducials.end())
 			continue;
 
+		// Locate the fiducials centers
 		from_ref.set(from_fiducial->getX(), from_fiducial->getY());
 		to_ref.set(to_fiducial->getX(), to_fiducial->getY());
-		
-		from.set(from_ref.x, from_ref.y + 4*from_fiducial->getRootSize());
-		to.set(to_ref.x, to_ref.y + 4*to_fiducial->getRootSize());
+
+		from_ref.map(origin, vx, vy);
+		to_ref.map(origin, vx, vy);
+/*
+		from_ref.rotateRad(-map_angle, map_ref);
+		to_ref.rotateRad(-map_angle, map_ref);
+*/		
+
+		from.set(from_ref.x, from_ref.y + 4*(from_fiducial->getRootSize()/map_rsize));
+		to.set(to_ref.x, to_ref.y + 4*(to_fiducial->getRootSize()/map_rsize));
 
 		from.rotateRad(from_fiducial->getAngle(), from_ref);
 		to.rotateRad(to_fiducial->getAngle(), to_ref);
-		
+
 		epicentre = from.getMiddle(to);
 		angle = (from_ref-epicentre).angleRad(to_ref-epicentre);
-		
+
 		POIs.push_back(make_pair("from_" + ofToString(from_fiducial->getId()), from));
 		POIs.push_back(make_pair("to_" + ofToString(to_fiducial->getId()), to));
 		cout << "angle = " << angle << endl;

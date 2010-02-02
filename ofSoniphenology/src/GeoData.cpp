@@ -8,8 +8,6 @@ GeoData::GeoData()
 	dataSourceName	= ofToDataPath("lilacs/japan_lilac.shp", true);
 
 	layerName		= "japan_lilac";
-	
-	bNewQuery = false;
 }
 
 //--------------------------------------------------------------
@@ -55,34 +53,52 @@ GeoData::threadedFunction()
 	if (datasource==NULL || layer==NULL)
 		return;
 
-	while (1)
+	map<int, request_t>::iterator req_iter;
+	map<int, response_t>::iterator resp_iter;
+
+	for (;;)
 	{
-		if (bNewQuery)
+		if (requests.empty())
+		{
+			ofSleepMillis(20);
+			continue;
+		}
+
+		for (req_iter = requests.begin(); req_iter != requests.end(); req_iter++)
 		{
 			while (!lock())
 			{}
+			
+			int tag			= req_iter->first;
+			request_t &req	= req_iter->second;
+
+			responses[tag].points.clear();
 
 			OGRFeature *feature;
 
 			layer->ResetReading();
 
-			layer->SetSpatialFilterRect(latitudeMin, longitudeMin,
-										latitudeMax, longitudeMax);
+			layer->SetSpatialFilterRect(req.latitudeMin, req.longitudeMin,
+										req.latitudeMax, req.longitudeMax);
 
 			stringstream where;
-			where << "first_bloom >= 'January 1, " << yearMin << "'";
+			where << "first_bloom >= 'January 1, " << req.yearMin << "'";
 			where << " AND ";
-			where << "first_bloom <= 'January 1, " << yearMax << "'";
+			where << "first_bloom <= 'January 1, " << req.yearMax << "'";
 
 			layer->SetAttributeFilter(where.str().c_str());
 
+			requests.erase(tag);
 			unlock();
+			
+			OGRGeometry *geometry;
+			OGRPoint *point;
 
 			while( (feature = layer->GetNextFeature()) != NULL )
 			{
+				// Feature iteration
 				OGRFeatureDefn *fDefn;
 				int iField;
-				OGRGeometry *geometry;
 				
 				fDefn = layer->GetLayerDefn();
 				
@@ -90,6 +106,7 @@ GeoData::threadedFunction()
 				{
 					OGRFieldDefn *fieldDefn = fDefn->GetFieldDefn(iField);
 					
+					printf("%s: ", fieldDefn->GetNameRef());
 					switch (fieldDefn->GetType())
 					{
 						case OFTInteger:
@@ -109,39 +126,36 @@ GeoData::threadedFunction()
 				if(geometry != NULL 
 				   && wkbFlatten(geometry->getGeometryType()) == wkbPoint)
 				{
-					OGRPoint *point = (OGRPoint*)geometry;
+					point = (OGRPoint*)geometry;
 					printf("%.3f,%3.f\n", point->getX(), point->getY());
+
+					responses[tag].points.push_back(ofPoint(point->getX(), point->getY()));
 				}
 				else
 					printf( "no point geometry\n" );
 				
-				OGRFeature::DestroyFeature(feature);				
+				OGRFeature::DestroyFeature(feature);
 			}
-
-			bNewQuery = false;
 		}
-		else ofSleepMillis(20);
 	}
 #endif
 }
 
 //--------------------------------------------------------------
 void
-GeoData::query(ofPoint from, ofPoint to, ofPoint timeInterval)
+GeoData::query(int tag, ofPoint from, ofPoint to, ofPoint timeInterval)
 {
 	while (!lock())
 		ofSleepMillis(1);
-
-	latitudeMin		= from.x;
-	latitudeMax		= to.x;
-
-	longitudeMin	= from.y;
-	longitudeMax	= to.y;
 	
-	yearMin			= timeInterval.x;
-	yearMax			= timeInterval.y;
-	
-	bNewQuery		= true;
+	requests[tag].latitudeMin	= from.x;
+	requests[tag].latitudeMax	= to.x;
 
+	requests[tag].longitudeMin	= from.y;
+	requests[tag].longitudeMax	= to.y;
+	
+	requests[tag].yearMin		= timeInterval.x;
+	requests[tag].yearMax		= timeInterval.y;
+	
 	unlock();
 }

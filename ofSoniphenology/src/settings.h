@@ -10,8 +10,8 @@
 
 #define	PREFER_OPENCV
 
-#define VIDEO_WIDTH		320
-#define VIDEO_HEIGHT	240
+#define VIDEO_WIDTH		640
+#define VIDEO_HEIGHT	480
 #define VIDEO_SIZE		VIDEO_WIDTH,VIDEO_HEIGHT
 //#define	VIDEO_FPS		1000/(10)
 #define	VIDEO_FPS		120
@@ -25,6 +25,7 @@
 
 #ifdef USE_FIDUCIAL_TRACKER
 #define FADER_FIDUCIAL_ID 0
+#define MAP_FIDUCIAL_ID 1
 #endif
 
 #define MIRROR_VERTICAL		true

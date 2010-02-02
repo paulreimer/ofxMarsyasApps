@@ -3,7 +3,8 @@
 #include "ofxMarsyasNetwork.h"
 #include "ofxMSAInteractiveObject.h"
 #include "marsyas/Fanout.h"
-#include "ofxFiducial.h"
+
+#include "GeoData.h"
 
 class SonificationEngine
 : public ofxMarsyasNetwork
@@ -16,5 +17,5 @@ public:
 	void update();
 	void draw();
 
-	list<ofxFiducial>* fiducials;
+	map<int, GeoData::response_t>* responses;
 };

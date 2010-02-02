@@ -13,6 +13,7 @@
 class GeoData
 : public ofxThread
 {
+	friend class SonificationEngine;
 public:
 	GeoData();
 	~GeoData();
@@ -20,7 +21,8 @@ public:
 	void setup();
 	void destroy();
 
-	void query(ofPoint tlCorner,
+	void query(int tag,
+			   ofPoint tlCorner,
 			   ofPoint brCorner,
 			   ofPoint timeInterval);
 
@@ -29,16 +31,28 @@ public:
 
 protected:
 	void threadedFunction();
-	
-	float	latitudeMin,	latitudeMax;
-	float	longitudeMin,	longitudeMax;
-	int		yearMin,		yearMax;
 
+	struct request_t
+	{
+		float	latitudeMin,	latitudeMax;
+		float	longitudeMin,	longitudeMax;
+		int		yearMin,		yearMax;
+	};
+	
+	struct response_t
+	{
+		vector<ofPoint> points;
+	};
+	
 private:
 #ifdef USE_GEO_DATA
 	OGRDataSource	*datasource;
     OGRLayer		*layer;
 #endif
+	map<int, request_t> requests;
+	map<int, response_t> responses;
 	
-	bool bNewQuery;
+public:	
+	map<int, response_t>& getResponses() { return responses; }
+
 };

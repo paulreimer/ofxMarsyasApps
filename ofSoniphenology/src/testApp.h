@@ -22,6 +22,8 @@
 #include "ofxSimpleGuiToo.h"
 #endif
 
+#include "ofxVec2f.h"
+
 class testApp
 : public ofBaseApp
 {
@@ -75,4 +77,8 @@ public:
 	GeoData geoData;
 #endif
 	vector<pair<string, ofPoint> > POIs;
+	
+	ofxVec2f	map_ref;
+	float		map_angle;
+	float		map_rsize;
 };
