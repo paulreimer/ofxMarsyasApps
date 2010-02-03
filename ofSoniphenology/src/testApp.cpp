@@ -3,6 +3,15 @@
 #define EVEN(n) (bool)((int)n % 2) 
 #define ODD(n) (!(bool)((int)n % 2))
 
+#define MAP_NW_CORNER_LAT			48
+#define MAP_NW_CORNER_LONG			121
+#define MAP_UNITS_TO_LAT_DEGREES	2.3/10
+#define MAP_UNITS_TO_LONG_DEGREES	2.3/10
+#define QUERY_POINT_OFFSET			4/MAP_UNITS_TO_LONG_DEGREES
+#define MIN_TIMESTAMP_YEAR			2000
+#define MAX_TIMESTAMP_YEAR			2010
+#define TIMESTAMP_RANGE_YEARS		MAX_TIMESTAMP_YEAR - MIN_TIMESTAMP_YEAR
+
 struct fiducialById:
 public std::unary_function <ofxFiducial, bool>{
 	int id;
@@ -55,7 +64,8 @@ testApp::setup()
 
 	fiducials.setup();
 
-	soundEngine.responses = &geoData.getResponses();
+//	soundEngine.responses = &geoData.getResponses();
+	soundEngine.geoData = &geoData;
 
 	ofAddListener(fiducials.newFrame, this, &testApp::processFiducials);
 #endif
@@ -185,11 +195,11 @@ void
 testApp::mousePressed(int x, int y, int button)
 {
 #ifdef USE_GEO_DATA
-	ofPoint tlCorner(-90, 0);
-	ofPoint brCorner(90, 180);
+	ofPoint nwCorner(-90, 0);
+	ofPoint seCorner(90, 180);
 	ofPoint timeInterval(1905, 2010);
 
-	geoData.query(1, tlCorner, brCorner, timeInterval);
+	geoData.query(1, nwCorner, seCorner, timeInterval);
 #endif
 }
 
@@ -228,11 +238,13 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 		map_rsize = map_fiducial->getRootSize();
 	}
 	
+	ofPoint scaleFac(1/(map_rsize*MAP_UNITS_TO_LAT_DEGREES),
+					 1/(map_rsize*MAP_UNITS_TO_LONG_DEGREES));
 	// new co-ordinate system, in units of root size of map fiducial
 	// relative to center of map fiducial
-	ofPoint origin(-map_ref.x,-map_ref.y);
-	ofxVec2f vx(cosf(map_angle)/map_rsize, -sinf(map_angle)/map_rsize);
-	ofxVec2f vy(sinf(map_angle)/map_rsize, cosf(map_angle)/map_rsize);
+	ofPoint origin(MAP_NW_CORNER_LAT,MAP_NW_CORNER_LONG);
+	ofxVec2f vx(cosf(map_angle)*scaleFac.x, -sinf(map_angle)*scaleFac.x);
+	ofxVec2f vy(sinf(map_angle)*scaleFac.y, cosf(map_angle)*scaleFac.y);
 
 	for (from_fiducial = fiducials.begin(); from_fiducial != fiducials.end(); from_fiducial++)
 	{
@@ -245,8 +257,10 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 			continue;
 
 		// Locate the fiducials centers
-		from_ref.set(from_fiducial->getX(), from_fiducial->getY());
-		to_ref.set(to_fiducial->getX(), to_fiducial->getY());
+		from_ref.set(from_fiducial->getX()	- map_ref.x,
+					 from_fiducial->getY()	- map_ref.y);
+		to_ref.set	(to_fiducial->getX()	- map_ref.x,
+					 to_fiducial->getY()	- map_ref.y);
 
 		from_ref.map(origin, vx, vy);
 		to_ref.map(origin, vx, vy);
@@ -254,9 +268,8 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 		from_ref.rotateRad(-map_angle, map_ref);
 		to_ref.rotateRad(-map_angle, map_ref);
 */		
-
-		from.set(from_ref.x, from_ref.y + 4*(from_fiducial->getRootSize()/map_rsize));
-		to.set(to_ref.x, to_ref.y + 4*(to_fiducial->getRootSize()/map_rsize));
+		from.set(from_ref.x, from_ref.y + QUERY_POINT_OFFSET*(from_fiducial->getRootSize()/map_rsize));
+		to.set(to_ref.x, to_ref.y + QUERY_POINT_OFFSET*(to_fiducial->getRootSize()/map_rsize));
 
 		from.rotateRad(from_fiducial->getAngle(), from_ref);
 		to.rotateRad(to_fiducial->getAngle(), to_ref);
@@ -264,6 +277,22 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 		epicentre = from.getMiddle(to);
 		angle = (from_ref-epicentre).angleRad(to_ref-epicentre);
 
+#ifdef USE_GEO_DATA
+		
+		ofPoint timeInterval(MIN_TIMESTAMP_YEAR + TIMESTAMP_RANGE_YEARS * (from_fiducial->getAngle() / TWO_PI),
+							 MIN_TIMESTAMP_YEAR + TIMESTAMP_RANGE_YEARS * (to_fiducial->getAngle() / TWO_PI));
+
+		if (timeInterval.y > timeInterval.x)
+			geoData.query(from_fiducial->getId(), from, to, timeInterval);
+		else {
+			cout<< "Attempted invalid query. "
+				<< "Paul suspects you have something in mind when you are trying this." << endl;
+			// is this what you had in mind?
+//			swap(timeInterval.x, timeInterval.y);
+//			geoData.query(from_fiducial->getId(), from, to, timeInterval);
+		}
+#endif
+		
 		POIs.push_back(make_pair("from_" + ofToString(from_fiducial->getId()), from));
 		POIs.push_back(make_pair("to_" + ofToString(to_fiducial->getId()), to));
 		cout << "angle = " << angle << endl;

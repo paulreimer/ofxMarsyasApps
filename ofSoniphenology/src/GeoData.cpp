@@ -28,7 +28,7 @@ GeoData::setup()
 		layer = datasource->GetLayerByName(layerName.c_str());
 #endif
 
-	startThread(false, false); // non-blocking, non-verbose
+	startThread(true, false); // blocking, non-verbose
 }
 
 //--------------------------------------------------------------
@@ -64,16 +64,23 @@ GeoData::threadedFunction()
 			continue;
 		}
 
-		for (req_iter = requests.begin(); req_iter != requests.end(); req_iter++)
+		req_iter = requests.begin();
+		while (req_iter != requests.end())
 		{
-			while (!lock())
-			{}
-			
+//			while (!lock())
+//			{}
+			lock();
+
 			int tag			= req_iter->first;
-			request_t &req	= req_iter->second;
+			request_t req	= req_iter->second;
+
+			++req_iter;
+			requests.erase(tag);
 
 			responses[tag].points.clear();
 
+			unlock();
+			
 			OGRFeature *feature;
 
 			layer->ResetReading();
@@ -88,8 +95,7 @@ GeoData::threadedFunction()
 
 			layer->SetAttributeFilter(where.str().c_str());
 
-			requests.erase(tag);
-			unlock();
+//			requests.erase(tag);
 			
 			OGRGeometry *geometry;
 			OGRPoint *point;
@@ -145,9 +151,11 @@ GeoData::threadedFunction()
 void
 GeoData::query(int tag, ofPoint from, ofPoint to, ofPoint timeInterval)
 {
-	while (!lock())
-		ofSleepMillis(1);
+//	while (!lock())
+//		ofSleepMillis(1);
 	
+	lock();
+
 	requests[tag].latitudeMin	= from.x;
 	requests[tag].latitudeMax	= to.x;
 
@@ -156,6 +164,6 @@ GeoData::query(int tag, ofPoint from, ofPoint to, ofPoint timeInterval)
 	
 	requests[tag].yearMin		= timeInterval.x;
 	requests[tag].yearMax		= timeInterval.y;
-	
+
 	unlock();
 }

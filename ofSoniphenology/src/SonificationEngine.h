@@ -17,5 +17,6 @@ public:
 	void update();
 	void draw();
 
-	map<int, GeoData::response_t>* responses;
+	GeoData* geoData;
+//	map<int, GeoData::response_t>* responses;
 };

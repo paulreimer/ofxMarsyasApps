@@ -22,8 +22,8 @@ public:
 	void destroy();
 
 	void query(int tag,
-			   ofPoint tlCorner,
-			   ofPoint brCorner,
+			   ofPoint nwCorner,
+			   ofPoint seCorner,
 			   ofPoint timeInterval);
 
 	string dataSourceName;
