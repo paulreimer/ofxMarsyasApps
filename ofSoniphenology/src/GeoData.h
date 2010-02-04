@@ -41,7 +41,8 @@ protected:
 	
 	struct response_t
 	{
-		vector<ofPoint> points;
+//		vector<ofPoint> points;
+		vector<string> dates;
 	};
 	
 private:

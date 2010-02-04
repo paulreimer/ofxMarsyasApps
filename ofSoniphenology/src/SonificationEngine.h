@@ -18,5 +18,10 @@ public:
 	void draw();
 
 	GeoData* geoData;
-//	map<int, GeoData::response_t>* responses;
+
+	int tempo;
+	map<int, string> instruments;
+private:
+	int nTicks;
+	int position;
 };

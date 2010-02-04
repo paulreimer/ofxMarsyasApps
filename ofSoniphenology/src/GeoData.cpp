@@ -1,11 +1,13 @@
 #include "GeoData.h"
 
+#define FIRST_BLOOM_COLUMN_IDX	12
+#define FULL_BLOOM_COLUMN_IDX	10
 //--------------------------------------------------------------
 GeoData::GeoData()
 {
-//	dataSourceName	= "PG:dbname=phenology host=opihi.cs.uvic.ca user=postgis password=p0stg1s";
+	dataSourceName	= "PG:dbname=phenology host=opihi.cs.uvic.ca user=postgis password=p0stg1s";
 //	dataSourceName	= "PG:dbname=phenology host=localhost user=postgis password=p0stg1s";
-	dataSourceName	= ofToDataPath("lilacs/japan_lilac.shp", true);
+//	dataSourceName	= ofToDataPath("lilacs/japan_lilac.shp", true);
 
 	layerName		= "japan_lilac";
 }
@@ -77,7 +79,7 @@ GeoData::threadedFunction()
 			++req_iter;
 			requests.erase(tag);
 
-			responses[tag].points.clear();
+			responses[tag].dates.clear();
 
 			unlock();
 			
@@ -95,51 +97,17 @@ GeoData::threadedFunction()
 
 			layer->SetAttributeFilter(where.str().c_str());
 
-//			requests.erase(tag);
-			
+/*			
 			OGRGeometry *geometry;
 			OGRPoint *point;
-
+*/
+			string first_bloom;
 			while( (feature = layer->GetNextFeature()) != NULL )
 			{
-				// Feature iteration
-				OGRFeatureDefn *fDefn;
-				int iField;
-				
-				fDefn = layer->GetLayerDefn();
-				
-				for(iField = 0; iField < fDefn->GetFieldCount(); iField++)
-				{
-					OGRFieldDefn *fieldDefn = fDefn->GetFieldDefn(iField);
-					
-					printf("%s: ", fieldDefn->GetNameRef());
-					switch (fieldDefn->GetType())
-					{
-						case OFTInteger:
-							printf("%d,", feature->GetFieldAsInteger(iField));
-							break;
-						case OFTReal:
-							printf("%.3f,", feature->GetFieldAsDouble(iField));
-							break;
-						default:
-						case OFTString:
-							printf("%s,", feature->GetFieldAsString(iField));
-							break;
-					}
-				}
-				
-				geometry = feature->GetGeometryRef();
-				if(geometry != NULL 
-				   && wkbFlatten(geometry->getGeometryType()) == wkbPoint)
-				{
-					point = (OGRPoint*)geometry;
-					printf("%.3f,%3.f\n", point->getX(), point->getY());
-
-					responses[tag].points.push_back(ofPoint(point->getX(), point->getY()));
-				}
-				else
-					printf( "no point geometry\n" );
-				
+				first_bloom = feature->GetFieldAsString(FIRST_BLOOM_COLUMN_IDX);
+				lock();
+				responses[tag].dates.push_back(first_bloom);
+				unlock();
 				OGRFeature::DestroyFeature(feature);
 			}
 		}
@@ -167,3 +135,42 @@ GeoData::query(int tag, ofPoint from, ofPoint to, ofPoint timeInterval)
 
 	unlock();
 }
+
+/*
+OGRFeatureDefn *fDefn;
+int iField;
+
+fDefn = layer->GetLayerDefn();
+
+for(iField = 0; iField < fDefn->GetFieldCount(); iField++)
+{
+	OGRFieldDefn *fieldDefn = fDefn->GetFieldDefn(iField);
+	
+	printf("%s [%d]: ", fieldDefn->GetNameRef(), iField);
+	switch (fieldDefn->GetType())
+	{
+		case OFTInteger:
+			printf("%d,", feature->GetFieldAsInteger(iField));
+			break;
+		case OFTReal:
+			printf("%.3f,", feature->GetFieldAsDouble(iField));
+			break;
+		default:
+		case OFTString:
+			printf("%s,", feature->GetFieldAsString(iField));
+			break;
+	}
+}
+
+geometry = feature->GetGeometryRef();
+if(geometry != NULL 
+   && wkbFlatten(geometry->getGeometryType()) == wkbPoint)
+{
+	point = (OGRPoint*)geometry;
+	printf("%.3f,%3.f\n", point->getX(), point->getY());
+	
+	responses[tag].points.push_back(ofPoint(point->getX(), point->getY()));
+}
+else
+printf( "no point geometry\n" );
+*/				

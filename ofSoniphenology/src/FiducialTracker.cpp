@@ -11,8 +11,8 @@ FiducialTracker::FiducialTracker()
 	
 	threshold = 90;
 
-	blocksize	= 9;
-	offset		= 0;
+	blocksize	= 15;
+	offset		= 2;
 	invert		= true;
 	gauss		= false;
 }

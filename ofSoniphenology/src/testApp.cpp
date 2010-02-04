@@ -1,16 +1,8 @@
 #include "testApp.h"
-
-#define EVEN(n) (bool)((int)n % 2) 
-#define ODD(n) (!(bool)((int)n % 2))
-
-#define MAP_NW_CORNER_LAT			48
-#define MAP_NW_CORNER_LONG			121
-#define MAP_UNITS_TO_LAT_DEGREES	2.3/10
-#define MAP_UNITS_TO_LONG_DEGREES	2.3/10
-#define QUERY_POINT_OFFSET			4/MAP_UNITS_TO_LONG_DEGREES
-#define MIN_TIMESTAMP_YEAR			2000
-#define MAX_TIMESTAMP_YEAR			2010
-#define TIMESTAMP_RANGE_YEARS		MAX_TIMESTAMP_YEAR - MIN_TIMESTAMP_YEAR
+/*
+#define MAP_UNITS_TO_LAT_DEGREES	2.3*MAP_LAT_RANGE/7.65217
+#define MAP_UNITS_TO_LONG_DEGREES	2.3*MAP_LONG_RANGE/8.69565 
+*/
 
 struct fiducialById:
 public std::unary_function <ofxFiducial, bool>{
@@ -64,12 +56,25 @@ testApp::setup()
 
 	fiducials.setup();
 
-//	soundEngine.responses = &geoData.getResponses();
-	soundEngine.geoData = &geoData;
-
 	ofAddListener(fiducials.newFrame, this, &testApp::processFiducials);
 #endif
 	
+#ifdef USE_SONIFICATION_ENGINE
+	soundEngine.instruments[1*2] = "wav/bass";
+	soundEngine.instruments[2*2] = "wav/clarinet";
+	soundEngine.instruments[3*2] = "wav/english_horn";
+	soundEngine.instruments[4*2] = "wav/flute";
+	soundEngine.instruments[5*2] = "wav/french_horn";
+	soundEngine.instruments[6*2] = "wav/harpsichord";
+	soundEngine.instruments[7*2] = "wav/marimba";
+	soundEngine.instruments[8*2] = "wav/piano";
+	soundEngine.instruments[9*2] = "wav/tuba";
+
+#ifdef USE_GEO_DATA
+	soundEngine.geoData = &geoData;
+#endif
+#endif
+
 #ifdef USE_GUI
 #ifdef USE_FIDUCIAL_TRACKER
 	gui.addPage("Fiducials");
@@ -160,12 +165,6 @@ testApp::draw()
 		fiducial->drawCorners(0,0);
 	}
 
-	for (int i=0; i<POIs.size(); i++)
-	{
-		ofDrawBitmapString(POIs[i].first, POIs[i].second.x, POIs[i].second.y);
-		ofCircle(POIs[i].second.x, POIs[i].second.y, 5);
-	}
-
 	glPopMatrix();
 #endif
 }
@@ -194,6 +193,7 @@ testApp::mouseDragged(int x, int y, int button)
 void
 testApp::mousePressed(int x, int y, int button)
 {
+/*	
 #ifdef USE_GEO_DATA
 	ofPoint nwCorner(-90, 0);
 	ofPoint seCorner(90, 180);
@@ -201,6 +201,7 @@ testApp::mousePressed(int x, int y, int button)
 
 	geoData.query(1, nwCorner, seCorner, timeInterval);
 #endif
+*/
 }
 
 //--------------------------------------------------------------
@@ -220,67 +221,59 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 {	
 	list<ofxFiducial>::iterator from_fiducial, to_fiducial, fader_fiducial, map_fiducial;
 	
-	POIs.clear();
-
 	fader_fiducial = find_if(fiducials.begin(), fiducials.end(), fiducialById(FADER_FIDUCIAL_ID));
 	map_fiducial = find_if(fiducials.begin(), fiducials.end(), fiducialById(MAP_FIDUCIAL_ID));
 
 	int channel;
 	ofxVec2f from, to;
 	ofxVec2f from_ref, to_ref;
-	ofxVec2f epicentre;
-	double angle;
 
-	if (map_fiducial != fiducials.end())
+	if (map_fiducial != fiducials.end() && VALID_FIDUCIAL(map_fiducial))
 	{
 		map_ref.set(map_fiducial->getX(), map_fiducial->getY());
 		map_angle = map_fiducial->getAngle();
 		map_rsize = map_fiducial->getRootSize();
 	}
 	
-	ofPoint scaleFac(1/(map_rsize*MAP_UNITS_TO_LAT_DEGREES),
-					 1/(map_rsize*MAP_UNITS_TO_LONG_DEGREES));
-	// new co-ordinate system, in units of root size of map fiducial
-	// relative to center of map fiducial
-	ofPoint origin(MAP_NW_CORNER_LAT,MAP_NW_CORNER_LONG);
-	ofxVec2f vx(cosf(map_angle)*scaleFac.x, -sinf(map_angle)*scaleFac.x);
-	ofxVec2f vy(sinf(map_angle)*scaleFac.y, cosf(map_angle)*scaleFac.y);
-
 	for (from_fiducial = fiducials.begin(); from_fiducial != fiducials.end(); from_fiducial++)
 	{
-		if (from_fiducial->getId() == FADER_FIDUCIAL_ID || EVEN(from_fiducial->getId()))
+		if (from_fiducial->getId() == FADER_FIDUCIAL_ID
+			|| EVEN(from_fiducial->getId())
+			|| !VALID_FIDUCIAL(from_fiducial))
 			continue;
 
 		to_fiducial = find_if(fiducials.begin(), fiducials.end(), fiducialById(from_fiducial->getId()+1));
 
-		if (to_fiducial == fiducials.end())
+		if (to_fiducial == fiducials.end()
+			|| !VALID_FIDUCIAL(to_fiducial))
 			continue;
 
 		// Locate the fiducials centers
-		from_ref.set(from_fiducial->getX()	- map_ref.x,
-					 from_fiducial->getY()	- map_ref.y);
-		to_ref.set	(to_fiducial->getX()	- map_ref.x,
-					 to_fiducial->getY()	- map_ref.y);
+		from_ref.set((from_fiducial->getX()	- map_ref.x)/map_rsize,
+					 (from_fiducial->getY()	- map_ref.y)/map_rsize);
+		to_ref.set	((to_fiducial->getX()	- map_ref.x)/map_rsize,
+					 (to_fiducial->getY()	- map_ref.y)/map_rsize);
 
-		from_ref.map(origin, vx, vy);
-		to_ref.map(origin, vx, vy);
-/*
-		from_ref.rotateRad(-map_angle, map_ref);
-		to_ref.rotateRad(-map_angle, map_ref);
-*/		
+		from_ref.rotateRad(-map_angle);
+		to_ref.rotateRad(-map_angle);
+
+		from_ref.set(	ofMap(from_ref.x,	0.0, MAP_UNITS_LAT,	MAP_NW_CORNER_LAT,	MAP_SE_CORNER_LAT),
+						ofMap(from_ref.x,	0.0, MAP_UNITS_LONG,MAP_NW_CORNER_LONG, MAP_SE_CORNER_LONG));
+		to_ref.set(		ofMap(to_ref.x,		0.0, MAP_UNITS_LAT,	MAP_NW_CORNER_LAT,	MAP_SE_CORNER_LAT),
+						ofMap(to_ref.x,		0.0, MAP_UNITS_LONG,MAP_NW_CORNER_LONG,	MAP_SE_CORNER_LONG));
+
+//		cout << "from_ref @ (" << from_ref.x << "," << from_ref.y << ")" << endl;
+//		cout << "to_ref @ (" << to_ref.x << "," << to_ref.y << ")" << endl;
+
 		from.set(from_ref.x, from_ref.y + QUERY_POINT_OFFSET*(from_fiducial->getRootSize()/map_rsize));
 		to.set(to_ref.x, to_ref.y + QUERY_POINT_OFFSET*(to_fiducial->getRootSize()/map_rsize));
 
 		from.rotateRad(from_fiducial->getAngle(), from_ref);
 		to.rotateRad(to_fiducial->getAngle(), to_ref);
 
-		epicentre = from.getMiddle(to);
-		angle = (from_ref-epicentre).angleRad(to_ref-epicentre);
-
 #ifdef USE_GEO_DATA
-		
-		ofPoint timeInterval(MIN_TIMESTAMP_YEAR + TIMESTAMP_RANGE_YEARS * (from_fiducial->getAngle() / TWO_PI),
-							 MIN_TIMESTAMP_YEAR + TIMESTAMP_RANGE_YEARS * (to_fiducial->getAngle() / TWO_PI));
+		ofPoint timeInterval((int)ofMap(from_fiducial->getAngle(),	0, TWO_PI, MIN_TIMESTAMP_YEAR, MAX_TIMESTAMP_YEAR),
+							 (int)ofMap(to_fiducial->getAngle(),	0, TWO_PI, MIN_TIMESTAMP_YEAR, MAX_TIMESTAMP_YEAR));
 
 		if (timeInterval.y > timeInterval.x)
 			geoData.query(from_fiducial->getId(), from, to, timeInterval);
@@ -291,11 +284,10 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 //			swap(timeInterval.x, timeInterval.y);
 //			geoData.query(from_fiducial->getId(), from, to, timeInterval);
 		}
-#endif
-		
-		POIs.push_back(make_pair("from_" + ofToString(from_fiducial->getId()), from));
-		POIs.push_back(make_pair("to_" + ofToString(to_fiducial->getId()), to));
-		cout << "angle = " << angle << endl;
+#endif		
+//		cout << "Query from: (" << from.x			<< ","		<< from.y	<< ")"	<< endl;
+//		cout << "      to:   ("	<< to.x				<< ","		<< to.y		<< ")"	<< endl;
+//		cout << "between "		<< timeInterval.x	<< " and "	<< timeInterval.y	<< endl;
 	}
 }
 #endif

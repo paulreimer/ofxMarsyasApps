@@ -76,8 +76,7 @@ public:
 #ifdef USE_GEO_DATA
 	GeoData geoData;
 #endif
-	vector<pair<string, ofPoint> > POIs;
-	
+
 	ofxVec2f	map_ref;
 	float		map_angle;
 	float		map_rsize;
