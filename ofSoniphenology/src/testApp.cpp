@@ -193,7 +193,7 @@ testApp::mouseDragged(int x, int y, int button)
 void
 testApp::mousePressed(int x, int y, int button)
 {
-/*	
+/*
 #ifdef USE_GEO_DATA
 	ofPoint nwCorner(-90, 0);
 	ofPoint seCorner(90, 180);

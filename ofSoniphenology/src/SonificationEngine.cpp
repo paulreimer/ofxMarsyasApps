@@ -19,6 +19,7 @@ SonificationEngine::SonificationEngine(string name)
 {
 	nTicks		= 0;
 	position	= 0;
+	positionPrev= 0;
 	tempo		= 10;
 
 	priority	= 2;
@@ -123,8 +124,9 @@ SonificationEngine::update()
 			year_idx = year - MIN_TIMESTAMP_YEAR;
 			date_idx = (month*30.5) + day - MIN_TIMESTAMP_DAYS;
 
-			if (date_idx == position)
+			if (date_idx <= position && date_idx > positionPrev)
 			{
+				positionPrev = position;
 				updctrl("mrs_bool/mute_"	+ INSTRUMENT_NOTE(tag,year_idx),	false);
 				updctrl("mrs_natural/pos_"	+ INSTRUMENT_NOTE(tag,year_idx),	year_idx);
 			}

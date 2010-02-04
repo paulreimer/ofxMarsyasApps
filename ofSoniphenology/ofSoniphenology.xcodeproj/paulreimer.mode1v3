@@ -284,7 +284,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
+									<integer>13</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
@@ -327,7 +327,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SonificationEngine.cpp</string>
+								<string>testApp.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,11 +335,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SonificationEngine.cpp</string>
+										<string>testApp.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>871D1503111B6E5200480050</string>
+										<string>871D1523111B786C00480050</string>
 										<key>history</key>
 										<array>
 											<string>87E014881106D1E1002664D1</string>
@@ -407,12 +407,12 @@
 											<string>871D13F4111A342300480050</string>
 											<string>871D143B111A3E1F00480050</string>
 											<string>871D143D111A3E1F00480050</string>
-											<string>871D1454111A47CB00480050</string>
 											<string>871D1455111A47CB00480050</string>
-											<string>871D1486111A8DD000480050</string>
 											<string>871D1488111A8DD000480050</string>
-											<string>871D14E6111B603600480050</string>
-											<string>871D14FD111B63DA00480050</string>
+											<string>871D1511111B77E000480050</string>
+											<string>871D1512111B77E000480050</string>
+											<string>871D1513111B77E000480050</string>
+											<string>871D1514111B77E000480050</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -610,13 +610,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>871D1502111B6E2F00480050</string>
 		<string>871D14C4111B5C6800480050</string>
 		<string>871D14C5111B5C6800480050</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>874EB89F1101295500DE1A0D</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/paulreimer/Development/ofx/0061/apps/marsyas/ofSoniphenology/ofSoniphenology.xcodeproj</string>
+		<string>874EB89F1101295500DE1A0D</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 67 1439 788 0 0 1440 878 </string>
@@ -642,7 +641,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SonificationEngine.cpp</string>
+								<string>GeoData.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -711,7 +710,7 @@
 			<key>WindowToolGUID</key>
 			<string>874EB89F1101295500DE1A0D</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -835,7 +834,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -992,7 +991,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

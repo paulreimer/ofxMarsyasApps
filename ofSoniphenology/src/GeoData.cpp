@@ -1,6 +1,6 @@
 #include "GeoData.h"
 
-#define FIRST_BLOOM_COLUMN_IDX	12
+#define FIRST_BLOOM_COLUMN_IDX	6
 #define FULL_BLOOM_COLUMN_IDX	10
 //--------------------------------------------------------------
 GeoData::GeoData()
@@ -97,10 +97,22 @@ GeoData::threadedFunction()
 
 			layer->SetAttributeFilter(where.str().c_str());
 
-/*			
+//--------------------------------------------------------------------------			
 			OGRGeometry *geometry;
 			OGRPoint *point;
-*/
+			
+			OGRFeatureDefn *fDefn;
+			int iField;
+			
+			fDefn = layer->GetLayerDefn();
+			
+			for(iField = 0; iField < fDefn->GetFieldCount(); iField++)
+			{
+				OGRFieldDefn *fieldDefn = fDefn->GetFieldDefn( iField );
+				printf("%s [%d]: ", fieldDefn->GetNameRef(), iField);
+			}
+//--------------------------------------------------------------------------			
+			
 			string first_bloom;
 			while( (feature = layer->GetNextFeature()) != NULL )
 			{

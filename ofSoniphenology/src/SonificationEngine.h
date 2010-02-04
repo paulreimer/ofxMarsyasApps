@@ -23,5 +23,5 @@ public:
 	map<int, string> instruments;
 private:
 	int nTicks;
-	int position;
+	int position, positionPrev;
 };

@@ -105,7 +105,7 @@
 		ignoreCount = 0;
 		lineNumber = 256;
 		location = ofSoniphenologyDebug;
-		modificationTime = 287010345.927938;
+		modificationTime = 287012978.138277;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -403,7 +403,7 @@
 		fRef = 87FF81601112242B00341604 /* GeoData.cpp */;
 		name = "GeoData.cpp: 76";
 		rLen = 69;
-		rLoc = 1592;
+		rLoc = 1591;
 		rType = 0;
 		vrLen = 646;
 		vrLoc = 0;
@@ -460,7 +460,7 @@
 		comments = "'fanout' was not declared in this scope";
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		rLen = 1;
-		rLoc = 127;
+		rLoc = 129;
 		rType = 1;
 	};
 	871D149D111A8E3800480050 /* PBXTextBookmark */ = {
@@ -468,7 +468,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 129";
 		rLen = 0;
-		rLoc = 3320;
+		rLoc = 3394;
 		rType = 0;
 		vrLen = 576;
 		vrLoc = 3165;
@@ -478,7 +478,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 123";
 		rLen = 0;
-		rLoc = 3188;
+		rLoc = 3206;
 		rType = 0;
 		vrLen = 630;
 		vrLoc = 2764;
@@ -498,7 +498,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 290";
 		rLen = 0;
-		rLoc = 8474;
+		rLoc = 8469;
 		rType = 0;
 		vrLen = 996;
 		vrLoc = 7571;
@@ -508,7 +508,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 290";
 		rLen = 0;
-		rLoc = 8474;
+		rLoc = 8469;
 		rType = 0;
 		vrLen = 996;
 		vrLoc = 7571;
@@ -518,7 +518,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 290";
 		rLen = 0;
-		rLoc = 8474;
+		rLoc = 8469;
 		rType = 0;
 		vrLen = 1092;
 		vrLoc = 7306;
@@ -528,7 +528,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 123";
 		rLen = 0;
-		rLoc = 3188;
+		rLoc = 3206;
 		rType = 0;
 		vrLen = 630;
 		vrLoc = 2764;
@@ -538,7 +538,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 128";
 		rLen = 29;
-		rLoc = 3351;
+		rLoc = 3425;
 		rType = 0;
 		vrLen = 541;
 		vrLoc = 3073;
@@ -548,7 +548,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 56";
 		rLen = 0;
-		rLoc = 1515;
+		rLoc = 1533;
 		rType = 0;
 		vrLen = 868;
 		vrLoc = 971;
@@ -558,7 +558,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 63";
 		rLen = 0;
-		rLoc = 1810;
+		rLoc = 1828;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 1142;
@@ -568,7 +568,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 132";
 		rLen = 0;
-		rLoc = 3474;
+		rLoc = 3548;
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 1052;
@@ -588,7 +588,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 290";
 		rLen = 0;
-		rLoc = 8474;
+		rLoc = 8469;
 		rType = 0;
 		vrLen = 1092;
 		vrLoc = 7306;
@@ -638,7 +638,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 60";
 		rLen = 0;
-		rLoc = 1735;
+		rLoc = 1753;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 1414;
@@ -649,7 +649,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 57;
+		rLoc = 58;
 		rType = 1;
 	};
 	871D14F6111B63A000480050 /* PBXTextBookmark */ = {
@@ -657,7 +657,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 58";
 		rLen = 0;
-		rLoc = 1577;
+		rLoc = 1595;
 		rType = 0;
 		vrLen = 802;
 		vrLoc = 1136;
@@ -668,7 +668,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 57;
+		rLoc = 58;
 		rType = 1;
 	};
 	871D14FA111B63B800480050 /* PBXTextBookmark */ = {
@@ -686,7 +686,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 58";
 		rLen = 0;
-		rLoc = 1577;
+		rLoc = 1595;
 		rType = 0;
 		vrLen = 802;
 		vrLoc = 1136;
@@ -696,7 +696,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 113";
 		rLen = 0;
-		rLoc = 2979;
+		rLoc = 2997;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 2599;
@@ -706,7 +706,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 113";
 		rLen = 0;
-		rLoc = 2979;
+		rLoc = 2997;
 		rType = 0;
 		vrLen = 467;
 		vrLoc = 2073;
@@ -716,7 +716,7 @@
 		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
 		name = "SonificationEngine.cpp: 113";
 		rLen = 0;
-		rLoc = 2979;
+		rLoc = 2997;
 		rType = 0;
 		vrLen = 622;
 		vrLoc = 2363;
@@ -730,6 +730,155 @@
 		rType = 0;
 		vrLen = 575;
 		vrLoc = 0;
+	};
+	871D150E111B77DE00480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
+		name = "SonificationEngine.cpp: 3";
+		rLen = 0;
+		rLoc = 118;
+		rType = 0;
+		vrLen = 539;
+		vrLoc = 0;
+	};
+	871D150F111B77DE00480050 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'struct GeoData::response_t' has no member named 'points'";
+		fRef = 87FF81601112242B00341604 /* GeoData.cpp */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 113;
+		rType = 1;
+	};
+	871D1510111B77DE00480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF81601112242B00341604 /* GeoData.cpp */;
+		name = "GeoData.cpp: 138";
+		rLen = 0;
+		rLoc = 2548;
+		rType = 0;
+		vrLen = 614;
+		vrLoc = 2275;
+	};
+	871D1511111B77E000480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF80FB1112173100341604 /* SonificationEngine.h */;
+		name = "SonificationEngine.h: 26";
+		rLen = 0;
+		rLoc = 445;
+		rType = 0;
+		vrLen = 368;
+		vrLoc = 82;
+	};
+	871D1512111B77E000480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF80FA1112173100341604 /* SonificationEngine.cpp */;
+		name = "SonificationEngine.cpp: 127";
+		rLen = 0;
+		rLoc = 3323;
+		rType = 0;
+		vrLen = 830;
+		vrLoc = 1188;
+	};
+	871D1513111B77E000480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF81601112242B00341604 /* GeoData.cpp */;
+		name = "GeoData.cpp: 103";
+		rLen = 0;
+		rLoc = 2270;
+		rType = 0;
+		vrLen = 690;
+		vrLoc = 2425;
+	};
+	871D1514111B77E000480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 68";
+		rLen = 0;
+		rLoc = 1905;
+		rType = 0;
+		vrLen = 549;
+		vrLoc = 0;
+	};
+	871D1515111B77E000480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 204";
+		rLen = 0;
+		rLoc = 5100;
+		rType = 0;
+		vrLen = 551;
+		vrLoc = 4622;
+	};
+	871D1518111B780900480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 204";
+		rLen = 0;
+		rLoc = 5100;
+		rType = 0;
+		vrLen = 485;
+		vrLoc = 4622;
+	};
+	871D151D111B782800480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 204";
+		rLen = 0;
+		rLoc = 5100;
+		rType = 0;
+		vrLen = 485;
+		vrLoc = 4622;
+	};
+	871D151F111B785A00480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF81601112242B00341604 /* GeoData.cpp */;
+		name = "GeoData.cpp: 114";
+		rLen = 0;
+		rLoc = 2548;
+		rType = 0;
+		vrLen = 646;
+		vrLoc = 2275;
+	};
+	871D1520111B786700480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF81601112242B00341604 /* GeoData.cpp */;
+		name = "GeoData.cpp: 114";
+		rLen = 0;
+		rLoc = 2548;
+		rType = 0;
+		vrLen = 646;
+		vrLoc = 2274;
+	};
+	871D1523111B786C00480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 204";
+		rLen = 0;
+		rLoc = 5100;
+		rType = 0;
+		vrLen = 551;
+		vrLoc = 4622;
+	};
+	871D1524111B788A00480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF81601112242B00341604 /* GeoData.cpp */;
+		name = "GeoData.cpp: 114";
+		rLen = 0;
+		rLoc = 2548;
+		rType = 0;
+		vrLen = 646;
+		vrLoc = 2274;
+	};
+	871D1525111B788D00480050 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 87FF81601112242B00341604 /* GeoData.cpp */;
+		name = "GeoData.cpp: 114";
+		rLen = 0;
+		rLoc = 2548;
+		rType = 0;
+		vrLen = 646;
+		vrLoc = 2274;
 	};
 	87242595110A4CCA00818640 /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -1485,9 +1634,9 @@
 	};
 	87FF80FA1112173100341604 /* SonificationEngine.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1308, 2400}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1308, 2384}}";
 			sepNavSelRange = "{118, 0}";
-			sepNavVisRange = "{0, 575}";
+			sepNavVisRange = "{0, 539}";
 		};
 	};
 	87FF80FB1112173100341604 /* SonificationEngine.h */ = {
@@ -1509,9 +1658,9 @@
 	};
 	87FF81601112242B00341604 /* GeoData.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {993, 2832}}";
-			sepNavSelRange = "{2368, 0}";
-			sepNavVisRange = "{0, 542}";
+			sepNavIntBoundsRect = "{{0, 0}, {1308, 2928}}";
+			sepNavSelRange = "{2548, 0}";
+			sepNavVisRange = "{2274, 646}";
 		};
 	};
 	87FF81611112242B00341604 /* GeoData.h */ = {
@@ -1810,6 +1959,21 @@
 			871D1501111B6E2F00480050 /* PBXTextBookmark */ = 871D1501111B6E2F00480050 /* PBXTextBookmark */;
 			871D1503111B6E5200480050 /* PBXTextBookmark */ = 871D1503111B6E5200480050 /* PBXTextBookmark */;
 			871D1504111B741100480050 /* PBXTextBookmark */ = 871D1504111B741100480050 /* PBXTextBookmark */;
+			871D150E111B77DE00480050 /* PBXTextBookmark */ = 871D150E111B77DE00480050 /* PBXTextBookmark */;
+			871D150F111B77DE00480050 /* XCBuildMessageTextBookmark */ = 871D150F111B77DE00480050 /* XCBuildMessageTextBookmark */;
+			871D1510111B77DE00480050 /* PBXTextBookmark */ = 871D1510111B77DE00480050 /* PBXTextBookmark */;
+			871D1511111B77E000480050 /* PBXTextBookmark */ = 871D1511111B77E000480050 /* PBXTextBookmark */;
+			871D1512111B77E000480050 /* PBXTextBookmark */ = 871D1512111B77E000480050 /* PBXTextBookmark */;
+			871D1513111B77E000480050 /* PBXTextBookmark */ = 871D1513111B77E000480050 /* PBXTextBookmark */;
+			871D1514111B77E000480050 /* PBXTextBookmark */ = 871D1514111B77E000480050 /* PBXTextBookmark */;
+			871D1515111B77E000480050 /* PBXTextBookmark */ = 871D1515111B77E000480050 /* PBXTextBookmark */;
+			871D1518111B780900480050 /* PBXTextBookmark */ = 871D1518111B780900480050 /* PBXTextBookmark */;
+			871D151D111B782800480050 /* PBXTextBookmark */ = 871D151D111B782800480050 /* PBXTextBookmark */;
+			871D151F111B785A00480050 /* PBXTextBookmark */ = 871D151F111B785A00480050 /* PBXTextBookmark */;
+			871D1520111B786700480050 /* PBXTextBookmark */ = 871D1520111B786700480050 /* PBXTextBookmark */;
+			871D1523111B786C00480050 /* PBXTextBookmark */ = 871D1523111B786C00480050 /* PBXTextBookmark */;
+			871D1524111B788A00480050 /* PBXTextBookmark */ = 871D1524111B788A00480050 /* PBXTextBookmark */;
+			871D1525111B788D00480050 /* PBXTextBookmark */ = 871D1525111B788D00480050 /* PBXTextBookmark */;
 			87242595110A4CCA00818640 = 87242595110A4CCA00818640 /* PBXBookmark */;
 			872429D6110BE74000818640 = 872429D6110BE74000818640 /* PBXTextBookmark */;
 			87242A24110D470400818640 = 87242A24110D470400818640 /* PBXTextBookmark */;
@@ -1857,9 +2021,9 @@
 	};
 	E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1003, 4736}}";
-			sepNavSelRange = "{1905, 0}";
-			sepNavVisRange = "{0, 524}";
+			sepNavIntBoundsRect = "{{0, 0}, {1003, 4928}}";
+			sepNavSelRange = "{5100, 0}";
+			sepNavVisRange = "{4622, 551}";
 		};
 	};
 	E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {
