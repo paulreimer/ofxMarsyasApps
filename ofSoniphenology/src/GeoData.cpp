@@ -97,10 +97,7 @@ GeoData::threadedFunction()
 
 			layer->SetAttributeFilter(where.str().c_str());
 
-//--------------------------------------------------------------------------			
-			OGRGeometry *geometry;
-			OGRPoint *point;
-			
+/*
 			OGRFeatureDefn *fDefn;
 			int iField;
 			
@@ -111,7 +108,7 @@ GeoData::threadedFunction()
 				OGRFieldDefn *fieldDefn = fDefn->GetFieldDefn( iField );
 				printf("%s [%d]: ", fieldDefn->GetNameRef(), iField);
 			}
-//--------------------------------------------------------------------------			
+*/
 			
 			string first_bloom;
 			while( (feature = layer->GetNextFeature()) != NULL )
@@ -147,42 +144,3 @@ GeoData::query(int tag, ofPoint from, ofPoint to, ofPoint timeInterval)
 
 	unlock();
 }
-
-/*
-OGRFeatureDefn *fDefn;
-int iField;
-
-fDefn = layer->GetLayerDefn();
-
-for(iField = 0; iField < fDefn->GetFieldCount(); iField++)
-{
-	OGRFieldDefn *fieldDefn = fDefn->GetFieldDefn(iField);
-	
-	printf("%s [%d]: ", fieldDefn->GetNameRef(), iField);
-	switch (fieldDefn->GetType())
-	{
-		case OFTInteger:
-			printf("%d,", feature->GetFieldAsInteger(iField));
-			break;
-		case OFTReal:
-			printf("%.3f,", feature->GetFieldAsDouble(iField));
-			break;
-		default:
-		case OFTString:
-			printf("%s,", feature->GetFieldAsString(iField));
-			break;
-	}
-}
-
-geometry = feature->GetGeometryRef();
-if(geometry != NULL 
-   && wkbFlatten(geometry->getGeometryType()) == wkbPoint)
-{
-	point = (OGRPoint*)geometry;
-	printf("%.3f,%3.f\n", point->getX(), point->getY());
-	
-	responses[tag].points.push_back(ofPoint(point->getX(), point->getY()));
-}
-else
-printf( "no point geometry\n" );
-*/				

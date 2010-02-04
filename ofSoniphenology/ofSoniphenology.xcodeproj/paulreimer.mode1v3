@@ -284,7 +284,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>13</integer>
+									<integer>5</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
@@ -327,7 +327,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>testApp.cpp</string>
+								<string>GeoData.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,11 +335,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>testApp.cpp</string>
+										<string>GeoData.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>871D1523111B786C00480050</string>
+										<string>871D1529111B870400480050</string>
 										<key>history</key>
 										<array>
 											<string>87E014881106D1E1002664D1</string>
@@ -411,8 +411,8 @@
 											<string>871D1488111A8DD000480050</string>
 											<string>871D1511111B77E000480050</string>
 											<string>871D1512111B77E000480050</string>
-											<string>871D1513111B77E000480050</string>
-											<string>871D1514111B77E000480050</string>
+											<string>871D1527111B870400480050</string>
+											<string>871D1528111B870400480050</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -613,9 +613,9 @@
 		<string>871D14C4111B5C6800480050</string>
 		<string>871D14C5111B5C6800480050</string>
 		<string>1C78EAAD065D492600B07095</string>
-		<string>/Users/paulreimer/Development/ofx/0061/apps/marsyas/ofSoniphenology/ofSoniphenology.xcodeproj</string>
-		<string>874EB89F1101295500DE1A0D</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>874EB89F1101295500DE1A0D</string>
+		<string>/Users/paulreimer/Development/ofx/0061/apps/marsyas/ofSoniphenology/ofSoniphenology.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 67 1439 788 0 0 1440 878 </string>
@@ -710,7 +710,7 @@
 			<key>WindowToolGUID</key>
 			<string>874EB89F1101295500DE1A0D</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -834,7 +834,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
