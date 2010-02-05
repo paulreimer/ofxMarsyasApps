@@ -227,6 +227,7 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 	int channel;
 	ofxVec2f from, to;
 	ofxVec2f from_ref, to_ref;
+	double from_angle, to_angle;
 
 	if (map_fiducial != fiducials.end() && VALID_FIDUCIAL(map_fiducial))
 	{
@@ -248,6 +249,9 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 			|| !VALID_FIDUCIAL(to_fiducial))
 			continue;
 
+		from_angle	= from_fiducial->getAngle() + map_angle;
+		to_angle	= to_fiducial->getAngle() + map_angle;
+
 		// Locate the fiducials centers
 		from_ref.set((from_fiducial->getX()	- map_ref.x)/map_rsize,
 					 (from_fiducial->getY()	- map_ref.y)/map_rsize);
@@ -268,12 +272,12 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 		from.set(from_ref.x, from_ref.y + QUERY_POINT_OFFSET*(from_fiducial->getRootSize()/map_rsize));
 		to.set(to_ref.x, to_ref.y + QUERY_POINT_OFFSET*(to_fiducial->getRootSize()/map_rsize));
 
-		from.rotateRad(from_fiducial->getAngle(), from_ref);
-		to.rotateRad(to_fiducial->getAngle(), to_ref);
+		from.rotateRad(from_angle, from_ref);
+		to.rotateRad(to_angle, to_ref);
 
 #ifdef USE_GEO_DATA
-		ofPoint timeInterval((int)ofMap(from_fiducial->getAngle(),	0, TWO_PI, MIN_TIMESTAMP_YEAR, MAX_TIMESTAMP_YEAR),
-							 (int)ofMap(to_fiducial->getAngle(),	0, TWO_PI, MIN_TIMESTAMP_YEAR, MAX_TIMESTAMP_YEAR));
+		ofPoint timeInterval((int)ofMap(from_angle,	0, TWO_PI, MIN_TIMESTAMP_YEAR, MAX_TIMESTAMP_YEAR),
+							 (int)ofMap(to_angle,	0, TWO_PI, MIN_TIMESTAMP_YEAR, MAX_TIMESTAMP_YEAR));
 
 		if (timeInterval.y > timeInterval.x)
 			geoData.query(from_fiducial->getId(), from, to, timeInterval);

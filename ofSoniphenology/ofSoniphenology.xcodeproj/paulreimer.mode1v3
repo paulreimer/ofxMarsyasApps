@@ -284,7 +284,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>13</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
@@ -327,7 +327,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GeoData.cpp</string>
+								<string>testApp.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,11 +335,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GeoData.cpp</string>
+										<string>testApp.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>871D1529111B870400480050</string>
+										<string>871D152D111B98BA00480050</string>
 										<key>history</key>
 										<array>
 											<string>87E014881106D1E1002664D1</string>
@@ -410,9 +410,9 @@
 											<string>871D1455111A47CB00480050</string>
 											<string>871D1488111A8DD000480050</string>
 											<string>871D1511111B77E000480050</string>
-											<string>871D1512111B77E000480050</string>
-											<string>871D1527111B870400480050</string>
-											<string>871D1528111B870400480050</string>
+											<string>871D152A111B98BA00480050</string>
+											<string>871D152B111B98BA00480050</string>
+											<string>871D152C111B98BA00480050</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

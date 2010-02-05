@@ -128,7 +128,7 @@ SonificationEngine::update()
 			{
 				positionPrev = position;
 				updctrl("mrs_bool/mute_"	+ INSTRUMENT_NOTE(tag,year_idx),	false);
-				updctrl("mrs_natural/pos_"	+ INSTRUMENT_NOTE(tag,year_idx),	year_idx);
+				updctrl("mrs_natural/pos_"	+ INSTRUMENT_NOTE(tag,year_idx),	0);
 			}
 		}
 
