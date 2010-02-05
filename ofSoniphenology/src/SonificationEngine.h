@@ -20,8 +20,9 @@ public:
 	GeoData* geoData;
 
 	int tempo;
-	map<int, string> instruments;
+	map<int, string>			instruments;
+	map<int, map<int,int> >	offsets;
 private:
 	int nTicks;
-	int position, positionPrev;
+	int position;
 };

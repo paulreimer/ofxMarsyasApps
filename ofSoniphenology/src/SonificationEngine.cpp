@@ -19,7 +19,6 @@ SonificationEngine::SonificationEngine(string name)
 {
 	nTicks		= 0;
 	position	= 0;
-	positionPrev= 0;
 	tempo		= 10;
 
 	priority	= 2;
@@ -97,6 +96,7 @@ SonificationEngine::update()
 	
 	int year, month, day;
 	int year_idx, date_idx;
+	int instrument;
 	
 	geoData->lock();
 	resp_iter = geoData->responses.begin();
@@ -110,32 +110,47 @@ SonificationEngine::update()
 		std::locale slasher(std::locale::classic(), new slash_skipper);
 		stringstream strstrm;
 		strstrm.imbue(slasher);
-
+		
 		cout << "Response to query " << tag << ", dates: " << resp.dates.size() << endl;
 		for (date_iter = resp.dates.begin();
 			 date_iter != resp.dates.end();
 			 date_iter++)
 		{
-			cout << "Date: " << *date_iter << endl;
+//			cout << "Date: " << *date_iter << endl;
 
 			strstrm.str(*date_iter);
 			strstrm >> year >> month >> day;
 
 			year_idx = year - MIN_TIMESTAMP_YEAR;
 			date_idx = (month*30.5) + day - MIN_TIMESTAMP_DAYS;
-
-			if (date_idx <= position && date_idx > positionPrev)
-			{
-				positionPrev = position;
-				updctrl("mrs_bool/mute_"	+ INSTRUMENT_NOTE(tag,year_idx),	false);
-				updctrl("mrs_natural/pos_"	+ INSTRUMENT_NOTE(tag,year_idx),	0);
-			}
+			
+			offsets[tag][year_idx] = date_idx;			
 		}
 
 		++resp_iter;
 		geoData->responses.erase(tag);
 	}
 	geoData->unlock();
+
+	map<int, map<int,int> >::iterator	instr_iter;
+	map<int,int>::iterator				year_iter;
+
+	for (instr_iter = offsets.begin(); instr_iter != offsets.end(); instr_iter++)
+	{
+		instrument	= instr_iter->first;
+		
+		for (year_iter = instr_iter->second.begin(); year_iter != instr_iter->second.end(); year_iter++)
+		{
+			year_idx	= year_iter->first;
+			date_idx	= year_iter->second;
+
+			if (date_idx == position)
+			{
+				updctrl("mrs_bool/mute_"	+ INSTRUMENT_NOTE(instrument,year_idx),	false);
+				updctrl("mrs_natural/pos_"	+ INSTRUMENT_NOTE(instrument,year_idx),	0);
+			}
+		}
+	}
 }
 
 //--------------------------------------------------------------
