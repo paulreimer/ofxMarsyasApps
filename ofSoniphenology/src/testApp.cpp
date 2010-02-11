@@ -60,13 +60,13 @@ testApp::setup()
 #endif
 	
 #ifdef USE_SONIFICATION_ENGINE
-	soundEngine.instruments[1*2] = "wav/flute";
-	soundEngine.instruments[2*2] = "wav/clarinet";
-	soundEngine.instruments[3*2] = "wav/marimba";
+	soundEngine.instruments[2*2] = "wav/flute";
+	soundEngine.instruments[1*2] = "wav/clarinet";
+//	soundEngine.instruments[3*2] = "wav/marimba";
 //	soundEngine.instruments[4*2] = "wav/flute";
-//	soundEngine.instruments[5*2] = "wav/french_horn";
+	soundEngine.instruments[3*2] = "wav/french_horn";
 //	soundEngine.instruments[6*2] = "wav/bass";
-//	soundEngine.instruments[7*2] = "wav/english_horn";
+//	soundEngine.instruments[3*2] = "wav/english_horn";
 //	soundEngine.instruments[8*2] = "wav/piano";
 //	soundEngine.instruments[9*2] = "wav/tuba";
 
@@ -146,7 +146,8 @@ testApp::draw()
 	cameraImage.draw(0,0, ofGetWidth(),ofGetHeight());
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 
-//	soundEngine.draw(0,ofGetHeight()-100,ofGetWidth(),100);
+	float xpos = 1 + defaultSimpleGuiConfig.gridSize.x + defaultSimpleGuiConfig.offset.x - defaultSimpleGuiConfig.padding.x;
+	soundEngine.draw(xpos,ofGetHeight()-120, ofGetWidth()-xpos,100);
 #ifdef USE_GUI
 	gui.draw();
 #endif

@@ -116,7 +116,9 @@ GeoData::threadedFunction()
 					days > MIN_TIMESTAMP_DAYS && days < MAX_TIMESTAMP_DAYS)
 				{
 					year_idx = yyyy-MIN_TIMESTAMP_YEAR;					
-					date_idx = (int)ofMap(days, 0, 365, 0, 70);
+					date_idx = (int)ofMap(days,
+										  MIN_TIMESTAMP_DAYS, MAX_TIMESTAMP_DAYS,
+										  0, TIMESTAMP_RANGE_DAYS);
 
 					cout<< "year_idx "	<< year_idx
 						<< " date_idx "	<< date_idx

@@ -21,7 +21,7 @@ SonificationEngine::SonificationEngine(string name)
 {
 	nTicks		= 0;
 	position	= 0;
-	tempo		= 10;
+	tempo		= TEMPO_TICKS;
 
 	priority	= 4;
 
@@ -61,6 +61,7 @@ SonificationEngine::setup()
 			linkctrl("mrs_natural/pos_"		+ INSTRUMENT_NOTE(instr,note),
 					 source->getAbsPath()	+ "mrs_natural/pos");
 
+			source->updctrl("mrs_real/repetitions",	1.);
 			source->updctrl("mrs_string/filename",	filename);
 			source->updctrl("mrs_bool/mute",		true);
 		}
@@ -88,7 +89,7 @@ SonificationEngine::update()
 	}
 	
 	// Place to wrap around
-	if ((position+1) % 90 == 0)
+	if ((position+1) % (TIMESTAMP_RANGE_DAYS + 5) == 0)
 	{
 		position = 0;
 		cout << endl;
@@ -162,17 +163,22 @@ void SonificationEngine::draw(float x, float y, float w, float h)
 	msaColor color;
 
 	glPushMatrix();
-	glTranslatef(x, y, 0.);
+	glTranslatef(x, y+h, 0.);
+	glScalef(1., -1., 1.);
 	
 	ofSetColor(0x777777);
-	cout << "From 0 to " << (TIMESTAMP_RANGE_YEARS/2) << endl;
-	for (int i=0; i<(TIMESTAMP_RANGE_YEARS/2); i++)
+	for (int i=0; i<TIMESTAMP_RANGE_YEARS; i++)
 	{
-		cout << "Line " << i << endl;
+		if (i%2)
+			ofSetLineWidth(2.0);
+		else
+			ofSetLineWidth(1.0);
+
 		ofLine(0, i*(h/TIMESTAMP_RANGE_YEARS),
 			   w, i*(h/TIMESTAMP_RANGE_YEARS));
 	}
-/*
+	ofSetLineWidth(1.0);
+
 	geoData->lock();
 	for (instr_iter = geoData->responses.begin();
 		 instr_iter != geoData->responses.end();
@@ -180,7 +186,9 @@ void SonificationEngine::draw(float x, float y, float w, float h)
 	{
 		instrument	= instr_iter->first;
 		roygbiv = (roygbiv+1) % 7;
+
 		color.setHSV(roygbiv*360., 1., 1., 1.);
+		color.setGL();
 
 		for (year_iter = instr_iter->second.offsets.begin();
 			 year_iter != instr_iter->second.offsets.end();
@@ -191,10 +199,22 @@ void SonificationEngine::draw(float x, float y, float w, float h)
 			
 			ofCircle(ofMap(date_idx, 0, TIMESTAMP_RANGE_DAYS,	0, w),
 					 ofMap(year_idx, 0, TIMESTAMP_RANGE_YEARS,	0, h),
-					 h/TIMESTAMP_RANGE_YEARS);
+					 (h/TIMESTAMP_RANGE_YEARS)-1);
 		}
 	}
 	geoData->unlock();
-*/
+	
+	if (position < smoothedPosition)
+		smoothedPosition = position;
+	else
+		smoothedPosition = ofLerp(smoothedPosition, position, 0.05);
+
+	float sequencerPos = ofMap(smoothedPosition, 0, TIMESTAMP_RANGE_DAYS, 0, w);
+	
+	ofSetColor(0xdadada);
+	ofSetLineWidth(3.0);
+	ofLine(sequencerPos, 0, sequencerPos, h);
+	ofSetLineWidth(1.0);
+
 	glPopMatrix();
 }

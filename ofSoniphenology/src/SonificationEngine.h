@@ -3,7 +3,7 @@
 #include "ofxMarsyasNetwork.h"
 #include "ofxMSAInteractiveObject.h"
 #include "marsyas/Fanout.h"
-
+#include "settings.h"
 #include "GeoData.h"
 
 class SonificationEngine
@@ -26,4 +26,5 @@ public:
 private:
 	int nTicks;
 	int position;
+	float smoothedPosition;
 };
