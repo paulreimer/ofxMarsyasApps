@@ -16,12 +16,13 @@ public:
 	void setup();
 	void update();
 	void draw();
+	void draw(float x, float y);
+	void draw(float x, float y, float w, float h);
 
 	GeoData* geoData;
 
 	int tempo;
-	map<int, string>			instruments;
-	map<int, map<int,int> >	offsets;
+	map<int, string> instruments;
 private:
 	int nTicks;
 	int position;

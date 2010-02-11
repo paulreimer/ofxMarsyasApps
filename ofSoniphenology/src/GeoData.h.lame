@@ -26,8 +26,6 @@ public:
 			   ofPoint seCorner,
 			   ofPoint timeInterval);
 
-	void unquery(int tag);
-
 	string dataSourceName;
 	string layerName;
 
@@ -44,8 +42,7 @@ protected:
 	struct response_t
 	{
 //		vector<ofPoint> points;
-//		vector<string> dates;
-		map<int, int> offsets;
+		vector<string> dates;
 	};
 	
 private:
@@ -53,10 +50,10 @@ private:
 	OGRDataSource	*datasource;
     OGRLayer		*layer;
 #endif
-
 	map<int, request_t> requests;
 	map<int, response_t> responses;
 	
-	OGRPolygon MakeRect(double dfMinX, double dfMinY,
-						double dfMaxX, double dfMaxY);
+public:	
+	map<int, response_t>& getResponses() { return responses; }
+
 };

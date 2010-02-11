@@ -27,6 +27,7 @@ void FiducialTracker::setup()
 {
 #ifdef USE_OPENCV
 	imThreshold.allocate(VIDEO_SIZE);
+	imThreshold.set(0);
 #endif
 
 	//detect finger is off by default
@@ -98,6 +99,10 @@ void FiducialTracker::draw(float x, float y, float w, float h)
 			 fiducial != tracker.fiducialsList.end();
 			 fiducial++)
 		{
+			if (fiducial->getX() == FIDUCIAL_INVALID_COORDS
+				&& fiducial->getY() == FIDUCIAL_INVALID_COORDS)
+				continue;
+
 			ofSetColor(0x00ff00);
 			fiducial->draw(0,0);
 			ofSetColor(0x0000ff);

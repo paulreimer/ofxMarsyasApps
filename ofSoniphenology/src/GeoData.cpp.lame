@@ -7,6 +7,9 @@ GeoData::GeoData()
 {
 	dataSourceName	= "PG:dbname=phenology host=opihi.cs.uvic.ca user=postgis password=p0stg1s";
 //	dataSourceName	= "PG:dbname=phenology host=localhost user=postgis password=p0stg1s";
+//	dataSourceName	= ofToDataPath("lilacs/japan_lilac.shp", true);
+
+	layerName		= "japan_lilac";
 }
 
 //--------------------------------------------------------------
@@ -23,6 +26,8 @@ GeoData::setup()
 	OGRRegisterAll();
 	
     datasource = OGRSFDriverRegistrar::Open(dataSourceName.c_str(), FALSE);
+    if(datasource!=NULL)
+		layer = datasource->GetLayerByName(layerName.c_str());
 #endif
 
 	startThread(true, false); // blocking, non-verbose
@@ -36,9 +41,6 @@ GeoData::destroy()
 		stopThread();
 
 #ifdef USE_GEO_DATA
-	if (layer != NULL)
-		datasource->ReleaseResultSet(layer);
-
 	if (datasource != NULL)
 		OGRDataSource::DestroyDataSource(datasource);
 #endif
@@ -50,14 +52,11 @@ void
 GeoData::threadedFunction()
 {
 #ifdef USE_GEO_DATA
-	if (datasource==NULL)
+	if (datasource==NULL || layer==NULL)
 		return;
 
 	map<int, request_t>::iterator req_iter;
 	map<int, response_t>::iterator resp_iter;
-
-	double	yyyy,		days;
-	int		year_idx,	date_idx;
 
 	for (;;)
 	{
@@ -80,54 +79,46 @@ GeoData::threadedFunction()
 			++req_iter;
 			requests.erase(tag);
 
-			responses[tag].offsets.clear();
+			responses[tag].dates.clear();
 
 			unlock();
-
+			
 			OGRFeature *feature;
 
-			stringstream q;
-			q<<"select"
-				<<" extract(year from first_bloom) as yyyy,"
-				<<" avg(extract(doy from first_bloom)) as days"
-			<<" from"
-				<<" japan_lilac"
-			<<" where"
-				<<" (first_bloom, '0'::interval) overlaps" <<"("
-					<< "'" << req.yearMin <<"-01-01'::date,"
-					<< "'" << req.yearMax <<"-01-01'::date"
-				<<")"
-			<<" group by"
-				<<" yyyy"
-			<<";";
+			layer->ResetReading();
 
-			layer = datasource->ExecuteSQL(q.str().c_str(),
-										   &(MakeRect(req.latitudeMin, req.longitudeMin,
-													  req.latitudeMax, req.longitudeMax)),
-										   NULL);
+			layer->SetSpatialFilterRect(req.latitudeMin, req.longitudeMin,
+										req.latitudeMax, req.longitudeMax);
 
-			lock();
+			stringstream where;
+			where << "first_bloom >= 'January 1, " << req.yearMin << "'";
+			where << " AND ";
+			where << "first_bloom <= 'January 1, " << req.yearMax << "'";
+
+			layer->SetAttributeFilter(where.str().c_str());
+
+/*
+			OGRFeatureDefn *fDefn;
+			int iField;
+			
+			fDefn = layer->GetLayerDefn();
+			
+			for(iField = 0; iField < fDefn->GetFieldCount(); iField++)
+			{
+				OGRFieldDefn *fieldDefn = fDefn->GetFieldDefn( iField );
+				printf("%s [%d]: ", fieldDefn->GetNameRef(), iField);
+			}
+*/
+			
+			string first_bloom;
 			while( (feature = layer->GetNextFeature()) != NULL )
 			{
-				yyyy = feature->GetFieldAsDouble(0);
-				days = feature->GetFieldAsDouble(1);
-
-				if (yyyy > MIN_TIMESTAMP_YEAR && yyyy < MAX_TIMESTAMP_YEAR &&
-					days > MIN_TIMESTAMP_DAYS && days < MAX_TIMESTAMP_DAYS)
-				{
-					year_idx = yyyy-MIN_TIMESTAMP_YEAR;					
-					date_idx = (int)ofMap(days, 0, 365, 0, 70);
-
-					cout<< "year_idx "	<< year_idx
-						<< " date_idx "	<< date_idx
-						<< endl;
-					
-					responses[tag].offsets[year_idx] = date_idx;
-				}
-
+				first_bloom = feature->GetFieldAsString(FIRST_BLOOM_COLUMN_IDX);
+				lock();
+				responses[tag].dates.push_back(first_bloom);
+				unlock();
 				OGRFeature::DestroyFeature(feature);
 			}
-			unlock();
 		}
 	}
 #endif
@@ -152,34 +143,4 @@ GeoData::query(int tag, ofPoint from, ofPoint to, ofPoint timeInterval)
 	requests[tag].yearMax		= timeInterval.y;
 
 	unlock();
-}
-
-//--------------------------------------------------------------
-void
-GeoData::unquery(int tag)
-{	
-	lock();
-
-	requests.erase(tag);
-	responses.erase(tag);
-	
-	unlock();
-}
-
-//--------------------------------------------------------------
-OGRPolygon GeoData::MakeRect(double dfMinX, double dfMinY, 
-					   double dfMaxX, double dfMaxY)
-{
-    OGRLinearRing oRing;
-    OGRPolygon oPoly;
-	
-    oRing.addPoint(dfMinX, dfMinY);
-    oRing.addPoint(dfMinX, dfMaxY);
-    oRing.addPoint(dfMaxX, dfMaxY);
-    oRing.addPoint(dfMaxX, dfMinY);
-    oRing.addPoint(dfMinX, dfMinY);
-	
-    oPoly.addRing(&oRing);
-
-	return oPoly;
 }

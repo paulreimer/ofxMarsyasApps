@@ -60,15 +60,15 @@ testApp::setup()
 #endif
 	
 #ifdef USE_SONIFICATION_ENGINE
-	soundEngine.instruments[1*2] = "wav/bass";
+	soundEngine.instruments[1*2] = "wav/flute";
 	soundEngine.instruments[2*2] = "wav/clarinet";
-	soundEngine.instruments[3*2] = "wav/english_horn";
-	soundEngine.instruments[4*2] = "wav/flute";
-	soundEngine.instruments[5*2] = "wav/french_horn";
-	soundEngine.instruments[6*2] = "wav/harpsichord";
-	soundEngine.instruments[7*2] = "wav/marimba";
-	soundEngine.instruments[8*2] = "wav/piano";
-	soundEngine.instruments[9*2] = "wav/tuba";
+	soundEngine.instruments[3*2] = "wav/marimba";
+//	soundEngine.instruments[4*2] = "wav/flute";
+//	soundEngine.instruments[5*2] = "wav/french_horn";
+//	soundEngine.instruments[6*2] = "wav/bass";
+//	soundEngine.instruments[7*2] = "wav/english_horn";
+//	soundEngine.instruments[8*2] = "wav/piano";
+//	soundEngine.instruments[9*2] = "wav/tuba";
 
 #ifdef USE_GEO_DATA
 	soundEngine.geoData = &geoData;
@@ -76,11 +76,15 @@ testApp::setup()
 #endif
 
 #ifdef USE_GUI
+	gui.setup();
+	defaultSimpleGuiConfig.gridSize.x = 200;
+	defaultSimpleGuiConfig.gridSize.y = 32;
 #ifdef USE_FIDUCIAL_TRACKER
 	gui.addPage("Fiducials");
-	gui.addContent("RGB",		imRGB);
-	gui.addContent("BW",		imBW);
-	gui.addContent("Threshold",	fiducials.imThreshold, VIDEO_WIDTH);
+	gui.addContent("RGB",		imRGB, 180);
+	gui.addContent("BW",		imBW, 180);
+	gui.addContent("Threshold",	fiducials.imThreshold, 180);
+	gui.addContent("Fiducials",	fiducials, 180);
 #ifdef PREFER_OPENCV
 	gui.addSlider("Block Size",	fiducials.blocksize, 0, 49);
 	gui.addSlider("Offset",		fiducials.offset, 0, 100);
@@ -89,11 +93,14 @@ testApp::setup()
 #else
 	gui.addSlider("Threshold",	fiducials.threshold, 0, 255);
 #endif
-	gui.addContent("Fiducials",	fiducials);
+#endif
+	
+#ifdef USE_CAMERA
+//	gui.addContent("Camera View", cameraImage, 320);
 #endif
 //	gui.setup();
 #endif
-	
+
 #ifdef USE_GEO_DATA
 	geoData.setup();
 #endif
@@ -123,7 +130,7 @@ testApp::update()
 		fiducials.update();
 #endif
 	}
-	
+
 #ifdef USE_CAMERA
 	if (cameraGrabber.isFrameNew())
 		cameraImage.setFromPixels(cameraGrabber.getPixels(), CAMERA_SIZE, OF_IMAGE_COLOR);
@@ -135,37 +142,13 @@ void
 testApp::draw()
 {
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
-	bg.draw(0,0, ofGetWidth(), ofGetHeight());
+//	bg.draw(0,0, ofGetWidth(), ofGetHeight());
+	cameraImage.draw(0,0, ofGetWidth(),ofGetHeight());
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 
-#ifdef USE_CAMERA
-	cameraImage.draw(ofGetWidth() - (CAMERA_WIDTH/1.5) - 10,
-					 ofGetHeight() - (CAMERA_HEIGHT/1.5) - 10,
-					 CAMERA_WIDTH/1.5,
-					 CAMERA_HEIGHT/1.5);
-#endif	
-	
+//	soundEngine.draw(0,ofGetHeight()-100,ofGetWidth(),100);
 #ifdef USE_GUI
 	gui.draw();
-#endif
-	
-#ifdef USE_FIDUCIAL_TRACKER
-	glPushMatrix();
-//	glTranslatef(x, y, 0.);
-	glScalef(ofGetWidth()/fiducials.getWidth(),
-			 ofGetHeight()/fiducials.getHeight(), 1.);
-
-	for (list<ofxFiducial>::iterator fiducial = fiducials.tracker.fiducialsList.begin();
-		 fiducial != fiducials.tracker.fiducialsList.end();
-		 fiducial++)
-	{
-		ofSetColor(0x00ff00);
-		fiducial->draw(0,0);
-		ofSetColor(0x0000ff);
-		fiducial->drawCorners(0,0);
-	}
-
-	glPopMatrix();
 #endif
 }
 
@@ -193,15 +176,15 @@ testApp::mouseDragged(int x, int y, int button)
 void
 testApp::mousePressed(int x, int y, int button)
 {
-/*
+	static int instr_idx;
 #ifdef USE_GEO_DATA
 	ofPoint nwCorner(-90, 0);
 	ofPoint seCorner(90, 180);
 	ofPoint timeInterval(1905, 2010);
 
-	geoData.query(1, nwCorner, seCorner, timeInterval);
+	instr_idx +=2;
+	geoData.query(instr_idx, nwCorner, seCorner, timeInterval);
 #endif
-*/
 }
 
 //--------------------------------------------------------------
@@ -239,18 +222,24 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 	for (from_fiducial = fiducials.begin(); from_fiducial != fiducials.end(); from_fiducial++)
 	{
 		if (from_fiducial->getId() == FADER_FIDUCIAL_ID
-			|| EVEN(from_fiducial->getId())
-			|| !VALID_FIDUCIAL(from_fiducial))
+			|| EVEN(from_fiducial->getId()))
 			continue;
 
 		to_fiducial = find_if(fiducials.begin(), fiducials.end(), fiducialById(from_fiducial->getId()+1));
 
-		if (to_fiducial == fiducials.end()
-			|| !VALID_FIDUCIAL(to_fiducial))
+		if (to_fiducial == fiducials.end())
 			continue;
+		
+		if (!VALID_FIDUCIAL(to_fiducial) || !VALID_FIDUCIAL(from_fiducial))
+		{
+#ifdef USE_GEO_DATA
+			geoData.unquery(from_fiducial->getId());
+#endif		
+			continue;
+		}
 
-		from_angle	= from_fiducial->getAngle() + map_angle;
-		to_angle	= to_fiducial->getAngle() + map_angle;
+		from_angle	= from_fiducial->getAngle()	- map_angle;
+		to_angle	= to_fiducial->getAngle()	- map_angle;
 
 		// Locate the fiducials centers
 		from_ref.set((from_fiducial->getX()	- map_ref.x)/map_rsize,
@@ -268,30 +257,36 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 
 //		cout << "from_ref @ (" << from_ref.x << "," << from_ref.y << ")" << endl;
 //		cout << "to_ref @ (" << to_ref.x << "," << to_ref.y << ")" << endl;
-
+/*
 		from.set(from_ref.x, from_ref.y + QUERY_POINT_OFFSET*(from_fiducial->getRootSize()/map_rsize));
 		to.set(to_ref.x, to_ref.y + QUERY_POINT_OFFSET*(to_fiducial->getRootSize()/map_rsize));
 
 		from.rotateRad(from_angle, from_ref);
 		to.rotateRad(to_angle, to_ref);
+*/
+		from = from_ref;
+		to = to_ref;
+		
+		if (from_angle < 0)
+			from_angle += TWO_PI;
 
-#ifdef USE_GEO_DATA
+		if (to_angle < 0)
+			to_angle += TWO_PI;
+
 		ofPoint timeInterval((int)ofMap(from_angle,	0, TWO_PI, MIN_TIMESTAMP_YEAR, MAX_TIMESTAMP_YEAR),
 							 (int)ofMap(to_angle,	0, TWO_PI, MIN_TIMESTAMP_YEAR, MAX_TIMESTAMP_YEAR));
 
-		if (timeInterval.y > timeInterval.x)
-			geoData.query(from_fiducial->getId(), from, to, timeInterval);
-		else {
-			cout<< "Attempted invalid query. "
-				<< "Paul suspects you have something in mind when you are trying this." << endl;
-			// is this what you had in mind?
-//			swap(timeInterval.x, timeInterval.y);
-//			geoData.query(from_fiducial->getId(), from, to, timeInterval);
-		}
+		if (timeInterval.x > timeInterval.y)
+			swap(timeInterval.x, timeInterval.y);
+
+#ifdef USE_GEO_DATA
+		geoData.query(from_fiducial->getId(), from, to, timeInterval);
 #endif		
 //		cout << "Query from: (" << from.x			<< ","		<< from.y	<< ")"	<< endl;
 //		cout << "      to:   ("	<< to.x				<< ","		<< to.y		<< ")"	<< endl;
-//		cout << "between "		<< timeInterval.x	<< " and "	<< timeInterval.y	<< endl;
+//		cout<< "between "	<< timeInterval.x << "(" << from_angle	<< ")"
+//			<< "and "		<< timeInterval.y << "(" << to_angle	<< ")"
+//			<< endl;
 	}
 }
 #endif
