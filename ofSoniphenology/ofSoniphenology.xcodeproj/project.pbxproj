@@ -217,7 +217,6 @@
 		877ED528110814ED00E93390 /* ofxFiducialTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxFiducialTracker.cpp; path = ../../../addons/ofxFiducialFinder/src/ofxFiducialTracker.cpp; sourceTree = SOURCE_ROOT; };
 		877ED529110814ED00E93390 /* ofxFiducialTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxFiducialTracker.h; path = ../../../addons/ofxFiducialFinder/src/ofxFiducialTracker.h; sourceTree = SOURCE_ROOT; };
 		877ED52A110814ED00E93390 /* ofxFinger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxFinger.h; path = ../../../addons/ofxFiducialFinder/src/ofxFinger.h; sourceTree = SOURCE_ROOT; };
-		877ED52C110814ED00E93390 /* legacy90.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = legacy90.pdf; path = ../../../addons/ofxFiducialFinder/Symbols/legacy90.pdf; sourceTree = SOURCE_ROOT; };
 		87E013F71106AD93002664D1 /* libmarsyas.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmarsyas.a; path = /usr/local/lib/libmarsyas.a; sourceTree = "<absolute>"; };
 		87E5CBF91124828200C80FB0 /* msaColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = msaColor.h; path = src/msaColor.h; sourceTree = SOURCE_ROOT; };
 		87FF80FA1112173100341604 /* SonificationEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SonificationEngine.cpp; path = src/SonificationEngine.cpp; sourceTree = SOURCE_ROOT; };
@@ -595,7 +594,6 @@
 			isa = PBXGroup;
 			children = (
 				877ED519110814ED00E93390 /* src */,
-				877ED52B110814ED00E93390 /* Symbols */,
 			);
 			name = ofxFiducialFinder;
 			path = ../../../addons/ofxFiducialFinder;
@@ -630,15 +628,6 @@
 			);
 			name = libfidtrack;
 			path = ../../../addons/ofxFiducialFinder/src/libfidtrack;
-			sourceTree = SOURCE_ROOT;
-		};
-		877ED52B110814ED00E93390 /* Symbols */ = {
-			isa = PBXGroup;
-			children = (
-				877ED52C110814ED00E93390 /* legacy90.pdf */,
-			);
-			name = Symbols;
-			path = ../../../addons/ofxFiducialFinder/Symbols;
 			sourceTree = SOURCE_ROOT;
 		};
 		E45BE0360E8CC5DE009D7055 /* libs */ = {

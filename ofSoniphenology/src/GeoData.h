@@ -27,6 +27,7 @@ public:
 			   ofPoint timeInterval);
 
 	void unquery(int tag);
+	void clear();
 
 	string dataSourceName;
 	string layerName;

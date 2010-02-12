@@ -60,11 +60,11 @@ testApp::setup()
 #endif
 	
 #ifdef USE_SONIFICATION_ENGINE
-	soundEngine.instruments[2*2] = "wav/flute";
+	soundEngine.instruments[4*2] = "wav/flute";
 	soundEngine.instruments[1*2] = "wav/clarinet";
 //	soundEngine.instruments[3*2] = "wav/marimba";
 //	soundEngine.instruments[4*2] = "wav/flute";
-	soundEngine.instruments[3*2] = "wav/french_horn";
+	soundEngine.instruments[5*2] = "wav/french_horn";
 //	soundEngine.instruments[6*2] = "wav/bass";
 //	soundEngine.instruments[3*2] = "wav/english_horn";
 //	soundEngine.instruments[8*2] = "wav/piano";
@@ -88,11 +88,13 @@ testApp::setup()
 #ifdef PREFER_OPENCV
 	gui.addSlider("Block Size",	fiducials.blocksize, 0, 49);
 	gui.addSlider("Offset",		fiducials.offset, 0, 100);
-	gui.addToggle("Gauss",		fiducials.gauss);
-	gui.addToggle("Invert",		fiducials.invert);
+//	gui.addToggle("Gauss",		fiducials.gauss);
+//	gui.addToggle("Invert",		fiducials.invert);
 #else
 	gui.addSlider("Threshold",	fiducials.threshold, 0, 255);
 #endif
+	gui.addSlider("Tempo",		soundEngine.tempo, 1, 50);
+//	gui.addSlider("Smoothing",	soundEngine.lerpFactor, 0., 1.);
 #endif
 	
 #ifdef USE_CAMERA
@@ -177,6 +179,7 @@ testApp::mouseDragged(int x, int y, int button)
 void
 testApp::mousePressed(int x, int y, int button)
 {
+/*	
 	static int instr_idx;
 #ifdef USE_GEO_DATA
 	ofPoint nwCorner(-90, 0);
@@ -186,6 +189,7 @@ testApp::mousePressed(int x, int y, int button)
 	instr_idx +=2;
 	geoData.query(instr_idx, nwCorner, seCorner, timeInterval);
 #endif
+*/
 }
 
 //--------------------------------------------------------------
@@ -219,7 +223,8 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 		map_angle = map_fiducial->getAngle();
 		map_rsize = map_fiducial->getRootSize();
 	}
-	
+
+//	geoData.clear();
 	for (from_fiducial = fiducials.begin(); from_fiducial != fiducials.end(); from_fiducial++)
 	{
 		if (from_fiducial->getId() == FADER_FIDUCIAL_ID
@@ -230,8 +235,10 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 
 		if (to_fiducial == fiducials.end())
 			continue;
+
 		
-		if (!VALID_FIDUCIAL(to_fiducial) || !VALID_FIDUCIAL(from_fiducial))
+//		if (!VALID_FIDUCIAL(to_fiducial) || !VALID_FIDUCIAL(from_fiducial))
+		if (to_fiducial->life <= 10 || to_fiducial->life <= 10)
 		{
 #ifdef USE_GEO_DATA
 			geoData.unquery(from_fiducial->getId());

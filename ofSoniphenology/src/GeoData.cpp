@@ -80,8 +80,6 @@ GeoData::threadedFunction()
 			++req_iter;
 			requests.erase(tag);
 
-			responses[tag].offsets.clear();
-
 			unlock();
 
 			OGRFeature *feature;
@@ -97,16 +95,22 @@ GeoData::threadedFunction()
 					<< "'" << req.yearMin <<"-01-01'::date,"
 					<< "'" << req.yearMax <<"-01-01'::date"
 				<<")"
+				<<" and"
+					<<" ST_Intersects("
+						<<"setSRID(Box2D_in('BOX("
+							<< req.latitudeMin << " " << req.longitudeMin << ","
+							<< req.latitudeMax << " " << req.longitudeMax						
+						<<")'),4326),"
+						<<"geom"
+					<<")"
 			<<" group by"
 				<<" yyyy"
 			<<";";
 
-			layer = datasource->ExecuteSQL(q.str().c_str(),
-										   &(MakeRect(req.latitudeMin, req.longitudeMin,
-													  req.latitudeMax, req.longitudeMax)),
-										   NULL);
+			layer = datasource->ExecuteSQL(q.str().c_str(), NULL, NULL);
 
-			lock();
+			lock();			
+			responses[tag].offsets.clear();
 			while( (feature = layer->GetNextFeature()) != NULL )
 			{
 				yyyy = feature->GetFieldAsDouble(0);
@@ -119,10 +123,6 @@ GeoData::threadedFunction()
 					date_idx = (int)ofMap(days,
 										  MIN_TIMESTAMP_DAYS, MAX_TIMESTAMP_DAYS,
 										  0, TIMESTAMP_RANGE_DAYS);
-
-					cout<< "year_idx "	<< year_idx
-						<< " date_idx "	<< date_idx
-						<< endl;
 					
 					responses[tag].offsets[year_idx] = date_idx;
 				}
@@ -169,8 +169,21 @@ GeoData::unquery(int tag)
 }
 
 //--------------------------------------------------------------
-OGRPolygon GeoData::MakeRect(double dfMinX, double dfMinY, 
-					   double dfMaxX, double dfMaxY)
+void
+GeoData::clear()
+{	
+	lock();
+	
+//	requests.clear();
+	responses.clear();
+
+	unlock();
+}
+
+//--------------------------------------------------------------
+OGRPolygon
+GeoData::MakeRect(double dfMinX, double dfMinY, 
+				  double dfMaxX, double dfMaxY)
 {
     OGRLinearRing oRing;
     OGRPolygon oPoly;

@@ -22,6 +22,7 @@ SonificationEngine::SonificationEngine(string name)
 	nTicks		= 0;
 	position	= 0;
 	tempo		= TEMPO_TICKS;
+	lerpFactor	= 0.123;
 
 	priority	= 4;
 
@@ -89,7 +90,7 @@ SonificationEngine::update()
 	}
 	
 	// Place to wrap around
-	if ((position+1) % (TIMESTAMP_RANGE_DAYS + 5) == 0)
+	if ((position+1) % (TIMESTAMP_RANGE_DAYS) == 0)
 	{
 		position = 0;
 		cout << endl;
@@ -184,10 +185,10 @@ void SonificationEngine::draw(float x, float y, float w, float h)
 		 instr_iter != geoData->responses.end();
 		 instr_iter++)
 	{
-		instrument	= instr_iter->first;
+		instrument = instr_iter->first;
 		roygbiv = (roygbiv+1) % 7;
 
-		color.setHSV(roygbiv*360., 1., 1., 1.);
+		color.setHSV(roygbiv*(360./7.), 1., 1., 1.);
 		color.setGL();
 
 		for (year_iter = instr_iter->second.offsets.begin();
@@ -207,7 +208,7 @@ void SonificationEngine::draw(float x, float y, float w, float h)
 	if (position < smoothedPosition)
 		smoothedPosition = position;
 	else
-		smoothedPosition = ofLerp(smoothedPosition, position, 0.05);
+		smoothedPosition = ofLerp(smoothedPosition, position, lerpFactor);
 
 	float sequencerPos = ofMap(smoothedPosition, 0, TIMESTAMP_RANGE_DAYS, 0, w);
 	

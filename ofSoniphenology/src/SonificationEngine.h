@@ -22,6 +22,7 @@ public:
 	GeoData* geoData;
 
 	int tempo;
+	float lerpFactor;
 	map<int, string> instruments;
 private:
 	int nTicks;
