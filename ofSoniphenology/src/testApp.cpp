@@ -4,6 +4,7 @@
 #define MAP_UNITS_TO_LONG_DEGREES	2.3*MAP_LONG_RANGE/8.69565 
 */
 
+#ifdef USE_FIDUCIAL_TRACKER
 struct fiducialById:
 public std::unary_function <ofxFiducial, bool>{
 	int id;
@@ -13,6 +14,7 @@ public std::unary_function <ofxFiducial, bool>{
 		return fiducial.getId() == id;
 	}
 };
+#endif
 
 //--------------------------------------------------------------
 void
@@ -26,7 +28,9 @@ testApp::setup()
 	bg.loadImage("chrome/bg-dark.png");
 	bg.getTextureReference().setTextureWrap(GL_REPEAT, GL_REPEAT);
 
+#ifdef USE_CV	
 	ofSetFrameRate(VIDEO_FPS);
+#endif
 
 	glutSetWindowTitle("A tangible interface for sonification of geo-spatial and phenological data at multiple time-scales.");
 	
@@ -34,14 +38,15 @@ testApp::setup()
 	font.loadFont(ofToDataPath("HelveticaBold.ttf"), 12);
 	font_sm.loadFont(ofToDataPath("Helvetica.ttf"), 9);
 
-//	cvGrabber.listDevices();
+#ifdef USE_CV	
 	cvGrabber.setDesiredFrameRate(VIDEO_FPS);
 	cvGrabber.initGrabber(VIDEO_SIZE);
 	videoSize.set(VIDEO_SIZE);
 	
 	imRGB.allocate(VIDEO_SIZE);
 	imBW.allocate(VIDEO_SIZE);
-
+#endif
+	
 #ifdef USE_CAMERA
 	cameraGrabber.setDesiredFrameRate(24);
 	cameraGrabber.initGrabber(CAMERA_SIZE);
@@ -77,8 +82,11 @@ testApp::setup()
 
 #ifdef USE_GUI
 	gui.setup();
+<<<<<<< HEAD:ofSoniphenology/src/testApp.cpp
 	defaultSimpleGuiConfig.gridSize.x = 200;
 	defaultSimpleGuiConfig.gridSize.y = 32;
+=======
+>>>>>>> 14af018... Added USE_CV ifdefs, random queries to GeoData on mouse click:ofSoniphenology/src/testApp.cpp
 #ifdef USE_FIDUCIAL_TRACKER
 	gui.addPage("Fiducials");
 	gui.addContent("RGB",		imRGB, 180);
@@ -100,7 +108,6 @@ testApp::setup()
 #ifdef USE_CAMERA
 //	gui.addContent("Camera View", cameraImage, 320);
 #endif
-//	gui.setup();
 #endif
 
 #ifdef USE_GEO_DATA
@@ -116,11 +123,14 @@ testApp::setup()
 void
 testApp::update()
 {
+#ifdef USE_CV
 	cvGrabber.grabFrame();
+#endif
 #ifdef USE_CAMERA
 	cameraGrabber.grabFrame();
 #endif
 
+#ifdef USE_CV
 	if (cvGrabber.isFrameNew())
 	{
 #ifdef USE_OPENCV
@@ -132,6 +142,10 @@ testApp::update()
 		fiducials.update();
 #endif
 	}
+<<<<<<< HEAD:ofSoniphenology/src/testApp.cpp
+=======
+#endif
+>>>>>>> 14af018... Added USE_CV ifdefs, random queries to GeoData on mouse click:ofSoniphenology/src/testApp.cpp
 
 #ifdef USE_CAMERA
 	if (cameraGrabber.isFrameNew())
@@ -179,6 +193,7 @@ testApp::mouseDragged(int x, int y, int button)
 void
 testApp::mousePressed(int x, int y, int button)
 {
+<<<<<<< HEAD:ofSoniphenology/src/testApp.cpp
 /*	
 	static int instr_idx;
 #ifdef USE_GEO_DATA
@@ -188,8 +203,26 @@ testApp::mousePressed(int x, int y, int button)
 
 	instr_idx +=2;
 	geoData.query(instr_idx, nwCorner, seCorner, timeInterval);
+=======
+#ifdef USE_GEO_DATA
+	float bounds = 1/4.0;
+	ofPoint nwCorner(ofRandom(MAP_NW_CORNER_LAT,
+							  MAP_NW_CORNER_LAT + (MAP_RANGE_LAT*bounds)),
+					 ofRandom(MAP_NW_CORNER_LONG,
+							  MAP_SE_CORNER_LONG - (MAP_RANGE_LONG*bounds)));
+	ofPoint seCorner(ofRandom(MAP_NW_CORNER_LAT + (MAP_RANGE_LAT*bounds),
+							  MAP_SE_CORNER_LAT),
+					 ofRandom(MAP_SE_CORNER_LONG - (MAP_RANGE_LONG*bounds),
+							  MAP_SE_CORNER_LONG));
+	ofPoint timeInterval(ofRandom(MIN_TIMESTAMP_YEAR,
+								  MIN_TIMESTAMP_YEAR + (TIMESTAMP_RANGE_YEARS*bounds)),
+						 ofRandom(MAX_TIMESTAMP_YEAR - (TIMESTAMP_RANGE_YEARS*bounds),
+								  MAX_TIMESTAMP_YEAR));
+	
+	if (timeInterval.x > timeInterval.y)
+		swap(timeInterval.x, timeInterval.y);
+>>>>>>> 14af018... Added USE_CV ifdefs, random queries to GeoData on mouse click:ofSoniphenology/src/testApp.cpp
 #endif
-*/
 }
 
 //--------------------------------------------------------------
@@ -286,15 +319,10 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 
 		if (timeInterval.x > timeInterval.y)
 			swap(timeInterval.x, timeInterval.y);
-
+		
 #ifdef USE_GEO_DATA
 		geoData.query(from_fiducial->getId(), from, to, timeInterval);
-#endif		
-//		cout << "Query from: (" << from.x			<< ","		<< from.y	<< ")"	<< endl;
-//		cout << "      to:   ("	<< to.x				<< ","		<< to.y		<< ")"	<< endl;
-//		cout<< "between "	<< timeInterval.x << "(" << from_angle	<< ")"
-//			<< "and "		<< timeInterval.y << "(" << to_angle	<< ")"
-//			<< endl;
+#endif
 	}
 }
 #endif

@@ -47,12 +47,16 @@ public:
 
 	ofImage			bg;
 
+#ifdef USE_CV
 	ofVideoGrabber 	cvGrabber;
 	ofPoint			videoSize;
+#endif
 
+#ifdef USE_CV
 	ofVideoGrabber 	cameraGrabber;
 	ofImage			cameraImage;
-	
+#endif
+
 	ofTrueTypeFont	font;
 	ofTrueTypeFont	font_sm;
 

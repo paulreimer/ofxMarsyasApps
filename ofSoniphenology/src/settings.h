@@ -2,23 +2,28 @@
 
 //--------------------------------------------------------------
 // Features
-#undef	USE_CVD
-#define USE_OPENCV
 #define	USE_GUI
-#define	USE_FIDUCIAL_TRACKER
 #define	USE_SONIFICATION_ENGINE
 #define	USE_GEO_DATA
-#define	USE_CAMERA
+#undef	USE_CV
+#undef	USE_CAMERA
 
 //--------------------------------------------------------------
 // Video
+#ifdef	USE_CV
+
+#undef	USE_CVD
+#define USE_OPENCV
 #define	PREFER_OPENCV
+
+#define	USE_FIDUCIAL_TRACKER
 
 #define VIDEO_WIDTH		640
 #define VIDEO_HEIGHT	480
 #define VIDEO_SIZE		VIDEO_WIDTH,VIDEO_HEIGHT
 //#define	VIDEO_FPS		1000/(10)
 #define	VIDEO_FPS		120
+#endif
 
 #ifdef USE_CAMERA
 #define CAMERA_WIDTH	320
@@ -62,8 +67,12 @@
 #define MAP_UNITS_LAT				(1180./134.)
 #define MAP_UNITS_LONG				(1570./134.)
 
-#define MAP_LAT_RANGE				MAP_SE_CORNER_LAT - MAP_NW_CORNER_LAT
-#define MAP_LONG_RANGE				MAP_SE_CORNER_LONG - MAP_NW_CORNER_LONG
+#define MIN_MAP_ELEVATION			0.0
+#define MAX_MAP_ELEVATION			20.0
+
+#define MAP_RANGE_LAT				(MAP_SE_CORNER_LAT - MAP_NW_CORNER_LAT)
+#define MAP_RANGE_LONG				(MAP_SE_CORNER_LONG - MAP_NW_CORNER_LONG)
+#define MAP_RANGE_ELEVATION			(MAX_MAP_ELEVATION - MIN_MAP_ELEVATION)
 
 //#define QUERY_POINT_OFFSET			4/MAP_UNITS_TO_LONG_DEGREES
 #define QUERY_POINT_OFFSET			4

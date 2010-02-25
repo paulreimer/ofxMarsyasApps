@@ -25,13 +25,18 @@ public:
 	void draw(float x, float y);
 	void draw(float x, float y, float w, float h);
 
-	float getWidth() { return videoSize.x; }
-	float getHeight() { return videoSize.y; }
-
+#ifdef USE_CV
 #ifdef USE_OPENCV
 	ofxCvGrayscaleImage	*imBW;
 	ofxCvGrayscaleImage	imThreshold;
+#endif
 	ofPoint				videoSize;
+
+	float getWidth() { return videoSize.x; }
+	float getHeight() { return videoSize.y; }	
+#else
+	float getWidth() { return 0; }
+	float getHeight() { return 0; }	
 #endif
 
 	int threshold;

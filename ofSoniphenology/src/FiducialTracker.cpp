@@ -46,6 +46,7 @@ void FiducialTracker::destroy()
 //--------------------------------------------------------------
 void FiducialTracker::update()
 {
+#ifdef USE_CV
 	if (!getWidth() || !getHeight())
 		return;
 
@@ -71,12 +72,13 @@ void FiducialTracker::update()
 	
 	imThreshold.flagImageChanged();
 #endif
-	
+
 	if (bTrackFiducials)
-		tracker.findFiducials((unsigned char*)imThreshold.getCvImage()->imageData, videoSize.x, videoSize.y);
+		tracker.findFiducials((unsigned char*)imThreshold.getCvImage()->imageData, getWidth(), getHeight());
 	
 	if (!tracker.fiducialsList.empty())
 		ofNotifyEvent(newFrame, tracker.fiducialsList);
+#endif
 }
 
 //--------------------------------------------------------------
