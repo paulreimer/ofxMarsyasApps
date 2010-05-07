@@ -283,7 +283,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
+									<integer>5</integer>
 									<integer>3</integer>
 									<integer>0</integer>
 								</array>
@@ -326,7 +326,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>testApp.cpp</string>
+								<string>MarPanning3D.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -334,11 +334,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>testApp.cpp</string>
+										<string>MarPanning3D.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>87E80576119009D000B3FB3B</string>
+										<string>87E805961194C74500B3FB3B</string>
 										<key>history</key>
 										<array>
 											<string>87E80307118FC07300B3FB3B</string>
@@ -347,12 +347,12 @@
 											<string>87E8030D118FC07300B3FB3B</string>
 											<string>87E803E9118FE53600B3FB3B</string>
 											<string>87E803ED118FE53600B3FB3B</string>
-											<string>87E805011190064D00B3FB3B</string>
-											<string>87E805021190064D00B3FB3B</string>
-											<string>87E805031190064D00B3FB3B</string>
 											<string>87E805091190067D00B3FB3B</string>
 											<string>87E8051F1190072B00B3FB3B</string>
-											<string>87E805211190072B00B3FB3B</string>
+											<string>87E805901194C71100B3FB3B</string>
+											<string>87E805911194C71100B3FB3B</string>
+											<string>87E805941194C74500B3FB3B</string>
+											<string>87E805951194C74500B3FB3B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -550,14 +550,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>87E80577119009D000B3FB3B</string>
 		<string>87E80425118FE93100B3FB3B</string>
 		<string>87E80277118FB73900B3FB3B</string>
 		<string>87E80278118FB73900B3FB3B</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>874EB89F1101295500DE1A0D</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/paulreimer/Development/ofx/0061/apps/marsyas/ofMarPanning3D/ofMarPanning3D.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -901,7 +900,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1312, 724}}</string>
 								<key>RubberWindowFrame</key>
-								<string>102 113 1312 765 0 0 1440 878 </string>
+								<string>89 -783 1312 765 0 -900 1440 900 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -930,11 +929,11 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>102 113 1312 765 0 0 1440 878 </string>
+			<string>89 -783 1312 765 0 -900 1440 900 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

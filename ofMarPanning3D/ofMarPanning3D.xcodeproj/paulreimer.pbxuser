@@ -41,9 +41,9 @@
 	};
 	874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1308, 5536}}";
-			sepNavSelRange = "{4003, 0}";
-			sepNavVisRange = "{5476, 388}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 5472}}";
+			sepNavSelRange = "{261, 0}";
+			sepNavVisRange = "{0, 522}";
 		};
 	};
 	874EB5C7110123B700DE1A0D /* MarPanning3D.h */ = {
@@ -56,8 +56,8 @@
 	874EB5C8110123B700DE1A0D /* settings.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1118, 452}}";
-			sepNavSelRange = "{37, 0}";
-			sepNavVisRange = "{0, 155}";
+			sepNavSelRange = "{27, 0}";
+			sepNavVisRange = "{0, 154}";
 		};
 	};
 	874EB5CA110123B700DE1A0D /* Source Control */ = {
@@ -193,7 +193,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 9";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 633;
 		vrLoc = 468;
@@ -203,7 +203,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 83";
 		rLen = 0;
-		rLoc = 1700;
+		rLoc = 1725;
 		rType = 0;
 		vrLen = 702;
 		vrLoc = 327;
@@ -223,7 +223,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 174";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 646;
 		vrLoc = 2653;
@@ -233,7 +233,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 101";
 		rLen = 0;
-		rLoc = 356;
+		rLoc = 409;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 2187;
@@ -260,7 +260,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 9";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 664;
 		vrLoc = 441;
@@ -270,7 +270,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 9";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 664;
 		vrLoc = 441;
@@ -363,7 +363,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 154;
 		vrLoc = 14;
@@ -451,7 +451,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 182;
 		vrLoc = 14;
@@ -461,7 +461,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -531,7 +531,7 @@
 		fRef = 874EB5C8110123B700DE1A0D /* settings.h */;
 		name = "settings.h: 3";
 		rLen = 0;
-		rLoc = 38;
+		rLoc = 37;
 		rType = 0;
 		vrLen = 139;
 		vrLoc = 0;
@@ -541,7 +541,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 150";
 		rLen = 0;
-		rLoc = 1727;
+		rLoc = 1752;
 		rType = 0;
 		vrLen = 656;
 		vrLoc = 0;
@@ -551,7 +551,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 6";
 		rLen = 0;
-		rLoc = 62;
+		rLoc = 78;
 		rType = 0;
 		vrLen = 526;
 		vrLoc = 0;
@@ -594,7 +594,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -614,7 +614,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -656,7 +656,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -710,7 +710,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -730,7 +730,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -750,7 +750,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -800,7 +800,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 7";
 		rLen = 0;
-		rLoc = 277;
+		rLoc = 330;
 		rType = 0;
 		vrLen = 588;
 		vrLoc = 26;
@@ -810,7 +810,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -830,7 +830,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 7";
 		rLen = 0;
-		rLoc = 277;
+		rLoc = 330;
 		rType = 0;
 		vrLen = 544;
 		vrLoc = 2769;
@@ -840,7 +840,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 7";
 		rLen = 0;
-		rLoc = 277;
+		rLoc = 330;
 		rType = 0;
 		vrLen = 549;
 		vrLoc = 2799;
@@ -850,7 +850,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 7";
 		rLen = 0;
-		rLoc = 277;
+		rLoc = 330;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 1096;
@@ -860,7 +860,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 7";
 		rLen = 0;
-		rLoc = 277;
+		rLoc = 330;
 		rType = 0;
 		vrLen = 690;
 		vrLoc = 826;
@@ -870,7 +870,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -890,7 +890,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -910,7 +910,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -930,7 +930,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 152;
 		vrLoc = 14;
@@ -950,7 +950,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 70";
 		rLen = 0;
-		rLoc = 1493;
+		rLoc = 1527;
 		rType = 0;
 		vrLen = 645;
 		vrLoc = 0;
@@ -960,7 +960,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 150";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 1015;
 		vrLoc = 1100;
@@ -990,7 +990,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 117;
 		vrLoc = 14;
@@ -1010,7 +1010,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 7";
 		rLen = 0;
-		rLoc = 92;
+		rLoc = 116;
 		rType = 0;
 		vrLen = 152;
 		vrLoc = 14;
@@ -1030,7 +1030,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 168";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 273;
 		vrLoc = 4580;
@@ -1041,7 +1041,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 117;
+		rLoc = 123;
 		rType = 1;
 	};
 	87E802F7118FBF7500B3FB3B /* PBXTextBookmark */ = {
@@ -1049,7 +1049,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 87";
 		rLen = 0;
-		rLoc = 1727;
+		rLoc = 1752;
 		rType = 0;
 		vrLen = 212;
 		vrLoc = 2308;
@@ -1069,7 +1069,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 87";
 		rLen = 0;
-		rLoc = 1727;
+		rLoc = 1752;
 		rType = 0;
 		vrLen = 212;
 		vrLoc = 2308;
@@ -1088,7 +1088,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 414";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 131;
 		vrLoc = 10179;
@@ -1108,7 +1108,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 414";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 157;
 		vrLoc = 10179;
@@ -1202,7 +1202,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 486";
 		rLen = 32;
-		rLoc = 8003;
+		rLoc = 8066;
 		rType = 0;
 		vrLen = 453;
 		vrLoc = 11317;
@@ -1212,7 +1212,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 148";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 549;
 		vrLoc = 3678;
@@ -1222,7 +1222,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 134";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 665;
 		vrLoc = 3451;
@@ -1232,7 +1232,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 137";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 657;
 		vrLoc = 3451;
@@ -1242,7 +1242,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 70";
 		rLen = 0;
-		rLoc = 1493;
+		rLoc = 1527;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 0;
@@ -1252,7 +1252,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 70";
 		rLen = 0;
-		rLoc = 1493;
+		rLoc = 1527;
 		rType = 0;
 		vrLen = 613;
 		vrLoc = 2149;
@@ -1262,7 +1262,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 70";
 		rLen = 0;
-		rLoc = 1493;
+		rLoc = 1527;
 		rType = 0;
 		vrLen = 651;
 		vrLoc = 2149;
@@ -1272,7 +1272,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 10";
 		rLen = 0;
-		rLoc = 225;
+		rLoc = 227;
 		rType = 0;
 		vrLen = 1142;
 		vrLoc = 959;
@@ -1282,7 +1282,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 10";
 		rLen = 0;
-		rLoc = 225;
+		rLoc = 227;
 		rType = 0;
 		vrLen = 742;
 		vrLoc = 685;
@@ -1292,7 +1292,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 70";
 		rLen = 0;
-		rLoc = 1493;
+		rLoc = 1527;
 		rType = 0;
 		vrLen = 651;
 		vrLoc = 2149;
@@ -1302,7 +1302,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 72";
 		rLen = 0;
-		rLoc = 1510;
+		rLoc = 1537;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 1498;
@@ -1312,7 +1312,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 72";
 		rLen = 0;
-		rLoc = 1510;
+		rLoc = 1537;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 1498;
@@ -1321,7 +1321,7 @@
 		isa = PBXTextBookmark;
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		rLen = 0;
-		rLoc = 22;
+		rLoc = 23;
 		rType = 1;
 	};
 	87E80329118FC17000B3FB3B /* PBXTextBookmark */ = {
@@ -1329,7 +1329,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 22";
 		rLen = 0;
-		rLoc = 388;
+		rLoc = 441;
 		rType = 0;
 		vrLen = 579;
 		vrLoc = 3615;
@@ -1339,7 +1339,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 124";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 844;
 		vrLoc = 3191;
@@ -1349,7 +1349,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 11";
 		rLen = 0;
-		rLoc = 245;
+		rLoc = 298;
 		rType = 0;
 		vrLen = 415;
 		vrLoc = 26;
@@ -1359,7 +1359,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 11";
 		rLen = 0;
-		rLoc = 244;
+		rLoc = 297;
 		rType = 0;
 		vrLen = 437;
 		vrLoc = 26;
@@ -1369,7 +1369,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 12";
 		rLen = 0;
-		rLoc = 275;
+		rLoc = 328;
 		rType = 0;
 		vrLen = 441;
 		vrLoc = 63;
@@ -1379,7 +1379,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 396";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 134;
 		vrLoc = 10558;
@@ -1399,7 +1399,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 12";
 		rLen = 0;
-		rLoc = 275;
+		rLoc = 328;
 		rType = 0;
 		vrLen = 443;
 		vrLoc = 63;
@@ -1409,7 +1409,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 6";
 		rLen = 0;
-		rLoc = 62;
+		rLoc = 78;
 		rType = 0;
 		vrLen = 526;
 		vrLoc = 0;
@@ -1419,7 +1419,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 6";
 		rLen = 0;
-		rLoc = 62;
+		rLoc = 78;
 		rType = 0;
 		vrLen = 619;
 		vrLoc = 264;
@@ -1429,7 +1429,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 149";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 162;
 		vrLoc = 4109;
@@ -1478,7 +1478,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 149";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 162;
 		vrLoc = 4109;
@@ -1488,7 +1488,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 149";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 162;
 		vrLoc = 4109;
@@ -1508,7 +1508,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 6";
 		rLen = 0;
-		rLoc = 62;
+		rLoc = 78;
 		rType = 0;
 		vrLen = 608;
 		vrLoc = 279;
@@ -1518,7 +1518,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 345";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 470;
 		vrLoc = 9005;
@@ -1528,7 +1528,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 72";
 		rLen = 0;
-		rLoc = 1510;
+		rLoc = 1537;
 		rType = 0;
 		vrLen = 893;
 		vrLoc = 1457;
@@ -1558,7 +1558,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 345";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 3097;
@@ -1568,7 +1568,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 118";
 		rLen = 0;
-		rLoc = 3222;
+		rLoc = 3295;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 2137;
@@ -1578,7 +1578,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 232";
 		rLen = 0;
-		rLoc = 4401;
+		rLoc = 4473;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 6630;
@@ -1588,7 +1588,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 145";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 179;
 		vrLoc = 4095;
@@ -1599,7 +1599,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 119;
+		rLoc = 125;
 		rType = 1;
 	};
 	87E80359118FC7A000B3FB3B /* PBXTextBookmark */ = {
@@ -1607,7 +1607,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 125";
 		rLen = 0;
-		rLoc = 3376;
+		rLoc = 3449;
 		rType = 0;
 		vrLen = 220;
 		vrLoc = 3572;
@@ -1628,7 +1628,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 75;
+		rLoc = 77;
 		rType = 1;
 	};
 	87E8035E118FC7C400B3FB3B /* PBXTextBookmark */ = {
@@ -1636,7 +1636,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 77";
 		rLen = 0;
-		rLoc = 1702;
+		rLoc = 1727;
 		rType = 0;
 		vrLen = 222;
 		vrLoc = 5361;
@@ -1656,7 +1656,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 52";
 		rLen = 0;
-		rLoc = 937;
+		rLoc = 1066;
 		rType = 0;
 		vrLen = 536;
 		vrLoc = 539;
@@ -1706,7 +1706,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 85";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 1144;
 		vrLoc = 2244;
@@ -1716,7 +1716,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 345";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 741;
 		vrLoc = 4937;
@@ -1726,7 +1726,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 256";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 548;
 		vrLoc = 7101;
@@ -1736,7 +1736,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 248";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 707;
 		vrLoc = 6746;
@@ -1746,7 +1746,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 233";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 573;
 		vrLoc = 6576;
@@ -1756,7 +1756,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 85";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 1167;
 		vrLoc = 2241;
@@ -1766,7 +1766,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 97";
 		rLen = 15;
-		rLoc = 2377;
+		rLoc = 2402;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 2244;
@@ -1776,7 +1776,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 85";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 2123;
@@ -1786,7 +1786,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 85";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 1099;
 		vrLoc = 2123;
@@ -1796,7 +1796,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 233";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 573;
 		vrLoc = 6576;
@@ -1806,7 +1806,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 244";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 639;
 		vrLoc = 6732;
@@ -1816,7 +1816,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 233";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 672;
 		vrLoc = 6760;
@@ -1826,7 +1826,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 237";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 509;
 		vrLoc = 6705;
@@ -1836,7 +1836,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 239";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 534;
 		vrLoc = 6730;
@@ -1846,7 +1846,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 529;
 		vrLoc = 6731;
@@ -1856,7 +1856,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 550;
 		vrLoc = 6732;
@@ -1866,7 +1866,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 522;
 		vrLoc = 6576;
@@ -1876,7 +1876,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 522;
 		vrLoc = 6576;
@@ -1886,7 +1886,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 510;
 		vrLoc = 6648;
@@ -1896,7 +1896,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 233";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 511;
 		vrLoc = 6648;
@@ -1906,7 +1906,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 520;
 		vrLoc = 6650;
@@ -1916,7 +1916,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 502;
 		vrLoc = 6674;
@@ -1926,7 +1926,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 498;
 		vrLoc = 6705;
@@ -1936,7 +1936,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 505;
 		vrLoc = 6730;
@@ -1946,7 +1946,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 521;
 		vrLoc = 6731;
@@ -1956,7 +1956,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 512;
 		vrLoc = 6758;
@@ -1966,7 +1966,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 234";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 524;
 		vrLoc = 6732;
@@ -1986,7 +1986,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 238";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 458;
 		vrLoc = 6648;
@@ -1996,7 +1996,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 238";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 6674;
@@ -2006,7 +2006,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 238";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 445;
 		vrLoc = 6728;
@@ -2016,7 +2016,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 238";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 7996;
@@ -2036,7 +2036,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 235";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 485;
 		vrLoc = 6648;
@@ -2046,7 +2046,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 235";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 437;
 		vrLoc = 6648;
@@ -2056,7 +2056,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 235";
 		rLen = 0;
-		rLoc = 389;
+		rLoc = 442;
 		rType = 0;
 		vrLen = 485;
 		vrLoc = 6648;
@@ -2066,7 +2066,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 161";
 		rLen = 0;
-		rLoc = 4340;
+		rLoc = 4412;
 		rType = 0;
 		vrLen = 1004;
 		vrLoc = 4485;
@@ -2076,7 +2076,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 9";
 		rLen = 0;
-		rLoc = 121;
+		rLoc = 145;
 		rType = 0;
 		vrLen = 531;
 		vrLoc = 0;
@@ -2102,7 +2102,7 @@
 		fRef = 874EB5C8110123B700DE1A0D /* settings.h */;
 		name = "settings.h: 3";
 		rLen = 0;
-		rLoc = 38;
+		rLoc = 37;
 		rType = 0;
 		vrLen = 139;
 		vrLoc = 0;
@@ -2112,7 +2112,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 164";
 		rLen = 0;
-		rLoc = 4446;
+		rLoc = 4518;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 2657;
@@ -2148,7 +2148,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 353";
 		rLen = 0;
-		rLoc = 7849;
+		rLoc = 7912;
 		rType = 0;
 		vrLen = 500;
 		vrLoc = 8644;
@@ -2158,7 +2158,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 153";
 		rLen = 0;
-		rLoc = 3974;
+		rLoc = 4027;
 		rType = 0;
 		vrLen = 561;
 		vrLoc = 8298;
@@ -2179,7 +2179,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 146;
+		rLoc = 147;
 		rType = 1;
 	};
 	87E803F5118FE54F00B3FB3B /* PBXTextBookmark */ = {
@@ -2187,7 +2187,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 448;
 		vrLoc = 6827;
@@ -2207,7 +2207,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 153";
 		rLen = 0;
-		rLoc = 3974;
+		rLoc = 4027;
 		rType = 0;
 		vrLen = 562;
 		vrLoc = 8298;
@@ -2217,7 +2217,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 164";
 		rLen = 0;
-		rLoc = 4446;
+		rLoc = 4518;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 2657;
@@ -2227,7 +2227,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 84";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 2037;
@@ -2237,7 +2237,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 84";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 944;
 		vrLoc = 2037;
@@ -2247,7 +2247,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 153";
 		rLen = 0;
-		rLoc = 3974;
+		rLoc = 4027;
 		rType = 0;
 		vrLen = 585;
 		vrLoc = 8275;
@@ -2257,7 +2257,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 306";
 		rLen = 0;
-		rLoc = 5674;
+		rLoc = 5737;
 		rType = 0;
 		vrLen = 535;
 		vrLoc = 8321;
@@ -2277,7 +2277,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 272";
 		rLen = 5;
-		rLoc = 4684;
+		rLoc = 4737;
 		rType = 0;
 		vrLen = 655;
 		vrLoc = 7531;
@@ -2287,7 +2287,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 269";
 		rLen = 0;
-		rLoc = 4614;
+		rLoc = 4667;
 		rType = 0;
 		vrLen = 728;
 		vrLoc = 7461;
@@ -2297,7 +2297,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 231";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 620;
 		vrLoc = 6620;
@@ -2307,7 +2307,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 233";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 645;
 		vrLoc = 6620;
@@ -2317,7 +2317,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 84";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 944;
 		vrLoc = 2037;
@@ -2327,7 +2327,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 84";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 948;
 		vrLoc = 2037;
@@ -2337,7 +2337,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 84";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 2123;
@@ -2347,7 +2347,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 84";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 996;
 		vrLoc = 2147;
@@ -2357,7 +2357,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 84";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 996;
 		vrLoc = 2147;
@@ -2367,7 +2367,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 233";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 624;
 		vrLoc = 6641;
@@ -2377,7 +2377,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 285";
 		rLen = 0;
-		rLoc = 5107;
+		rLoc = 5170;
 		rType = 0;
 		vrLen = 694;
 		vrLoc = 7813;
@@ -2387,7 +2387,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 406;
 		vrLoc = 7006;
@@ -2407,7 +2407,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 426;
 		vrLoc = 7006;
@@ -2427,7 +2427,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 79";
 		rLen = 0;
-		rLoc = 1677;
+		rLoc = 1702;
 		rType = 0;
 		vrLen = 1079;
 		vrLoc = 2147;
@@ -2437,7 +2437,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 285";
 		rLen = 0;
-		rLoc = 5107;
+		rLoc = 5170;
 		rType = 0;
 		vrLen = 694;
 		vrLoc = 7813;
@@ -2447,7 +2447,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 278";
 		rLen = 0;
-		rLoc = 4663;
+		rLoc = 4716;
 		rType = 0;
 		vrLen = 613;
 		vrLoc = 7780;
@@ -2457,7 +2457,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 406;
 		vrLoc = 7006;
@@ -2477,7 +2477,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 285";
 		rLen = 0;
-		rLoc = 4822;
+		rLoc = 4875;
 		rType = 0;
 		vrLen = 623;
 		vrLoc = 7780;
@@ -2487,7 +2487,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 426;
 		vrLoc = 7006;
@@ -2507,7 +2507,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 426;
 		vrLoc = 7006;
@@ -2527,7 +2527,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 286";
 		rLen = 0;
-		rLoc = 4833;
+		rLoc = 4886;
 		rType = 0;
 		vrLen = 633;
 		vrLoc = 7780;
@@ -2537,7 +2537,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 79";
 		rLen = 0;
-		rLoc = 1677;
+		rLoc = 1702;
 		rType = 0;
 		vrLen = 1079;
 		vrLoc = 2147;
@@ -2547,7 +2547,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 79";
 		rLen = 0;
-		rLoc = 1677;
+		rLoc = 1702;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 2151;
@@ -2557,7 +2557,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 286";
 		rLen = 0;
-		rLoc = 4833;
+		rLoc = 4886;
 		rType = 0;
 		vrLen = 602;
 		vrLoc = 7780;
@@ -2567,7 +2567,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 79";
 		rLen = 0;
-		rLoc = 1677;
+		rLoc = 1702;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 2151;
@@ -2577,7 +2577,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 79";
 		rLen = 0;
-		rLoc = 1677;
+		rLoc = 1702;
 		rType = 0;
 		vrLen = 992;
 		vrLoc = 2151;
@@ -2587,7 +2587,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 484;
 		vrLoc = 7008;
@@ -2607,7 +2607,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 84";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 2523;
@@ -2617,7 +2617,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 286";
 		rLen = 0;
-		rLoc = 4833;
+		rLoc = 4886;
 		rType = 0;
 		vrLen = 618;
 		vrLoc = 7778;
@@ -2627,7 +2627,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 235";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 580;
 		vrLoc = 326;
@@ -2637,7 +2637,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 328";
 		rLen = 0;
-		rLoc = 5674;
+		rLoc = 5737;
 		rType = 0;
 		vrLen = 619;
 		vrLoc = 7698;
@@ -2647,7 +2647,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 281";
 		rLen = 0;
-		rLoc = 5003;
+		rLoc = 5066;
 		rType = 0;
 		vrLen = 479;
 		vrLoc = 8304;
@@ -2657,7 +2657,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 281";
 		rLen = 0;
-		rLoc = 5003;
+		rLoc = 5066;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 7687;
@@ -2667,7 +2667,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 278";
 		rLen = 0;
-		rLoc = 4922;
+		rLoc = 4975;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 7471;
@@ -2677,7 +2677,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 281";
 		rLen = 0;
-		rLoc = 5003;
+		rLoc = 5066;
 		rType = 0;
 		vrLen = 636;
 		vrLoc = 7557;
@@ -2687,7 +2687,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 281";
 		rLen = 0;
-		rLoc = 5003;
+		rLoc = 5066;
 		rType = 0;
 		vrLen = 668;
 		vrLoc = 7525;
@@ -2697,7 +2697,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 84";
 		rLen = 0;
-		rLoc = 1854;
+		rLoc = 1879;
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 2523;
@@ -2707,7 +2707,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 99";
 		rLen = 0;
-		rLoc = 2520;
+		rLoc = 2569;
 		rType = 0;
 		vrLen = 986;
 		vrLoc = 2123;
@@ -2717,7 +2717,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 99";
 		rLen = 0;
-		rLoc = 2520;
+		rLoc = 2569;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 4324;
@@ -2727,7 +2727,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 281";
 		rLen = 0;
-		rLoc = 5003;
+		rLoc = 5066;
 		rType = 0;
 		vrLen = 668;
 		vrLoc = 7525;
@@ -2737,7 +2737,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 283";
 		rLen = 0;
-		rLoc = 5107;
+		rLoc = 5170;
 		rType = 0;
 		vrLen = 717;
 		vrLoc = 7698;
@@ -2747,7 +2747,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 323;
 		vrLoc = 7375;
@@ -2767,7 +2767,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 236";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 323;
 		vrLoc = 7375;
@@ -2787,7 +2787,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 277";
 		rLen = 0;
-		rLoc = 4821;
+		rLoc = 4874;
 		rType = 0;
 		vrLen = 765;
 		vrLoc = 7493;
@@ -2797,7 +2797,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 186";
 		rLen = 0;
-		rLoc = 5043;
+		rLoc = 5106;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 4696;
@@ -2807,7 +2807,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 178";
 		rLen = 0;
-		rLoc = 4821;
+		rLoc = 4874;
 		rType = 0;
 		vrLen = 741;
 		vrLoc = 4748;
@@ -2817,7 +2817,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 5018;
+		rLoc = 5081;
 		rType = 0;
 		vrLen = 746;
 		vrLoc = 4612;
@@ -2827,7 +2827,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 183";
 		rLen = 0;
-		rLoc = 5032;
+		rLoc = 5095;
 		rType = 0;
 		vrLen = 717;
 		vrLoc = 4625;
@@ -2837,7 +2837,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 99";
 		rLen = 0;
-		rLoc = 2520;
+		rLoc = 2569;
 		rType = 0;
 		vrLen = 623;
 		vrLoc = 3402;
@@ -2847,7 +2847,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 183";
 		rLen = 0;
-		rLoc = 5001;
+		rLoc = 5064;
 		rType = 0;
 		vrLen = 1094;
 		vrLoc = 5968;
@@ -2857,7 +2857,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 5033;
+		rLoc = 5096;
 		rType = 0;
 		vrLen = 880;
 		vrLoc = 2596;
@@ -2867,7 +2867,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 182";
 		rLen = 0;
-		rLoc = 4969;
+		rLoc = 5024;
 		rType = 0;
 		vrLen = 708;
 		vrLoc = 4636;
@@ -2877,7 +2877,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 182";
 		rLen = 0;
-		rLoc = 4969;
+		rLoc = 5024;
 		rType = 0;
 		vrLen = 713;
 		vrLoc = 4661;
@@ -2887,7 +2887,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 182";
 		rLen = 0;
-		rLoc = 4969;
+		rLoc = 5024;
 		rType = 0;
 		vrLen = 736;
 		vrLoc = 4663;
@@ -2897,7 +2897,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 182";
 		rLen = 0;
-		rLoc = 4969;
+		rLoc = 5024;
 		rType = 0;
 		vrLen = 724;
 		vrLoc = 4699;
@@ -2907,7 +2907,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 183";
 		rLen = 0;
-		rLoc = 5001;
+		rLoc = 5064;
 		rType = 0;
 		vrLen = 739;
 		vrLoc = 4748;
@@ -2917,7 +2917,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 183";
 		rLen = 0;
-		rLoc = 5001;
+		rLoc = 5064;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 4823;
@@ -2927,7 +2927,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 183";
 		rLen = 0;
-		rLoc = 4968;
+		rLoc = 4988;
 		rType = 0;
 		vrLen = 600;
 		vrLoc = 4924;
@@ -2937,7 +2937,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 183";
 		rLen = 0;
-		rLoc = 4961;
+		rLoc = 4988;
 		rType = 0;
 		vrLen = 618;
 		vrLoc = 4934;
@@ -2947,7 +2947,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 183";
 		rLen = 0;
-		rLoc = 4967;
+		rLoc = 4988;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 4602;
@@ -2957,7 +2957,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 183";
 		rLen = 0;
-		rLoc = 4967;
+		rLoc = 4988;
 		rType = 0;
 		vrLen = 680;
 		vrLoc = 4612;
@@ -2967,7 +2967,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 183";
 		rLen = 0;
-		rLoc = 4967;
+		rLoc = 4988;
 		rType = 0;
 		vrLen = 686;
 		vrLoc = 4625;
@@ -2977,7 +2977,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 183";
 		rLen = 0;
-		rLoc = 4953;
+		rLoc = 4988;
 		rType = 0;
 		vrLen = 711;
 		vrLoc = 4636;
@@ -2987,7 +2987,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 5001;
+		rLoc = 5064;
 		rType = 0;
 		vrLen = 721;
 		vrLoc = 4647;
@@ -2997,7 +2997,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 5001;
+		rLoc = 5064;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 4663;
@@ -3007,7 +3007,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 5001;
+		rLoc = 5064;
 		rType = 0;
 		vrLen = 720;
 		vrLoc = 4696;
@@ -3017,7 +3017,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 5001;
+		rLoc = 5064;
 		rType = 0;
 		vrLen = 692;
 		vrLoc = 4748;
@@ -3027,7 +3027,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 5001;
+		rLoc = 5064;
 		rType = 0;
 		vrLen = 723;
 		vrLoc = 4752;
@@ -3037,7 +3037,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 4998;
+		rLoc = 5056;
 		rType = 0;
 		vrLen = 579;
 		vrLoc = 4924;
@@ -3047,7 +3047,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 4994;
+		rLoc = 5055;
 		rType = 0;
 		vrLen = 615;
 		vrLoc = 4934;
@@ -3057,7 +3057,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 4969;
+		rLoc = 5024;
 		rType = 0;
 		vrLen = 638;
 		vrLoc = 4935;
@@ -3067,7 +3067,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 5001;
+		rLoc = 5064;
 		rType = 0;
 		vrLen = 726;
 		vrLoc = 4752;
@@ -3077,7 +3077,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 4987;
+		rLoc = 5046;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 4924;
@@ -3087,7 +3087,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 4987;
+		rLoc = 5046;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 4924;
@@ -3097,7 +3097,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 4987;
+		rLoc = 5046;
 		rType = 0;
 		vrLen = 616;
 		vrLoc = 4935;
@@ -3107,7 +3107,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 4987;
+		rLoc = 5046;
 		rType = 0;
 		vrLen = 629;
 		vrLoc = 4951;
@@ -3117,7 +3117,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 4997;
+		rLoc = 5056;
 		rType = 0;
 		vrLen = 579;
 		vrLoc = 5005;
@@ -3127,7 +3127,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 5001;
+		rLoc = 5064;
 		rType = 0;
 		vrLen = 708;
 		vrLoc = 4663;
@@ -3137,7 +3137,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 184";
 		rLen = 0;
-		rLoc = 4997;
+		rLoc = 5056;
 		rType = 0;
 		vrLen = 721;
 		vrLoc = 4696;
@@ -3147,7 +3147,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 187";
 		rLen = 0;
-		rLoc = 5098;
+		rLoc = 5161;
 		rType = 0;
 		vrLen = 741;
 		vrLoc = 4699;
@@ -3157,7 +3157,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 138";
 		rLen = 0;
-		rLoc = 4003;
+		rLoc = 4056;
 		rType = 0;
 		vrLen = 388;
 		vrLoc = 5476;
@@ -3168,7 +3168,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 50;
+		rLoc = 53;
 		rType = 1;
 	};
 	87E804FD1190063300B3FB3B /* PBXTextBookmark */ = {
@@ -3176,7 +3176,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 52";
 		rLen = 0;
-		rLoc = 1222;
+		rLoc = 1256;
 		rType = 0;
 		vrLen = 523;
 		vrLoc = 1155;
@@ -3196,7 +3196,7 @@
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 192";
 		rLen = 0;
-		rLoc = 5227;
+		rLoc = 5290;
 		rType = 0;
 		vrLen = 777;
 		vrLoc = 4699;
@@ -3206,7 +3206,7 @@
 		fRef = 874EB5C8110123B700DE1A0D /* settings.h */;
 		name = "settings.h: 3";
 		rLen = 0;
-		rLoc = 37;
+		rLoc = 36;
 		rType = 0;
 		vrLen = 155;
 		vrLoc = 0;
@@ -3216,7 +3216,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 9";
 		rLen = 0;
-		rLoc = 121;
+		rLoc = 145;
 		rType = 0;
 		vrLen = 574;
 		vrLoc = 473;
@@ -3226,7 +3226,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 87";
 		rLen = 0;
-		rLoc = 2520;
+		rLoc = 2569;
 		rType = 0;
 		vrLen = 588;
 		vrLoc = 0;
@@ -3256,7 +3256,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 87";
 		rLen = 0;
-		rLoc = 2520;
+		rLoc = 2569;
 		rType = 0;
 		vrLen = 588;
 		vrLoc = 0;
@@ -3266,7 +3266,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 86";
 		rLen = 0;
-		rLoc = 2499;
+		rLoc = 2546;
 		rType = 0;
 		vrLen = 554;
 		vrLoc = 2960;
@@ -3292,7 +3292,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 107";
 		rLen = 13;
-		rLoc = 3204;
+		rLoc = 3277;
 		rType = 0;
 		vrLen = 588;
 		vrLoc = 2920;
@@ -3302,7 +3302,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 118";
 		rLen = 0;
-		rLoc = 3373;
+		rLoc = 3446;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 2940;
@@ -3312,7 +3312,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3167;
+		rLoc = 3232;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 2563;
@@ -3322,7 +3322,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3132;
+		rLoc = 3197;
 		rType = 0;
 		vrLen = 773;
 		vrLoc = 2594;
@@ -3332,7 +3332,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3109;
+		rLoc = 3174;
 		rType = 0;
 		vrLen = 684;
 		vrLoc = 2732;
@@ -3342,7 +3342,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3119;
+		rLoc = 3184;
 		rType = 0;
 		vrLen = 706;
 		vrLoc = 2732;
@@ -3352,7 +3352,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3116;
+		rLoc = 3181;
 		rType = 0;
 		vrLen = 775;
 		vrLoc = 2594;
@@ -3362,7 +3362,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 106";
 		rLen = 0;
-		rLoc = 3181;
+		rLoc = 3254;
 		rType = 0;
 		vrLen = 651;
 		vrLoc = 2732;
@@ -3372,7 +3372,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 52";
 		rLen = 0;
-		rLoc = 1222;
+		rLoc = 1256;
 		rType = 0;
 		vrLen = 728;
 		vrLoc = 1744;
@@ -3392,7 +3392,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 59";
 		rLen = 0;
-		rLoc = 1498;
+		rLoc = 1537;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 763;
@@ -3402,7 +3402,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3176;
+		rLoc = 3241;
 		rType = 0;
 		vrLen = 604;
 		vrLoc = 2738;
@@ -3413,7 +3413,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 55;
+		rLoc = 58;
 		rType = 1;
 	};
 	87E8054B119008B700B3FB3B /* PBXTextBookmark */ = {
@@ -3421,7 +3421,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 57";
 		rLen = 0;
-		rLoc = 1470;
+		rLoc = 1504;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 2667;
@@ -3441,7 +3441,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 57";
 		rLen = 0;
-		rLoc = 1470;
+		rLoc = 1504;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 2667;
@@ -3461,7 +3461,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 105";
 		rLen = 0;
-		rLoc = 3180;
+		rLoc = 3253;
 		rType = 0;
 		vrLen = 609;
 		vrLoc = 2738;
@@ -3471,7 +3471,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 105";
 		rLen = 0;
-		rLoc = 3167;
+		rLoc = 3232;
 		rType = 0;
 		vrLen = 524;
 		vrLoc = 2855;
@@ -3481,7 +3481,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 116";
 		rLen = 0;
-		rLoc = 3373;
+		rLoc = 3446;
 		rType = 0;
 		vrLen = 623;
 		vrLoc = 2877;
@@ -3491,7 +3491,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3160;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 673;
 		vrLoc = 2895;
@@ -3501,7 +3501,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3160;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 710;
 		vrLoc = 2899;
@@ -3511,7 +3511,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3160;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 647;
 		vrLoc = 2966;
@@ -3521,7 +3521,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3160;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 633;
 		vrLoc = 2981;
@@ -3531,7 +3531,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3160;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 692;
 		vrLoc = 3042;
@@ -3541,7 +3541,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3160;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 2584;
@@ -3551,7 +3551,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 104";
 		rLen = 0;
-		rLoc = 3160;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 673;
 		vrLoc = 2718;
@@ -3561,10 +3561,170 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 88";
 		rLen = 0;
-		rLoc = 2500;
+		rLoc = 2549;
 		rType = 0;
 		vrLen = 924;
 		vrLoc = 2134;
+	};
+	87E8057C1194C28A00B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 88";
+		rLen = 0;
+		rLoc = 2549;
+		rType = 0;
+		vrLen = 861;
+		vrLoc = 413;
+	};
+	87E8057D1194C28A00B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
+		name = "MarPanning3D.cpp: 192";
+		rLen = 0;
+		rLoc = 5290;
+		rType = 0;
+		vrLen = 728;
+		vrLoc = 4748;
+	};
+	87E8057E1194C28A00B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
+		name = "MarPanning3D.cpp: 184";
+		rLen = 0;
+		rLoc = 5002;
+		rType = 0;
+		vrLen = 592;
+		vrLoc = 4930;
+	};
+	87E805821194C2C100B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
+		name = "MarPanning3D.cpp: 188";
+		rLen = 0;
+		rLoc = 5106;
+		rType = 0;
+		vrLen = 617;
+		vrLoc = 4930;
+	};
+	87E805841194C40700B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 57";
+		rLen = 0;
+		rLoc = 1504;
+		rType = 0;
+		vrLen = 528;
+		vrLoc = 3203;
+	};
+	87E805851194C40700B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 9";
+		rLen = 0;
+		rLoc = 190;
+		rType = 0;
+		vrLen = 260;
+		vrLoc = 24;
+	};
+	87E805881194C4FF00B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
+		name = "MarPanning3D.cpp: 11";
+		rLen = 0;
+		rLoc = 272;
+		rType = 0;
+		vrLen = 526;
+		vrLoc = 0;
+	};
+	87E8058B1194C5AB00B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
+		name = "MarPanning3D.cpp: 187";
+		rLen = 0;
+		rLoc = 5106;
+		rType = 0;
+		vrLen = 730;
+		vrLoc = 4682;
+	};
+	87E8058F1194C71100B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
+		name = "MarPanning3D.cpp: 187";
+		rLen = 0;
+		rLoc = 5106;
+		rType = 0;
+		vrLen = 750;
+		vrLoc = 4682;
+	};
+	87E805901194C71100B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
+		name = "testApp.h: 50";
+		rLen = 0;
+		rLoc = 953;
+		rType = 0;
+		vrLen = 540;
+		vrLoc = 530;
+	};
+	87E805911194C71100B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 136";
+		rLen = 0;
+		rLoc = 3769;
+		rType = 0;
+		vrLen = 589;
+		vrLoc = 0;
+	};
+	87E805921194C71100B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C8110123B700DE1A0D /* settings.h */;
+		name = "settings.h: 3";
+		rLen = 0;
+		rLoc = 36;
+		rType = 0;
+		vrLen = 155;
+		vrLoc = 0;
+	};
+	87E805931194C71100B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C8110123B700DE1A0D /* settings.h */;
+		name = "settings.h: 2";
+		rLen = 0;
+		rLoc = 27;
+		rType = 0;
+		vrLen = 154;
+		vrLoc = 0;
+	};
+	87E805941194C74500B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C8110123B700DE1A0D /* settings.h */;
+		name = "settings.h: 2";
+		rLen = 0;
+		rLoc = 27;
+		rType = 0;
+		vrLen = 154;
+		vrLoc = 0;
+	};
+	87E805951194C74500B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
+		name = "MarPanning3D.cpp: 187";
+		rLen = 0;
+		rLoc = 5106;
+		rType = 0;
+		vrLen = 750;
+		vrLoc = 4682;
+	};
+	87E805961194C74500B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
+		name = "MarPanning3D.cpp: 11";
+		rLen = 0;
+		rLoc = 261;
+		rType = 0;
+		vrLen = 522;
+		vrLoc = 0;
 	};
 	87F54C271101A638006D749A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -4093,6 +4253,22 @@
 			87E8056E1190099500B3FB3B /* PBXTextBookmark */ = 87E8056E1190099500B3FB3B /* PBXTextBookmark */;
 			87E80572119009AD00B3FB3B /* PBXTextBookmark */ = 87E80572119009AD00B3FB3B /* PBXTextBookmark */;
 			87E80576119009D000B3FB3B /* PBXTextBookmark */ = 87E80576119009D000B3FB3B /* PBXTextBookmark */;
+			87E8057C1194C28A00B3FB3B /* PBXTextBookmark */ = 87E8057C1194C28A00B3FB3B /* PBXTextBookmark */;
+			87E8057D1194C28A00B3FB3B /* PBXTextBookmark */ = 87E8057D1194C28A00B3FB3B /* PBXTextBookmark */;
+			87E8057E1194C28A00B3FB3B /* PBXTextBookmark */ = 87E8057E1194C28A00B3FB3B /* PBXTextBookmark */;
+			87E805821194C2C100B3FB3B /* PBXTextBookmark */ = 87E805821194C2C100B3FB3B /* PBXTextBookmark */;
+			87E805841194C40700B3FB3B /* PBXTextBookmark */ = 87E805841194C40700B3FB3B /* PBXTextBookmark */;
+			87E805851194C40700B3FB3B /* PBXTextBookmark */ = 87E805851194C40700B3FB3B /* PBXTextBookmark */;
+			87E805881194C4FF00B3FB3B /* PBXTextBookmark */ = 87E805881194C4FF00B3FB3B /* PBXTextBookmark */;
+			87E8058B1194C5AB00B3FB3B /* PBXTextBookmark */ = 87E8058B1194C5AB00B3FB3B /* PBXTextBookmark */;
+			87E8058F1194C71100B3FB3B /* PBXTextBookmark */ = 87E8058F1194C71100B3FB3B /* PBXTextBookmark */;
+			87E805901194C71100B3FB3B /* PBXTextBookmark */ = 87E805901194C71100B3FB3B /* PBXTextBookmark */;
+			87E805911194C71100B3FB3B /* PBXTextBookmark */ = 87E805911194C71100B3FB3B /* PBXTextBookmark */;
+			87E805921194C71100B3FB3B /* PBXTextBookmark */ = 87E805921194C71100B3FB3B /* PBXTextBookmark */;
+			87E805931194C71100B3FB3B /* PBXTextBookmark */ = 87E805931194C71100B3FB3B /* PBXTextBookmark */;
+			87E805941194C74500B3FB3B /* PBXTextBookmark */ = 87E805941194C74500B3FB3B /* PBXTextBookmark */;
+			87E805951194C74500B3FB3B /* PBXTextBookmark */ = 87E805951194C74500B3FB3B /* PBXTextBookmark */;
+			87E805961194C74500B3FB3B /* PBXTextBookmark */ = 87E805961194C74500B3FB3B /* PBXTextBookmark */;
 			87F54C271101A638006D749A = 87F54C271101A638006D749A /* PBXTextBookmark */;
 			87F54C281101A638006D749A = 87F54C281101A638006D749A /* PBXTextBookmark */;
 			87F54C361101A6EA006D749A = 87F54C361101A6EA006D749A /* PBXTextBookmark */;
@@ -4115,16 +4291,16 @@
 	};
 	E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 2704}}";
-			sepNavSelRange = "{2500, 0}";
-			sepNavVisRange = "{2134, 924}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 2832}}";
+			sepNavSelRange = "{3769, 0}";
+			sepNavVisRange = "{0, 589}";
 		};
 	};
 	E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 864}}";
-			sepNavSelRange = "{121, 0}";
-			sepNavVisRange = "{473, 574}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 912}}";
+			sepNavSelRange = "{953, 0}";
+			sepNavVisRange = "{530, 540}";
 		};
 	};
 }

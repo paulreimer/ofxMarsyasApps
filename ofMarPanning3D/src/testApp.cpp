@@ -26,16 +26,19 @@ void testApp::setup()
 	glutSetWindowTitle("MarPanning3D");
 	
 	font.loadFont("fonts/HelveticaBold.ttf", 14);
+	
+	// brute force init
+	manualRotation.set(30, 0, 0);
+	offset.set(INITIAL_OFFSET);
+	
+	net.setup();
 
+#ifdef USE_GUI
 	defaultSimpleGuiConfig.fontName = "fonts/Helvetica.ttf";
 	defaultSimpleGuiConfig.fontSize = 10;
 	defaultSimpleGuiConfig.setup();
 
 	gui.setup();
-	
-	// brute force init
-	manualRotation.set(30, 0, 0);
-	offset.set(INITIAL_OFFSET);
 	
 	defaultSimpleGuiConfig.setup();
 	rotation_gui.setup();
@@ -55,8 +58,7 @@ void testApp::setup()
 	
 //	gui.setPos(8, rotation_gui.height+16);
 //	gui.enableAllEvents();
-
-	net.setup();
+#endif
 }
 
 //--------------------------------------------------------------
@@ -81,10 +83,12 @@ void testApp::draw()
 	{
 		glTranslatef(0.0, 0.0, depthZ);						//translate to screenplane
 		net.draw();
+#ifdef USE_GUI
 		ofSetColor(0xffffff);
 		glScalef(1./100., -1./100., 1.);
 		glTranslatef(0.0, 0.0, 3.);
 		gui.draw();
+#endif
 	}
 	glPopMatrix();
 
@@ -102,10 +106,12 @@ void testApp::draw()
 	{
 		glTranslatef(0.0, 0.0, depthZ);						//translate to screenplane
 		net.draw();
+#ifdef USE_GUI
 		ofSetColor(0xffffff);
 		glScalef(1./100., -1./100., 1.);
 		glTranslatef(0.0, 0.0, 3.);
 		gui.draw();
+#endif
 	}
 	glPopMatrix();
 
@@ -127,7 +133,7 @@ void testApp::keyReleased(int key)
 {}
 
 //--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y )
+void testApp::mouseMoved(int x, int y)
 {}
 
 //--------------------------------------------------------------

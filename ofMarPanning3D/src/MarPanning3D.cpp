@@ -7,7 +7,8 @@ using namespace Marsyas;
 MarPanning3D::MarPanning3D()
 {
 //	targetRate = rate = sampleRate / bufferSize;
-	inAudioFileName = ofToDataPath("wav/french_horn/6.wav");
+//	inAudioFileName = ofToDataPath("wav/french_horn/6.wav");
+	inAudioFileName = ofToDataPath("in_my_life.wav");
 //	targetRate = 100; // [10ms]
 	targetRate = 1000;
 }
@@ -179,9 +180,8 @@ void MarPanning3D::draw()
 			y = (log10(((22050.0 / double(spectrum_bins)) * j) + (0.5 * (22050.0 / double(spectrum_bins)))));
 			z = i;
 
-			x = x*50000;
-//			y = (y-7.1);
-			y = ofMap(y, -7,	14,		-50,	50);
+			x = ofMap(x, -1,	1,		-1.5,	1.5);
+			y = ofMap(y, 1.0143,4.5143,	-1.5,	1.5);
 			z = ofMap(z, 0.,	MAX_Z,	3,		30);
 
 //			cout << "p at (" << x << "," << y << "," << z << ")" << endl;

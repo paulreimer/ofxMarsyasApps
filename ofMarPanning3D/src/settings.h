@@ -1,5 +1,5 @@
 #undef MARSYAS_DEBUG
-#define USE_GUI
+#undef USE_GUI
 
 #define INITIAL_OFFSET			0.0, -0.75, 0.0
 								//0.0, -0.75, -29.0
