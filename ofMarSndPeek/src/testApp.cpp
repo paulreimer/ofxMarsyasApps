@@ -17,9 +17,7 @@ testApp::setup(){
 	ofSetFrameRate(1000/(10));
 	glutSetWindowTitle("MarSndPeek");
 	
-//	font.loadFont(ofToDataPath("frabk.ttf"), 14);
-	font.loadFont(ofToDataPath("HelveticaBold.ttf"), 14);
-//	font.loadFont("frabk.ttf", 14);
+	font.loadFont("fonts/HelveticaBold.ttf", 14);
 
 	// brute force init
 	manualRotation.set(30, 0, 0);

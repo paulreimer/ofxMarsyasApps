@@ -40,7 +40,7 @@ testApp::setup(){
 	ofSetFrameRate(1000/(10));
 	glutSetWindowTitle("MarMicArray");
 	
-	font.loadFont(ofToDataPath("HelveticaBold.ttf"), 14);
+	font.loadFont("fonts/HelveticaBold.ttf", 14);
 }
 
 //--------------------------------------------------------------

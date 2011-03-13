@@ -20,9 +20,8 @@ testApp::setup()
 	ofSetFrameRate(1000/(10));
 	glutSetWindowTitle("PhaseVocoder");
 	
-//	font.loadFont(ofToDataPath("frabk.ttf"), 14);
-	font.loadFont(ofToDataPath("HelveticaBold.ttf"), 12);
-	font_sm.loadFont(ofToDataPath("Helvetica.ttf"), 9);
+	font.loadFont("fonts/HelveticaBold.ttf", 12);
+	font_sm.loadFont("fonts/Helvetica.ttf", 9);
 
 	cvGrabber.listDevices();
 	cvGrabber.initGrabber(VIDEO_SIZE);

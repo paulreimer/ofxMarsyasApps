@@ -12,8 +12,7 @@ testApp::setup()
 	ofSetFrameRate(1000/(10));
 	glutSetWindowTitle("PhaseVocoder");
 	
-//	font.loadFont(ofToDataPath("frabk.ttf"), 14);
-	font.loadFont(ofToDataPath("HelveticaBold.ttf"), 256);
+	font.loadFont("fonts/HelveticaBold.ttf", 256);
 }
 
 //--------------------------------------------------------------

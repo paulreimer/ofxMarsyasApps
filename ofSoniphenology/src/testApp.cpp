@@ -34,9 +34,8 @@ testApp::setup()
 
 	glutSetWindowTitle("A tangible interface for sonification of geo-spatial and phenological data at multiple time-scales.");
 	
-//	font.loadFont(ofToDataPath("frabk.ttf"), 14);
-	font.loadFont(ofToDataPath("HelveticaBold.ttf"), 12);
-	font_sm.loadFont(ofToDataPath("Helvetica.ttf"), 9);
+	font.loadFont("fonts/HelveticaBold.ttf", 12);
+	font_sm.loadFont("fonts/Helvetica.ttf", 9);
 
 #ifdef USE_CV	
 	cvGrabber.setDesiredFrameRate(VIDEO_FPS);
