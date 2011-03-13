@@ -245,8 +245,8 @@ testApp::processFiducials(list<ofxFiducial>& fiducials)
 	map_fiducial = find_if(fiducials.begin(), fiducials.end(), fiducialById(MAP_FIDUCIAL_ID));
 
 	int channel;
-	ofxVec2f from, to;
-	ofxVec2f from_ref, to_ref;
+	ofVec2f from, to;
+	ofVec2f from_ref, to_ref;
 	double from_angle, to_angle;
 
 	if (map_fiducial != fiducials.end() && VALID_FIDUCIAL(map_fiducial))

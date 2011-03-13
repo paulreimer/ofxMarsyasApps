@@ -22,7 +22,7 @@
 #include "ofxSimpleGuiToo.h"
 #endif
 
-#include "ofxVec2f.h"
+#include "ofVec2f.h"
 
 class testApp
 : public ofBaseApp
@@ -81,7 +81,7 @@ public:
 	GeoData geoData;
 #endif
 
-	ofxVec2f	map_ref;
+	ofVec2f	map_ref;
 	float		map_angle;
 	float		map_rsize;
 };

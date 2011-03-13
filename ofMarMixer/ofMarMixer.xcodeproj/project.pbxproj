@@ -23,9 +23,6 @@
 		87242AA6110D483700818640 /* ofxSimpleGuiControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87242A7A110D483700818640 /* ofxSimpleGuiControl.cpp */; };
 		87242AA7110D483700818640 /* ofxSimpleGuiPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87242A7D110D483700818640 /* ofxSimpleGuiPage.cpp */; };
 		87242AA8110D483700818640 /* ofxSimpleGuiToo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87242A7F110D483700818640 /* ofxSimpleGuiToo.cpp */; };
-		87242AA9110D483700818640 /* ofxMatrix3x3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87242A84110D483700818640 /* ofxMatrix3x3.cpp */; };
-		87242AAA110D483700818640 /* ofxMatrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87242A86110D483700818640 /* ofxMatrix4x4.cpp */; };
-		87242AAB110D483700818640 /* ofxQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87242A8B110D483700818640 /* ofxQuaternion.cpp */; };
 		87242AAC110D483700818640 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87242A94110D483700818640 /* tinyxml.cpp */; };
 		87242AAD110D483700818640 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87242A96110D483700818640 /* tinyxmlerror.cpp */; };
 		87242AAE110D483700818640 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87242A97110D483700818640 /* tinyxmlparser.cpp */; };
@@ -315,19 +312,6 @@
 		87242A7E110D483700818640 /* ofxSimpleGuiPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiPage.h; path = ../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiPage.h; sourceTree = SOURCE_ROOT; };
 		87242A7F110D483700818640 /* ofxSimpleGuiToo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxSimpleGuiToo.cpp; path = ../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiToo.cpp; sourceTree = SOURCE_ROOT; };
 		87242A80110D483700818640 /* ofxSimpleGuiToo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxSimpleGuiToo.h; path = ../../../addons/ofxSimpleGuiToo/src/ofxSimpleGuiToo.h; sourceTree = SOURCE_ROOT; };
-		87242A84110D483700818640 /* ofxMatrix3x3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxMatrix3x3.cpp; path = ../../../addons/ofxVectorMath/src/ofxMatrix3x3.cpp; sourceTree = SOURCE_ROOT; };
-		87242A85110D483700818640 /* ofxMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxMatrix3x3.h; path = ../../../addons/ofxVectorMath/src/ofxMatrix3x3.h; sourceTree = SOURCE_ROOT; };
-		87242A86110D483700818640 /* ofxMatrix4x4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxMatrix4x4.cpp; path = ../../../addons/ofxVectorMath/src/ofxMatrix4x4.cpp; sourceTree = SOURCE_ROOT; };
-		87242A87110D483700818640 /* ofxMatrix4x4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxMatrix4x4.h; path = ../../../addons/ofxVectorMath/src/ofxMatrix4x4.h; sourceTree = SOURCE_ROOT; };
-		87242A88110D483700818640 /* ofxPoint2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxPoint2f.h; path = ../../../addons/ofxVectorMath/src/ofxPoint2f.h; sourceTree = SOURCE_ROOT; };
-		87242A89110D483700818640 /* ofxPoint3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxPoint3f.h; path = ../../../addons/ofxVectorMath/src/ofxPoint3f.h; sourceTree = SOURCE_ROOT; };
-		87242A8A110D483700818640 /* ofxPoint4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxPoint4f.h; path = ../../../addons/ofxVectorMath/src/ofxPoint4f.h; sourceTree = SOURCE_ROOT; };
-		87242A8B110D483700818640 /* ofxQuaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxQuaternion.cpp; path = ../../../addons/ofxVectorMath/src/ofxQuaternion.cpp; sourceTree = SOURCE_ROOT; };
-		87242A8C110D483700818640 /* ofxQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxQuaternion.h; path = ../../../addons/ofxVectorMath/src/ofxQuaternion.h; sourceTree = SOURCE_ROOT; };
-		87242A8D110D483700818640 /* ofxVec2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxVec2f.h; path = ../../../addons/ofxVectorMath/src/ofxVec2f.h; sourceTree = SOURCE_ROOT; };
-		87242A8E110D483700818640 /* ofxVec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxVec3f.h; path = ../../../addons/ofxVectorMath/src/ofxVec3f.h; sourceTree = SOURCE_ROOT; };
-		87242A8F110D483700818640 /* ofxVec4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxVec4f.h; path = ../../../addons/ofxVectorMath/src/ofxVec4f.h; sourceTree = SOURCE_ROOT; };
-		87242A90110D483700818640 /* ofxVectorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxVectorMath.h; path = ../../../addons/ofxVectorMath/src/ofxVectorMath.h; sourceTree = SOURCE_ROOT; };
 		87242A94110D483700818640 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
 		87242A95110D483700818640 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml.h; path = ../../../addons/ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
 		87242A96110D483700818640 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlerror.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
@@ -912,36 +896,6 @@
 			path = ../../../addons/ofxSimpleGuiToo/src/Controls;
 			sourceTree = SOURCE_ROOT;
 		};
-		87242A81110D483700818640 /* ofxVectorMath */ = {
-			isa = PBXGroup;
-			children = (
-				87242A83110D483700818640 /* src */,
-			);
-			name = ofxVectorMath;
-			path = ../../../addons/ofxVectorMath;
-			sourceTree = SOURCE_ROOT;
-		};
-		87242A83110D483700818640 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				87242A84110D483700818640 /* ofxMatrix3x3.cpp */,
-				87242A85110D483700818640 /* ofxMatrix3x3.h */,
-				87242A86110D483700818640 /* ofxMatrix4x4.cpp */,
-				87242A87110D483700818640 /* ofxMatrix4x4.h */,
-				87242A88110D483700818640 /* ofxPoint2f.h */,
-				87242A89110D483700818640 /* ofxPoint3f.h */,
-				87242A8A110D483700818640 /* ofxPoint4f.h */,
-				87242A8B110D483700818640 /* ofxQuaternion.cpp */,
-				87242A8C110D483700818640 /* ofxQuaternion.h */,
-				87242A8D110D483700818640 /* ofxVec2f.h */,
-				87242A8E110D483700818640 /* ofxVec3f.h */,
-				87242A8F110D483700818640 /* ofxVec4f.h */,
-				87242A90110D483700818640 /* ofxVectorMath.h */,
-			);
-			name = src;
-			path = ../../../addons/ofxVectorMath/src;
-			sourceTree = SOURCE_ROOT;
-		};
 		87242A91110D483700818640 /* ofxXmlSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1084,7 +1038,6 @@
 				87242B5B110D53C300818640 /* ofxOpenCv */,
 				87242A42110D483700818640 /* ofxFiducialBacked */,
 				87242A5E110D483700818640 /* ofxSimpleGuiToo */,
-				87242A81110D483700818640 /* ofxVectorMath */,
 				87242A91110D483700818640 /* ofxXmlSettings */,
 				8724267C110AA36700818640 /* ofxCvd */,
 				877ED50D110814ED00E93390 /* ofxFiducialFinder */,
@@ -1585,9 +1538,6 @@
 				87242AA6110D483700818640 /* ofxSimpleGuiControl.cpp in Sources */,
 				87242AA7110D483700818640 /* ofxSimpleGuiPage.cpp in Sources */,
 				87242AA8110D483700818640 /* ofxSimpleGuiToo.cpp in Sources */,
-				87242AA9110D483700818640 /* ofxMatrix3x3.cpp in Sources */,
-				87242AAA110D483700818640 /* ofxMatrix4x4.cpp in Sources */,
-				87242AAB110D483700818640 /* ofxQuaternion.cpp in Sources */,
 				87242AAC110D483700818640 /* tinyxml.cpp in Sources */,
 				87242AAD110D483700818640 /* tinyxmlerror.cpp in Sources */,
 				87242AAE110D483700818640 /* tinyxmlparser.cpp in Sources */,

@@ -337,7 +337,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>87F3E837132D848D00F23C34</string>
+										<string>87F3E8CE132D872C00F23C34</string>
 										<key>history</key>
 										<array>
 											<string>87890FE111067FC700694FA4</string>
@@ -348,7 +348,7 @@
 											<string>877ED59F110819D400E93390</string>
 											<string>87F4126C11B6E6FC003AE3CA</string>
 											<string>87F4129111B7020C003AE3CA</string>
-											<string>874A304511D44AD200EB5968</string>
+											<string>87F3E837132D848D00F23C34</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -360,14 +360,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1179, 394}}</string>
+								<string>{{0, 0}, {1179, 385}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 113 1440 765 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>394pt</string>
+							<string>385pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -380,14 +380,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 399}, {1179, 325}}</string>
+								<string>{{0, 390}, {1179, 334}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 113 1440 765 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>325pt</string>
+							<string>334pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -406,9 +406,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>87F3E838132D848D00F23C34</string>
+				<string>87F3E8CF132D872C00F23C34</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>87F3E839132D848D00F23C34</string>
+				<string>87F3E8D0132D872C00F23C34</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -546,7 +546,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>874EB89F1101295500DE1A0D</string>
 		<string>/Users/paulreimer/Development/of/0061/apps/marsyas/ofMarMicArray/ofMarMicArray.xcodeproj</string>
 	</array>
@@ -628,7 +627,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>874EB89F1101295500DE1A0D</string>
-				<string>87F3E833132D848C00F23C34</string>
+				<string>87F3E8D1132D872C00F23C34</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

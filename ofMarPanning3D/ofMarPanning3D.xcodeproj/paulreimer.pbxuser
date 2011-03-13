@@ -95,13 +95,6 @@
 			sepNavVisRange = "{6134, 252}";
 		};
 	};
-	874EB832110127FC00DE1A0D /* ofxPoint2f.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1308, 400}}";
-			sepNavSelRange = "{262, 0}";
-			sepNavVisRange = "{122, 252}";
-		};
-	};
 	874EB843110127FC00DE1A0D /* ofxXmlSettings.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1308, 11712}}";
@@ -283,7 +276,7 @@
 		vrLen = 154;
 		vrLoc = 0;
 	};
-	87F3E826132D846C00F23C34 /* PBXTextBookmark */ = {
+	87F3E827132D846C00F23C34 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 11";
@@ -293,7 +286,7 @@
 		vrLen = 544;
 		vrLoc = 0;
 	};
-	87F3E827132D846C00F23C34 /* PBXTextBookmark */ = {
+	87F3E8C0132D870800F23C34 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 874EB5C6110123B700DE1A0D /* MarPanning3D.cpp */;
 		name = "MarPanning3D.cpp: 11";
@@ -399,8 +392,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 321749999;
-			PBXWorkspaceStateSaveDate = 321749999;
+			PBXPerProjectTemplateStateSaveDate = 321750696;
+			PBXWorkspaceStateSaveDate = 321750696;
 		};
 		perUserProjectItems = {
 			87E80307118FC07300B3FB3B /* PBXTextBookmark */ = 87E80307118FC07300B3FB3B /* PBXTextBookmark */;
@@ -412,8 +405,8 @@
 			87E805901194C71100B3FB3B /* PBXTextBookmark */ = 87E805901194C71100B3FB3B /* PBXTextBookmark */;
 			87E805911194C71100B3FB3B /* PBXTextBookmark */ = 87E805911194C71100B3FB3B /* PBXTextBookmark */;
 			87E805941194C74500B3FB3B /* PBXTextBookmark */ = 87E805941194C74500B3FB3B /* PBXTextBookmark */;
-			87F3E826132D846C00F23C34 /* PBXTextBookmark */ = 87F3E826132D846C00F23C34 /* PBXTextBookmark */;
 			87F3E827132D846C00F23C34 /* PBXTextBookmark */ = 87F3E827132D846C00F23C34 /* PBXTextBookmark */;
+			87F3E8C0132D870800F23C34 /* PBXTextBookmark */ = 87F3E8C0132D870800F23C34 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 874EB5CA110123B700DE1A0D /* Source Control */;
 		userBuildSettings = {

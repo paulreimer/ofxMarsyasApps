@@ -292,7 +292,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 136}, {239, 706}}</string>
+							<string>{{0, 242}, {239, 706}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -339,7 +339,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>87F3E83F132D849400F23C34</string>
+										<string>87F3E8D2132D873000F23C34</string>
 										<key>history</key>
 										<array>
 											<string>87E014881106D1E1002664D1</string>
@@ -369,7 +369,7 @@
 											<string>87242A0F110C1F3900818640</string>
 											<string>87242A24110D470400818640</string>
 											<string>87242A25110D470400818640</string>
-											<string>87F3E79A132D83E400F23C34</string>
+											<string>87F3E83F132D849400F23C34</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -381,14 +381,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1179, 429}}</string>
+								<string>{{0, 0}, {1179, 421}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 113 1440 765 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>429pt</string>
+							<string>421pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -401,14 +401,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 434}, {1179, 290}}</string>
+								<string>{{0, 426}, {1179, 298}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 113 1440 765 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>290pt</string>
+							<string>298pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -427,9 +427,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>87F3E840132D849400F23C34</string>
+				<string>87F3E8D3132D873000F23C34</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>87F3E841132D849400F23C34</string>
+				<string>87F3E8D4132D873000F23C34</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -567,7 +567,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>874EB89F1101295500DE1A0D</string>
 		<string>/Users/paulreimer/Development/of/0061/apps/marsyas/ofMarFader/ofMarFader.xcodeproj</string>
 	</array>
@@ -649,7 +648,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>874EB89F1101295500DE1A0D</string>
-				<string>87F3E83B132D849300F23C34</string>
+				<string>87F3E8D5132D873000F23C34</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
