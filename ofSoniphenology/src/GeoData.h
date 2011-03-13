@@ -7,11 +7,11 @@
 #endif
 
 #include "ofTypes.h"
-#include "ofxThread.h"
+#include "ofThread.h"
 #include "ofAppRunner.h"
 
 class GeoData
-: public ofxThread
+: public ofThread
 {
 	friend class SonificationEngine;
 public:

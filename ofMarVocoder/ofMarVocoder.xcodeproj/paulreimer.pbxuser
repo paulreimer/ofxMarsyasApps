@@ -1,22 +1,5 @@
 // !$*UTF8*$!
 {
-	8700A5E51107C2DC003124BD /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 8700A5E61107C2DC003124BD /* MarSystem.cpp */;
-		name = "MarSystem.cpp: 626";
-		rLen = 0;
-		rLoc = 17925;
-		rType = 0;
-		vrLen = 545;
-		vrLoc = 17588;
-	};
-	8700A5E61107C2DC003124BD /* MarSystem.cpp */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.cpp.cpp;
-		name = MarSystem.cpp;
-		path = "/Users/paulreimer/Development/lib/marsyas-safe/src/marsyas/MarSystem.cpp";
-		sourceTree = "<absolute>";
-	};
 	8700A5FD1107C585003124BD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 8700A5FE1107C585003124BD /* MarControl.h */;
@@ -33,16 +16,6 @@
 		name = MarControl.h;
 		path = /usr/local/include/marsyas/MarControl.h;
 		sourceTree = "<absolute>";
-	};
-	8700A5FF1107C585003124BD /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 87E014B71106DB6C002664D1 /* PhaseVocoder.cpp */;
-		name = "PhaseVocoder.cpp: 77";
-		rLen = 0;
-		rLoc = 2015;
-		rType = 0;
-		vrLen = 727;
-		vrLoc = 1690;
 	};
 	874EB5B21101239E00DE1A0D /* ofMarVocoder */ = {
 		isa = PBXExecutable;
@@ -118,20 +91,6 @@
 			sepNavVisRange = "{3063, 1379}";
 		};
 	};
-	874EB829110127FC00DE1A0D /* ofxThread.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 1840}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 689}";
-		};
-	};
-	874EB82A110127FC00DE1A0D /* ofxThread.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 1024}}";
-			sepNavSelRange = "{73, 20}";
-			sepNavVisRange = "{0, 637}";
-		};
-	};
 	877ED594110819CB00E93390 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */;
@@ -141,27 +100,7 @@
 		);
 		name = "/Users/paulreimer/Development/ofx/0061/apps/marsyas/ofMarVocoder/openFrameworks-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	877ED595110819CB00E93390 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
-		name = "testApp.cpp: 22";
-		rLen = 0;
-		rLoc = 480;
-		rType = 0;
-		vrLen = 663;
-		vrLoc = 1022;
-	};
-	877ED596110819CB00E93390 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 87E015981107BA26002664D1 /* RtAudio3.h */;
-		name = "RtAudio3.h: 486";
-		rLen = 0;
-		rLoc = 20739;
-		rType = 0;
-		vrLen = 1240;
-		vrLoc = 20241;
+		rLoc = 9223372036854775808;
 	};
 	877ED597110819CB00E93390 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -172,16 +111,6 @@
 		rType = 0;
 		vrLen = 487;
 		vrLoc = 0;
-	};
-	877ED598110819CB00E93390 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 87E014B71106DB6C002664D1 /* PhaseVocoder.cpp */;
-		name = "PhaseVocoder.cpp: 63";
-		rLen = 0;
-		rLoc = 1738;
-		rType = 0;
-		vrLen = 659;
-		vrLoc = 1581;
 	};
 	87E014781106D15A002664D1 /* iostream */ = {
 		isa = PBXFileReference;
@@ -202,9 +131,9 @@
 	};
 	87E014B71106DB6C002664D1 /* PhaseVocoder.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 1600}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 1584}}";
 			sepNavSelRange = "{1738, 0}";
-			sepNavVisRange = "{1581, 659}";
+			sepNavVisRange = "{1958, 590}";
 		};
 	};
 	87E014B81106DB6C002664D1 /* PhaseVocoder.h */ = {
@@ -213,52 +142,6 @@
 			sepNavSelRange = "{292, 0}";
 			sepNavVisRange = "{83, 448}";
 		};
-	};
-	87E014DD1106DD91002664D1 /* phasevocoder.cpp */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.cpp.cpp;
-		name = phasevocoder.cpp;
-		path = "/Users/paulreimer/Development/lib/marsyas-safe/src/apps/phasevocoder/phasevocoder.cpp";
-		sourceTree = "<absolute>";
-	};
-	87E0157F1107B99E002664D1 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 87E014DD1106DD91002664D1 /* phasevocoder.cpp */;
-		name = "phasevocoder.cpp: 1715";
-		rLen = 36;
-		rLoc = 50393;
-		rType = 0;
-		vrLen = 731;
-		vrLoc = 50072;
-	};
-	87E015981107BA26002664D1 /* RtAudio3.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = RtAudio3.h;
-		path = "/Users/paulreimer/Development/lib/marsyas-safe/src/otherlibs/RtAudio/RtAudio3.h";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 12576}}";
-			sepNavSelRange = "{20739, 0}";
-			sepNavVisRange = "{20241, 1240}";
-		};
-	};
-	87E015C01107BE52002664D1 /* ofTrueTypeFont.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = ofTrueTypeFont.h;
-		path = /Users/paulreimer/Development/ofx/0061/libs/openFrameworks/graphics/ofTrueTypeFont.h;
-		sourceTree = "<absolute>";
-	};
-	87E015CF1107BEFB002664D1 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 87E015C01107BE52002664D1 /* ofTrueTypeFont.h */;
-		name = "ofTrueTypeFont.h: 62";
-		rLen = 65;
-		rLoc = 1460;
-		rType = 0;
-		vrLen = 822;
-		vrLoc = 1155;
 	};
 	87E015D61107BF42002664D1 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -270,22 +153,35 @@
 		vrLen = 448;
 		vrLoc = 83;
 	};
-	87E015E31107BFD1002664D1 /* PBXTextBookmark */ = {
+	87E80511119006E100B3FB3B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 87E015E41107BFD1002664D1 /* ofAppRunner.h */;
-		name = "ofAppRunner.h: 32";
-		rLen = 21;
-		rLoc = 933;
+		fRef = 87E014B71106DB6C002664D1 /* PhaseVocoder.cpp */;
+		name = "PhaseVocoder.cpp: 63";
+		rLen = 0;
+		rLoc = 1738;
 		rType = 0;
-		vrLen = 756;
-		vrLoc = 537;
+		vrLen = 590;
+		vrLoc = 1958;
 	};
-	87E015E41107BFD1002664D1 /* ofAppRunner.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = ofAppRunner.h;
-		path = /Users/paulreimer/Development/ofx/0061/libs/openFrameworks/app/ofAppRunner.h;
-		sourceTree = "<absolute>";
+	87E80513119006E100B3FB3B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 23";
+		rLen = 0;
+		rLoc = 480;
+		rType = 0;
+		vrLen = 701;
+		vrLoc = 425;
+	};
+	87F3E802132D842F00F23C34 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 23";
+		rLen = 0;
+		rLoc = 480;
+		rType = 0;
+		vrLen = 701;
+		vrLoc = 425;
 	};
 	E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 		activeBuildConfigurationName = Debug;
@@ -383,23 +279,18 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 285743514;
-			PBXWorkspaceStateSaveDate = 285743514;
+			PBXPerProjectTemplateStateSaveDate = 321750002;
+			PBXWorkspaceStateSaveDate = 321750002;
 		};
 		perUserProjectItems = {
-			8700A5E51107C2DC003124BD /* PBXTextBookmark */ = 8700A5E51107C2DC003124BD /* PBXTextBookmark */;
 			8700A5FD1107C585003124BD /* PBXTextBookmark */ = 8700A5FD1107C585003124BD /* PBXTextBookmark */;
-			8700A5FF1107C585003124BD /* PBXTextBookmark */ = 8700A5FF1107C585003124BD /* PBXTextBookmark */;
 			877ED594110819CB00E93390 /* PlistBookmark */ = 877ED594110819CB00E93390 /* PlistBookmark */;
-			877ED595110819CB00E93390 /* PBXTextBookmark */ = 877ED595110819CB00E93390 /* PBXTextBookmark */;
-			877ED596110819CB00E93390 /* PBXTextBookmark */ = 877ED596110819CB00E93390 /* PBXTextBookmark */;
 			877ED597110819CB00E93390 /* PBXTextBookmark */ = 877ED597110819CB00E93390 /* PBXTextBookmark */;
-			877ED598110819CB00E93390 /* PBXTextBookmark */ = 877ED598110819CB00E93390 /* PBXTextBookmark */;
 			87E014881106D1E1002664D1 /* PBXTextBookmark */ = 87E014881106D1E1002664D1 /* PBXTextBookmark */;
-			87E0157F1107B99E002664D1 /* PBXTextBookmark */ = 87E0157F1107B99E002664D1 /* PBXTextBookmark */;
-			87E015CF1107BEFB002664D1 /* PBXTextBookmark */ = 87E015CF1107BEFB002664D1 /* PBXTextBookmark */;
 			87E015D61107BF42002664D1 /* PBXTextBookmark */ = 87E015D61107BF42002664D1 /* PBXTextBookmark */;
-			87E015E31107BFD1002664D1 /* PBXTextBookmark */ = 87E015E31107BFD1002664D1 /* PBXTextBookmark */;
+			87E80511119006E100B3FB3B /* PBXTextBookmark */ = 87E80511119006E100B3FB3B /* PBXTextBookmark */;
+			87E80513119006E100B3FB3B /* PBXTextBookmark */ = 87E80513119006E100B3FB3B /* PBXTextBookmark */;
+			87F3E802132D842F00F23C34 /* PBXTextBookmark */ = 87F3E802132D842F00F23C34 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 874EB5CA110123B700DE1A0D /* Source Control */;
 		userBuildSettings = {
@@ -413,9 +304,9 @@
 	};
 	E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1118, 1136}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 1168}}";
 			sepNavSelRange = "{480, 0}";
-			sepNavVisRange = "{1022, 663}";
+			sepNavVisRange = "{425, 701}";
 		};
 	};
 	E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {

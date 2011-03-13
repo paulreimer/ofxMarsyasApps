@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		874EB850110127FD00DE1A0D /* ofxMarsyasNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 874EB7CB110127FC00DE1A0D /* ofxMarsyasNetwork.cpp */; };
 		874EB853110127FD00DE1A0D /* ofxMSAInteractiveObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 874EB7D8110127FC00DE1A0D /* ofxMSAInteractiveObject.cpp */; };
-		874EB860110127FD00DE1A0D /* ofxThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 874EB829110127FC00DE1A0D /* ofxThread.cpp */; };
 		874EB8D01101332C00DE1A0D /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874EB8CF1101332C00DE1A0D /* CoreMIDI.framework */; };
 		874EB8DB110133BF00DE1A0D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 874EB5C5110123B700DE1A0D /* main.cpp */; };
 		878910B2110698A400694FA4 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C242CC10CC650E004149E2 /* libfmodex.dylib */; };
@@ -77,8 +76,6 @@
 		874EB7CC110127FC00DE1A0D /* ofxMarsyasNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxMarsyasNetwork.h; path = ../../../addons/ofxMarsyas/src/ofxMarsyasNetwork.h; sourceTree = SOURCE_ROOT; };
 		874EB7D8110127FC00DE1A0D /* ofxMSAInteractiveObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxMSAInteractiveObject.cpp; path = ../../../addons/ofxMSAInteractiveObject/src/ofxMSAInteractiveObject.cpp; sourceTree = SOURCE_ROOT; };
 		874EB7D9110127FC00DE1A0D /* ofxMSAInteractiveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxMSAInteractiveObject.h; path = ../../../addons/ofxMSAInteractiveObject/src/ofxMSAInteractiveObject.h; sourceTree = SOURCE_ROOT; };
-		874EB829110127FC00DE1A0D /* ofxThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxThread.cpp; path = ../../../addons/ofxThread/src/ofxThread.cpp; sourceTree = SOURCE_ROOT; };
-		874EB82A110127FC00DE1A0D /* ofxThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxThread.h; path = ../../../addons/ofxThread/src/ofxThread.h; sourceTree = SOURCE_ROOT; };
 		874EB8CF1101332C00DE1A0D /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		87E013F71106AD93002664D1 /* libmarsyas.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmarsyas.a; path = /usr/local/lib/libmarsyas.a; sourceTree = "<absolute>"; };
 		87E014B71106DB6C002664D1 /* PhaseVocoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PhaseVocoder.cpp; path = src/PhaseVocoder.cpp; sourceTree = SOURCE_ROOT; };
@@ -164,7 +161,6 @@
 			children = (
 				874EB5CF110127F900DE1A0D /* ofxMarsyas */,
 				874EB7CD110127FC00DE1A0D /* ofxMSAInteractiveObject */,
-				874EB824110127FC00DE1A0D /* ofxThread */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -205,25 +201,6 @@
 			);
 			name = src;
 			path = ../../../addons/ofxMSAInteractiveObject/src;
-			sourceTree = SOURCE_ROOT;
-		};
-		874EB824110127FC00DE1A0D /* ofxThread */ = {
-			isa = PBXGroup;
-			children = (
-				874EB828110127FC00DE1A0D /* src */,
-			);
-			name = ofxThread;
-			path = ../../../addons/ofxThread;
-			sourceTree = SOURCE_ROOT;
-		};
-		874EB828110127FC00DE1A0D /* src */ = {
-			isa = PBXGroup;
-			children = (
-				874EB829110127FC00DE1A0D /* ofxThread.cpp */,
-				874EB82A110127FC00DE1A0D /* ofxThread.h */,
-			);
-			name = src;
-			path = ../../../addons/ofxThread/src;
 			sourceTree = SOURCE_ROOT;
 		};
 		E45BE0360E8CC5DE009D7055 /* libs */ = {
@@ -541,7 +518,14 @@
 			isa = PBXProject;
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "ofMarVocoder" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = E4B69B4A0A3A1720003C02F2;
 			productRefGroup = E4B69B4A0A3A1720003C02F2;
 			projectDirPath = "";
@@ -593,7 +577,6 @@
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				874EB850110127FD00DE1A0D /* ofxMarsyasNetwork.cpp in Sources */,
 				874EB853110127FD00DE1A0D /* ofxMSAInteractiveObject.cpp in Sources */,
-				874EB860110127FD00DE1A0D /* ofxThread.cpp in Sources */,
 				87E014B91106DB6C002664D1 /* PhaseVocoder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
